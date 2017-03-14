@@ -1,4 +1,10 @@
-<div class="container" style="margin-top: 80px">
+<header class="sb-page-header" style="padding-top: 60px;padding-bottom: 60px;text-align: left;font-size: 24px;padding: 30px 15px;color: rgba(255,255,255,.8);background-color: #26A65B;margin-bottom: 10px;font-size: 20px;background-image: url(<?php echo base_url() ?>resources/public/images/bg.png);position: relative;">
+    <div class="container">
+        <p style="padding-top:60px;font-size:30px;color:#fff"><i class="fa fa-graduation-cap"></i> Selamat Datang di PPDB Madrasah Mu'allimin Mu'allimat </p>
+        <p style="margin-left:50px;color:#fff"><i class="icon-book-open"></i> Tambak Beras, Jombang, Jawa Timur</p>
+    </div>
+</header>
+<div class="container" style="margin-top: 10px">
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-8">
