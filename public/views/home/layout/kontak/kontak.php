@@ -46,6 +46,19 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
+                            <i class="icon-pointer"></i> Peta Lokasi
+                            <hr>
+                            <div class="card-content" style="min-height: 60px">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
                             <i class="icon-question"></i> Kontak Informasi
                             <hr>
                             <div class="card-content" style="min-height: 60px">
