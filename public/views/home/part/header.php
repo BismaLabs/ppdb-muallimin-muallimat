@@ -47,9 +47,14 @@
         </div><!--/.navbar-collapse -->
     </div>
 </nav>
-<header class="sb-page-header" style="padding-top: 60px;padding-bottom: 60px;text-align: left;font-size: 24px;padding: 30px 15px;color: rgba(255,255,255,.8);background-color: #26A65B;margin-bottom: 10px;font-size: 20px;background-image: url(<?php echo base_url() ?>resources/public/images/bg.png);position: relative;">
+<header class="sb-page-header" style="padding-top: 60px;padding-bottom: 30px;text-align: left;font-size: 24px;padding: 30px 15px;color: rgba(255,255,255,.8);background-color: #26A65B;margin-bottom: 10px;font-size: 20px;background-image: url(<?php echo base_url() ?>resources/public/images/bg.png);position: relative;">
     <div class="container">
-        <p style="padding-top:60px;font-size:30px;color:#fff;font-family: Roboto;font-weight: 300"><i class="fa fa-graduation-cap"></i> Selamat Datang di PPDB Madrasah Mu'allimin Mu'allimat </p>
-        <p style="margin-left:50px;color:#fff;font-family: Roboto;font-weight: 300"><i class="icon-book-open"></i> Tambak Beras, Jombang, Jawa Timur</p>
+        <div class="col-md-10">
+            <p style="padding-top:70px;font-size:30px;color:#fff;font-family: Roboto;font-weight: 300"><i class="icon-graduation"></i> Selamat Datang di PPDB Madrasah Mu'allimin Mu'allimat </p>
+            <p style="margin-left:40px;color:#fff;font-family: Roboto;font-weight: 300"><i class="icon-pointer"></i> Tambak Beras, Jombang, Jawa Timur</p>
+        </div>
+        <div class="col-md-2">
+            <img src="<?php echo base_url() ?>resources/public/images/logo.png" style="width: 130px;margin-top: 50px">
+        </div>
     </div>
 </header>

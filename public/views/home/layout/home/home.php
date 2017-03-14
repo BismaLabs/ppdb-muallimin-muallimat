@@ -45,7 +45,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-content">
-
+                        <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
+                            <i class="icon-info"></i> Informasi
+                            <hr>
+                            <i class="icon-bell"></i> Pengumuman
+                        </div>
                     </div>
                 </div>
             </div>
