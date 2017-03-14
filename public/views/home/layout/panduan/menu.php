@@ -45,7 +45,15 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-content">
-
+                        <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
+                            <a href="<?php echo base_url() ?>panduan/ketentuan/" style="text-decoration: none">
+                                <i class="icon-info"></i> Ketentuan
+                            </a>
+                            <hr>
+                            <a href="<?php echo base_url() ?>panduan/alur-pendaftaran/" style="text-decoration: none">
+                                <i class="icon-info"></i> Alur Pendaftaran
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,11 +78,11 @@
                     <br>
                     <br>
                     <i class="fa fa-phone"></i> Telephone : <br />
-                        0321 - 853 - 533
+                    0321 - 853 - 533
                     <br>
                     <br>
                     <i class="fa fa-envelope"></i> Alamat Email:<br />
-                        puskom@unwaha.ac.id
+                    puskom@unwaha.ac.id
                 </div>
             </div>
         </div>

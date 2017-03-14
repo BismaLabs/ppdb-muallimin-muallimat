@@ -32,18 +32,24 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Beranda</a></li>
+                <li><a href="<?php echo base_url() ?>"><i class="icon-home"></i> Beranda</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-book"></i> Panduan <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-book-open"></i> Panduan <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url() ?>panduan/ketentuan/">Ketentuan</a></li>
-                        <li><a href="<?php echo base_url() ?>panduan/alur-pendaftaran/">Alur Pendaftaran</a></li>
+                        <li><a href="<?php echo base_url() ?>panduan/ketentuan/"><i class="icon-arrow-right"></i> Ketentuan</a></li>
+                        <li><a href="<?php echo base_url() ?>panduan/alur-pendaftaran/"><i class="icon-arrow-right"></i> Alur Pendaftaran</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo base_url() ?>daftar/"><i class="fa fa-male"></i> Daftar Online</a></li>
-                <li><a href="<?php echo base_url() ?>statistik/"><i class="fa fa-bar-chart-o"></i> Statistik</a></li>
-                <li><a href="<?php echo base_url() ?>kontak/"><i class="fa fa-comments-o"></i> Kontak</a></li>
+                <li><a href="<?php echo base_url() ?>daftar/"><i class="icon-user-follow"></i> Daftar Online</a></li>
+                <li><a href="<?php echo base_url() ?>statistik/"><i class="icon-graph"></i> Statistik</a></li>
+                <li><a href="<?php echo base_url() ?>kontak/"><i class="icon-question"></i> Kontak</a></li>
             </ul>
         </div><!--/.navbar-collapse -->
     </div>
 </nav>
+<header class="sb-page-header" style="padding-top: 60px;padding-bottom: 60px;text-align: left;font-size: 24px;padding: 30px 15px;color: rgba(255,255,255,.8);background-color: #26A65B;margin-bottom: 10px;font-size: 20px;background-image: url(<?php echo base_url() ?>resources/public/images/bg.png);position: relative;">
+    <div class="container">
+        <p style="padding-top:60px;font-size:30px;color:#fff;font-family: Roboto;font-weight: 300"><i class="fa fa-graduation-cap"></i> Selamat Datang di PPDB Madrasah Mu'allimin Mu'allimat </p>
+        <p style="margin-left:50px;color:#fff;font-family: Roboto;font-weight: 300"><i class="icon-book-open"></i> Tambak Beras, Jombang, Jawa Timur</p>
+    </div>
+</header>

@@ -45,7 +45,22 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-content">
-
+                        <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
+                            <i class="icon-question"></i> Kontak Informasi
+                            <hr>
+                            <div class="card-content" style="min-height: 60px">
+                                <i class="fa fa-building"></i> Alamat Kantor : <br />
+                                Jl. Garuda No.09 Tambakberas Jombang, Jawa Timur, Indonesia
+                                <br>
+                                <br>
+                                <i class="fa fa-phone"></i> Telephone : <br />
+                                0321 - 853 - 533
+                                <br>
+                                <br>
+                                <i class="fa fa-envelope"></i> Alamat Email:<br />
+                                puskom@unwaha.ac.id
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,11 +85,11 @@
                     <br>
                     <br>
                     <i class="fa fa-phone"></i> Telephone : <br />
-                        0321 - 853 - 533
+                    0321 - 853 - 533
                     <br>
                     <br>
                     <i class="fa fa-envelope"></i> Alamat Email:<br />
-                        puskom@unwaha.ac.id
+                    puskom@unwaha.ac.id
                 </div>
             </div>
         </div>
