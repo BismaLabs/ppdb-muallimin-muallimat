@@ -76,6 +76,11 @@
     transition-property: max-height,box-shadow;	
 }
 
+.active-menu-navbar {
+    background-color: #55a532;
+    color: #fff;
+}
+
 #nprogress {
   pointer-events: none;
 }
@@ -280,6 +285,7 @@
   border-top: 1px solid #dddddd;
   font-family: Roboto;
   font-weight: 400;
+  border-top: 3px solid #55a532;
 }
 
 .footer .footer-menu {
