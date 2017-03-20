@@ -11,7 +11,9 @@ class Kontak extends CI_Controller {
     public function index()
     {
         $data = array(
-            'kontak' => TRUE,
+            'kontak'    => TRUE,
+            'data_js'   => '',
+            'js_ready'  => '',
         );
         $this->load->view('home/part/header', $data);
         $this->load->view('home/layout/kontak/kontak');
