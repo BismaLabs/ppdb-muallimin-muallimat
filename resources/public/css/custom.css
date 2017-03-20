@@ -533,7 +533,3 @@
         height: 400px;
         background-color: grey;
     }
-
-  .strikethrough:checked + .strikeThis {
-  text-decoration: line-through
-  }
