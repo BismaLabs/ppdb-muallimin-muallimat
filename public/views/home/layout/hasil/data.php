@@ -48,6 +48,26 @@
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
                             <i class="icon-user-following"></i> Hasil Seleksi
                             <hr>
+                            <div class="table-responsive">
+                              <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>No</th>
+                                    <th>No. Ujian</th>
+                                    <th>Nama</th>
+                                    <th>Keterangan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>619</td>
+                                    <td>Peserta</td>
+                                    <td>Lulus</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                            </div>
                         </div>
                     </div>
                 </div>

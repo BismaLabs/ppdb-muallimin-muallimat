@@ -479,6 +479,14 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
+                                        <label>Kode POS</label>
+                                        <input type="text" class="form-control" name="kode_pos"
+                                               placeholder="Masukkan Kode pos " style="border-radius: 0px">
+                                        <?php echo form_error('alamat_pos'); ?>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
                                         <label>Provinsi</label>
                                         <select class="form-control">
                                         <option value="Aceh">  Aceh </option>
@@ -681,6 +689,13 @@
                                         <label>Kab.</label>
                                         <input type="text" class="form-control" name=""
                                                placeholder="Masukkan Kabupaten/Kota " style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kode POS</label>
+                                        <input type="text" class="form-control" name="kode_pos"
+                                               placeholder="Masukkan Kode pos " style="border-radius: 0px">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
