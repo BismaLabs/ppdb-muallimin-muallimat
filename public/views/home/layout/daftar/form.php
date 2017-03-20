@@ -361,10 +361,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="cita_cita"
-                                           placeholder="Masukkan Nama Lengkap Ayah" style="border-radius: 0px">
+                                           placeholder="Masukkan Nomor KTP/NIK" style="border-radius: 0px">
                                     <br/>
                                     <input type="text" class="form-control" name="cita_cita"
-                                           placeholder="Masukkan Nama Ibu" style="border-radius: 0px">
+                                           placeholder="Masukkan Nomor KTP/NIK" style="border-radius: 0px">
                                 </div>
                             </div>
                         </div>
