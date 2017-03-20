@@ -216,7 +216,6 @@
                                             <input type="text" placeholder="Jumlah" class="pull-left form-control"
                                                    style="border-radius: 0px">
                                         </div>
-                                        <?php echo form_error('jumlah_anak_ke'); ?>
                                     </div>
                                     <div class="col-md-3">
                                         <label style="margin-top: 7px;"> Bersaudara</label>
