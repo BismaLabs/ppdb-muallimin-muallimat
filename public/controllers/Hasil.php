@@ -6,12 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @since    : 2017
  * @license  : https://maulayya.com/portofolio/ppdb-muallimin-muallimat/
  */
-class Statistik extends CI_Controller {
+class Hasil extends CI_Controller {
 
     public function index()
     {
         $this->load->view('home/part/header');
-        $this->load->view('home/layout/statistik/statistik');
+        $this->load->view('home/layout/hasil/data');
         $this->load->view('home/part/footer');
     }
 }
