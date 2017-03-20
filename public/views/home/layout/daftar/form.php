@@ -757,7 +757,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label> Recaptcha</label>
+                                <label> Recaptcha <span class="required"    style="color: red">*</span></label>
                                 <?php echo $recaptcha_html;?>
                                 <?php echo form_error('g-recaptcha-response'); ?>
                             </div>

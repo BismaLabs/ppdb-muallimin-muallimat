@@ -51,19 +51,22 @@
                               <i class="icon-user-following"></i> Hasil Seleksi
                             </div>
                             <div class="col-md-6">
-                              <div class="form-group">
-                                <div class="input-group">
-                                  <input type="text" class="form-control" id="" placeholder="Pencarian">
-                                  <div class="input-group-addon">
-                                    <button class="btn btn-success btn-xs" type="submit"><i class="icon-magnifier"></i></button>
+                                <form method="GET" action="<?php echo base_url('auth/developers/search');?>">
+                                    <div class = "input-group">
+                                        <input type = "text" name = "q" class = "form-control" placeholder="Cari berdasarkan NISN" autocomplete="off" id="developers">
+                                        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                                        <span class = "input-group-btn">
+                              <button class = "btn btn-default" type = "submit">
+                                 <i class="fa fa-search"></i> Search
+                              </button>
+                           </span>
                                     </div>
-                                </div>
-                              </div>
+                                </form>
                             </div>
                           </div>
                             <hr>
                             <div class="table-responsive">
-                              <table class="table table-striped">
+                              <table class="table table-striped table-bordered">
                                 <thead>
                                   <tr>
                                     <th>No</th>

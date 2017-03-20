@@ -121,12 +121,12 @@ class Daftar extends CI_Controller {
 
         //set message form validation
         $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">
-                                                        <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
+                                                        <i class="fa fa-exclamation-circle"></i> {field} wajib diisi.
                                                      </div>');
 
         $this->form_validation->set_message('callback_getResponseCaptcha',
             '<div class="alert alert-danger" style="font-family:Roboto">
-                                                          i class="fa fa-exclamation-circle"></i> {field} {g-recaptcha-response} harus diisi.
+                                                          i class="fa fa-exclamation-circle"></i> {field} {g-recaptcha-response} harus dipilih.
                                                       div>');
         //checking form validation
         if($this->form_validation->run() == TRUE)
