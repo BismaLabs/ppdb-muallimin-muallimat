@@ -215,6 +215,7 @@
                                         <div class="form-group">
                                             <input type="text" placeholder="Jumlah" class="pull-left form-control"
                                                    style="border-radius: 0px">
+                                            <?php echo form_error('jumlah_anak_ke'); ?>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -480,7 +481,7 @@
                                     <div class="form-group">
                                         <label>Kode POS</label>
                                         <input type="text" class="form-control" name="kode_pos"
-                                               placeholder="Masukkan Kode pos " style="border-radius: 0px">
+                                               placeholder="Masukkan Kode POS " style="border-radius: 0px">
                                         <?php echo form_error('alamat_pos'); ?>
                                     </div>
                                 </div>
@@ -694,7 +695,7 @@
                                     <div class="form-group">
                                         <label>Kode POS</label>
                                         <input type="text" class="form-control" name="kode_pos"
-                                               placeholder="Masukkan Kode pos " style="border-radius: 0px">
+                                               placeholder="Masukkan Kode POS " style="border-radius: 0px">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
