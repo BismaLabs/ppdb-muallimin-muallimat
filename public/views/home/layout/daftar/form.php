@@ -478,39 +478,232 @@
                                         <option value="Sumatera Selatan">Sumatera Selatan</option>
                                         <option value="Sumatera Utara">Sumatera Utara</option>
                                         <option value="Yogyakarta">Yogyakarta</option>
-
                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                            <div class="form-group">
+                                <label> Penghasilan Rata-rata Perbulan</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>a. Ayah </label>
+                                        <br/>
+                                        <label style="padding-top:30px">b. Ibu </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <select class="form-control" name="">
+                                        <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                      </select>
+                                      <br>
+                                      <select class="form-control" name="">
+                                        <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label> Keterangan Dan Nomor HP</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>a. Ayah </label>
+                                        <br/>
+                                        <label style="padding-top:50px">b. Ibu </label>
+                                    </div>
+                                    <div class="form-group">
+                                      <div class="col-md-3">
+                                        <label>Keterangan</label>
+                                        <select class="form-control" name="">
+                                          <option value="Masih Hidup">Masih Hidup</option>
+                                          <option value="Meninggal Dunia">Meninggal Dunia</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <div class="col-md-3">
+                                          <label>Nomor HP Orang Tua</label>
+                                          <input type="text" class="form-control" name=""
+                                                 placeholder="Nomor Telp/HP Orang Tua" style="border-radius: 0px">
+                                      </div>
+                                    </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <div class="col-md-3">
+                                        <label>Keterangan</label>
+                                        <select class="form-control" name="">
+                                          <option value="Masih Hidup">Masih Hidup</option>
+                                          <option value="Meninggal Dunia">Meninggal Dunia</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                      <div class="form-group">
+                                        <div class="col-md-3">
+                                          <label>Nomor HP Orang Tua</label>
+                                          <input type="text" class="form-control" name=""
+                                                 placeholder="Nomor Telp/HP Orang Tua" style="border-radius: 0px">
+                                      </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
                 <div class="card">
                     <div class="card-content">
                         <h4 style="margin-top: 30px">D. KETERANGAN WALI ( <i>diisi jika point <strong>C</strong> tidak
                                 diisi</i> )</h4>
                         <hr>
-                        <div class="form-group">
-                            <label for="user_id"> ASAL SEKOLAH</label>
-                            <input type="text" class="form-control" id="user_id" name="user_id"
-                                   placeholder="Masukkan User ID Anda" style="border-radius: 0px">
+                          <div class="form-group">
+                              <label> Nama Lengkap</label>
+                              <input type="text" class="form-control" name="" value="Nama Lengkap">
                         </div>
                         <div class="form-group">
-                            <label for="user_id"> PENDAFTARAN KELAS</label>
-                            <input type="text" class="form-control" id="user_id" name="user_id"
-                                   placeholder="Masukkan User ID Anda" style="border-radius: 0px">
+                            <label for="jenis_kelamin_wali"> JENIS KELAMIN <span class="required"
+                                                                            style="color: red">*</span></label>
+                            <select id="jenis_kelamin_wali" class="form-control" name="">
+                                <option value="">--Pilih--</option>
+                                <option value="">Laki-laki</option>
+                                <option value="">Perempuan</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="user_id"> NAMA LENGKAP (SESUAI IJAZAH)</label>
-                            <input type="text" class="form-control" id="user_id" name="user_id"
-                                   placeholder="Masukkan User ID Anda" style="border-radius: 0px">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nomor KK Wali</label>
+                                        <input type="text" placeholder="Nomor KK Wali" name=""
+                                               class="form-control" style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Nomor KTP Wali</label>
+                                    <input type="text" placeholder="Nomor KTP Wali" name=""
+                                           class="form-control" style="border-radius: 0px">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="user_id"> JENIS KELAMIN</label>
-                            <input type="text" class="form-control" id="user_id" name="user_id"
-                                   placeholder="Masukkan User ID Anda" style="border-radius: 0px">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Pekerjaan</label>
+                                        <input type="text" placeholder="Pekerjaan" name=""
+                                               class="form-control" style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Pendidikan</label>
+                                    <input type="text" placeholder="Pendidikan" name=""
+                                           class="form-control" style="border-radius: 0px">
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="form-group">
+                            <label> Alamat Tempat Tinggal <i>(Sesuai KK)</i></label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Jln Dsn.</label>
+                                        <input type="text" class="form-control" name=""
+                                               placeholder="Masukkan Jalan Dusun " style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>RT</label>
+                                        <input type="text" class="form-control" name="" style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>RW</label>
+                                        <input type="text" class="form-control" name="" style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Desa.</label>
+                                        <input type="text" class="form-control" name="" placeholder="Desa"
+                                               style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kec.</label>
+                                        <input type="text" class="form-control" name="" placeholder="Kecamatan"
+                                               style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kab.</label>
+                                        <input type="text" class="form-control" name=""
+                                               placeholder="Masukkan Kabupaten/Kota " style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Provinsi</label>
+                                        <select class="form-control" name="">
+                                        <option value="Aceh">  Aceh </option>
+                                        <option value="Bali"> Bali </option>
+                                        <option value="Banten"> Banten </option>
+                                        <option value="Bengkulu"> Bengkulu </option>
+                                        <option value="Gorontalo"> Gorontalo</option>
+                                        <option value="Jakarta"> Jakarta</option>
+                                        <option value="Jambi"> Jambi</option>
+                                        <option value="Jawa Barat"> Jawa Barat</option>
+                                        <option value="Jawa Tengah"> Jawa Tengah</option>
+                                        <option value="Jawa Timur"> Jawa Timur</option>
+                                        <option value="Kalimantan Barat"> Kalimantan Barat</option>
+                                        <option value="Kalimat Selatan"> Kalimantan Selatan</option>
+                                        <option value="Kalimantan Tengah"> Kalimantan Tengah</option>
+                                        <option value="Kalimantan Timur"> Kalimantan Timur</option>
+                                        <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                        <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                                        <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                        <option value="Lampung">Lampung</option>
+                                        <option value="Maluku">Maluku</option>
+                                        <option value="Maluku Utara">Maluku Utara</option>
+                                        <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                        <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                        <option value="Papua">Papua</option>
+                                        <option value="Papua Barat">Papua Barat</option>
+                                        <option value="Riau">Riau</option>
+                                        <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                        <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                        <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                        <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                        <option value="Sulaesi Utara">Sulawesi Utara</option>
+                                        <option value="Sumatera Barat">Sumatera Barat</option>
+                                        <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                        <option value="Sumatera Utara">Sumatera Utara</option>
+                                        <option value="Yogyakarta">Yogyakarta</option>
+                                        </select>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <div class="row">
+                                <div class="col-md-6">
+                                <label> Penghasilan Rata-rata Perbulan</label>
+                              </div>
+                                    <div class="col-md-6">
+                                      <select class="form-control" name="">
+                                        <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
                         <button type="submit" class="btn btn-success"
                                 style="border-radius: 0px;padding: 5px 15px;font-family: Roboto;font-weight: normal;text-shadow: 0 -1px 0 rgba(0,0,0,0.15);background-color: #6cc644;background-image: -webkit-linear-gradient(#7bcc58, #60b838);background-image: linear-gradient(#7bcc58, #60b838);border-color: #55a532;">
                             Daftar Sekarang <i class="fa fa-send"></i></button>
