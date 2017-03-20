@@ -54,25 +54,25 @@
                                         <label for="asal_sekolah"> Asal Sekolah <span class="required"
                                                                                       style="color: red">*</span></label>
                                         <br/>
-                                        <input type="radio" name="rad" id="rad1" value="1" class="rad"/> SD/MI <input
-                                                type="radio" name="rad" id="rad2" value="2" class="rad"/> SMP/MTs
+                                        <input type="radio" name="asal_sekolah" id="rad1" value="SD/MI" class="rad"/> SD/MI
+                                        <input type="radio" name="asal_sekolah" id="rad2" value="SMP/MTs" class="rad"/> SMP/MTs
                                     </div>
                                     <div class="col-md-9">
                                         <label for="user_id"> PENDAFTARAN KELAS <span class="required"
                                                                                       style="color: red">*</span></label>
                                         <div id="form1" style="display:none">
-                                            <select class="form-control" name="">
-                                                <option value="">--Pilih--</option>
-                                                <option value="">Kelas 1A</option>
-                                                <option value="">Kelas 2B</option>
+                                            <select class="form-control" name="pendaftaran_kelas">
+                                                <option value="">-- Pilih --</option>
+                                                <option value="Kelas 1A">Kelas 1A</option>
+                                                <option value="Kelas 2B">Kelas 2B</option>
                                             </select>
                                         </div>
                                         <div id="form2" style="display:none">
-                                            <select class="form-control" name="">
-                                                <option value="">--Pilih--</option>
-                                                <option value="">Kelas 2</option>
-                                                <option value="">Kelas 3</option>
-                                                <option value="">Kelas 4</option>
+                                            <select class="form-control" name="pendaftaran_kelas">
+                                                <option value="">-- Pilih --</option>
+                                                <option value="Kelas 2">Kelas 2</option>
+                                                <option value="Kelas 3">Kelas 3</option>
+                                                <option value="Kelas 4">Kelas 4</option>
                                             </select>
                                         </div>
                                     </div>
