@@ -537,16 +537,16 @@
             </div>
             <div class="card">
                 <div class="card-content" style="min-height: 60px">
-                    <i class="fa fa-building"></i> Alamat Kantor : <br/>
-                    Jl. Garuda No.09 Tambakberas Jombang, Jawa Timur, Indonesia
+                    <i class="fa fa-building"></i> Alamat Kantor : <br />
+                    Jl. KH. Wahab Hasbullah, Gg. PPBU No. 28, RT02/RW03, Bahrul Ulum, Tambakberas, Tambakrejo, Tambak Rejo, Kec. Jombang, Kabupaten Jombang, Jawa Timur 61451, Indonesia
                     <br>
                     <br>
-                    <i class="fa fa-phone"></i> Telephone : <br/>
-                    0321 - 853 - 533
+                    <i class="fa fa-phone"></i> Telephone : <br />
+                    +62 321 865280
                     <br>
                     <br>
-                    <i class="fa fa-envelope"></i> Alamat Email:<br/>
-                    puskom@unwaha.ac.id
+                    <i class="fa fa-envelope"></i> Alamat Email:<br />
+                    madrasatuna_1953@yahoo.com
                 </div>
             </div>
         </div>
