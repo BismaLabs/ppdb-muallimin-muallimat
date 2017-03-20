@@ -46,7 +46,21 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
-                            <i class="icon-user-following"></i> Hasil Seleksi
+                          <div class="row">
+                            <div class="col-md-6">
+                              <i class="icon-user-following"></i> Hasil Seleksi
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="" placeholder="Pencarian">
+                                  <div class="input-group-addon">
+                                    <button class="btn btn-success btn-xs" type="submit"><i class="icon-magnifier"></i></button>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                             <hr>
                             <div class="table-responsive">
                               <table class="table table-striped">
@@ -67,6 +81,7 @@
                                   </tr>
                                 </tbody>
                             </table>
+                            <p class="pull-left">Jombang: Tangal-Bulan-Tahun</p>
                             </div>
                         </div>
                     </div>
