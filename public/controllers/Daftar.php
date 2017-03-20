@@ -20,6 +20,7 @@ class Daftar extends CI_Controller {
     {
         $data = array(
             'daftar' => TRUE,
+            'recaptcha_html' => $this->recaptcha->render()
         );
         //set form validation
 

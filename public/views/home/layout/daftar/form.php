@@ -756,6 +756,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label> Recaptcha</label>
+                                <?php echo $recaptcha_html;?>
+                                <?php echo form_error('g-recaptcha-response'); ?>
+                            </div>
                             <hr>
                         <button type="submit" class="btn btn-success"
                                 style="border-radius: 0px;padding: 5px 15px;font-family: Roboto;font-weight: normal;text-shadow: 0 -1px 0 rgba(0,0,0,0.15);background-color: #6cc644;background-image: -webkit-linear-gradient(#7bcc58, #60b838);background-image: linear-gradient(#7bcc58, #60b838);border-color: #55a532;">
