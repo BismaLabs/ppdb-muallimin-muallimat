@@ -10,7 +10,10 @@ class Daftar extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('home/part/header');
+        $data = array(
+            'daftar' => TRUE,
+        );
+        $this->load->view('home/part/header', $data);
         $this->load->view('home/layout/daftar/form');
         $this->load->view('home/part/footer');
     }

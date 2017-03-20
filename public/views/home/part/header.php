@@ -32,7 +32,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active-menu-navbar"><a href="<?php echo base_url() ?>" style="color: #fff"><i class="icon-home"></i> Beranda</a></li>
+                <li class="<?php if(isset($home)) { echo 'active-menu-navbar'; } ?>"><a href="<?php echo base_url() ?>" style="color: #fff"><i class="icon-home"></i> Beranda</a></li>
                 <li class="dropdown">
                     <a href="#" style="color: #fff" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-book-open"></i> Panduan <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -40,9 +40,9 @@
                         <li><a href="<?php echo base_url() ?>panduan/alur-pendaftaran/"><i class="icon-arrow-right"></i> Alur Pendaftaran</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo base_url() ?>daftar/" style="color: #fff"><i class="icon-user-follow"></i> Daftar Online</a></li>
+                <li class="<?php if(isset($daftar)) { echo 'active-menu-navbar'; } ?>"><a href="<?php echo base_url() ?>daftar/" style="color: #fff"><i class="icon-user-follow"></i> Daftar Online</a></li>
                 <li><a href="<?php echo base_url() ?>hasil-seleksi/" style="color: #fff"><i class="icon-user-following"></i> Hasil Seleksi</a></li>
-                <li><a href="<?php echo base_url() ?>kontak/" style="color: #fff"><i class="icon-question"></i> Kontak</a></li>
+                <li class="<?php if(isset($kontak)) { echo 'active-menu-navbar'; } ?>"><a href="<?php echo base_url() ?>kontak/" style="color: #fff"><i class="icon-question"></i> Kontak</a></li>
             </ul>
         </div><!--/.navbar-collapse -->
     </div>

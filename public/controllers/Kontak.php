@@ -10,7 +10,10 @@ class Kontak extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('home/part/header');
+        $data = array(
+            'kontak' => TRUE,
+        );
+        $this->load->view('home/part/header', $data);
         $this->load->view('home/layout/kontak/kontak');
         $this->load->view('home/part/footer');
     }
