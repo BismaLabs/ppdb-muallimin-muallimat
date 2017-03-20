@@ -23,11 +23,11 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="<?php echo base_url() ?>statistik/" style="text-decoration: none;color:#23527c;">
+                <a href="<?php echo base_url() ?>hasil-seleksi/" style="text-decoration: none;color:#23527c;">
                     <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
-                        <i class="icon-graph fa-3x"></i>
+                        <i class="icon-user-following fa-3x"></i>
                         <div class="card-content" style="text-align: center;padding: 5px">
-                            STATISTIK
+                            HASIL SELEKSI
                         </div>
                     </div>
                 </a>
@@ -56,7 +56,7 @@
                                     <input type="radio" name="rad" id="rad1" value="1" class="rad"/> SD/MI <input type="radio" name="rad" id="rad2" value="2" class="rad"/> SMP/MTs
                                   </div>
                                   <div class="col-md-9">
-                                    <label> Pilih Kelas</label>
+                                      <label for="user_id"> PENDAFTARAN KELAS</label>
                                     <div id="form1" style="display:none">
                                       <select class="form-control" name="">
                                         <option value="">--Pilih--</option>
@@ -75,27 +75,22 @@
                                   </div>
                                 </div>
                             </div>
-
-   <!-- tambahkan jquery-->
-   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-   <script type="text/javascript">
-     $(function(){
-       $(":radio.rad").click(function(){
-         $("#form1, #form2").hide()
-         if($(this).val() == "1"){
-           $("#form1").show();
-         }else{
-           $("#form2").show();
-         }
-       });
-     });
-   </script>
+                           <!-- tambahkan jquery-->
+                           <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+                           <script type="text/javascript">
+                             $(function(){
+                               $(":radio.rad").click(function(){
+                                 $("#form1, #form2").hide()
+                                 if($(this).val() == "1"){
+                                   $("#form1").show();
+                                 }else{
+                                   $("#form2").show();
+                                 }
+                               });
+                             });
+                           </script>
                             <div class="form-group">
-                                <label for="user_id"> PENDAFTARAN KELAS</label>
-                                <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Masukkan User ID Anda" style="border-radius: 0px">
-                            </div>
-                            <div class="form-group">
-                                <label for="nama_lengkap"> NAMA LENGKAP <i>(SESUAI IJAZAH)</i></label>
+                                <label for="nama_lengkap"> NAMA LENGKAP <i>(Sesuai Ijazah)</i></label>
                                 <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan Nama Lengkap" style="border-radius: 0px">
                             </div>
                             <div class="form-group">
@@ -107,7 +102,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="nisn"> NIS <i>(Nomor Induk Siswa Nasional)</i></label>
+                                <label for="nisn"> NISN <i>(Nomor Induk Siswa Nasional)</i></label>
                                 <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Masukkan NISN" style="border-radius: 0px">
                             </div>
                             <div class="form-group">
@@ -178,7 +173,7 @@
                                     </div>
                                   </div>
                                   <div class="col-md-3">
-                                     <label> Dari</label>
+                                     <label style="margin-top: 7px;"> Dari</label>
                                   </div>
                                   <div class="col-md-3">
                                     <div class="form-group">
@@ -186,7 +181,7 @@
                                     </div>
                                   </div>
                                   <div class="col-md-3">
-                                     <label> Bersaudara</label>
+                                     <label style="margin-top: 7px;"> Bersaudara</label>
                                   </div>
                                 </div>
                             </div>
@@ -228,7 +223,7 @@
                               <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                      <label>Nama Madrasah Asal  <i>*Disertai Kota</i></label>
+                                      <label>Nama Madrasah Asal  <i>(*Disertai Kota Madrasah)</i></label>
                                           <input type="text" placeholder="Nama Madrasah" name="madrasah_asal" class="form-control" style="border-radius: 0px">
                                     </div>
                                   </div>

@@ -23,11 +23,11 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="<?php echo base_url() ?>statistik/" style="text-decoration: none;color:#23527c;">
+                <a href="<?php echo base_url() ?>hasil-seleksi/" style="text-decoration: none;color:#23527c;">
                     <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
-                        <i class="icon-graph fa-3x"></i>
+                        <i class="icon-user-following fa-3x"></i>
                         <div class="card-content" style="text-align: center;padding: 5px">
-                            STATISTIK
+                            HASIL SELEKSI
                         </div>
                     </div>
                 </a>
@@ -46,7 +46,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
-                            <i class="icon-graph"></i> Statistik
+                            <i class="icon-user-following"></i> Hasil Seleksi
                             <hr>
                         </div>
                     </div>

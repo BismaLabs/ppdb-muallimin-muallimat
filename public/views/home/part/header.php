@@ -41,7 +41,7 @@
                     </ul>
                 </li>
                 <li><a href="<?php echo base_url() ?>daftar/" style="color: #fff"><i class="icon-user-follow"></i> Daftar Online</a></li>
-                <li><a href="<?php echo base_url() ?>statistik/" style="color: #fff"><i class="icon-graph"></i> Statistik</a></li>
+                <li><a href="<?php echo base_url() ?>hasil-seleksi/" style="color: #fff"><i class="icon-user-following"></i> Hasil Seleksi</a></li>
                 <li><a href="<?php echo base_url() ?>kontak/" style="color: #fff"><i class="icon-question"></i> Kontak</a></li>
             </ul>
         </div><!--/.navbar-collapse -->
