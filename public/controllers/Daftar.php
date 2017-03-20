@@ -54,7 +54,7 @@ class Daftar extends CI_Controller {
         //set
         $this->form_validation->set_rules('jumlah_adik', 'Jumlah Adik', 'required');
         //set
-        $this->form_validation->set_rules('jumlah_kaka', 'Jumlah Kakak', 'required');
+        $this->form_validation->set_rules('jumlah_kakak', 'Jumlah Kakak', 'required');
         //set
         $this->form_validation->set_rules('kk', 'Nomor Kartu Keluarga', 'required');
         //set
@@ -69,15 +69,6 @@ class Daftar extends CI_Controller {
 
         /** FORM B */
 
-        //set
-        $this->form_validation->set_rules('jumlah_anak_ke', 'Jumlah Anak Ke', 'required');
-        //set
-        $this->form_validation->set_rules('jumlah_anak_ke', 'Jumlah Anak Ke', 'required');
-        //set
-        $this->form_validation->set_rules('jumlah_anak_ke', 'Jumlah Anak Ke', 'required');
-        //set
-        $this->form_validation->set_rules('jumlah_anak_ke', 'Jumlah Anak Ke', 'required');
-
         /** FORM C */
 
         //set
@@ -85,9 +76,9 @@ class Daftar extends CI_Controller {
         //set
         $this->form_validation->set_rules('nama_ibu_kandung', 'Nama Lengkap Ibu Kandung', 'required');
         //set
-        $this->form_validation->set_rules('no_ktp_ayah', 'Nomor KTP/NIK', 'required');
+        $this->form_validation->set_rules('no_ktp_ayah', 'Nomor KTP/NIK Ayah', 'required');
         //set
-        $this->form_validation->set_rules('no_ktp_ibu', 'Nomor KTP/NIK', 'required');
+        $this->form_validation->set_rules('no_ktp_ibu', 'Nomor KTP/NIK Ibu', 'required');
         //set
         $this->form_validation->set_rules('pekerjaan_ayah', 'Pekerjaan Ayah', 'required');
         //set
@@ -99,19 +90,19 @@ class Daftar extends CI_Controller {
         //set
         $this->form_validation->set_rules('alamat_jalan', 'Alamat Jalan', 'required');
         //set
-        $this->form_validation->set_rules('alamat_rt', 'Nomor RT', 'required');
+        $this->form_validation->set_rules('alamat_rt', 'RT', 'required');
         //set
-        $this->form_validation->set_rules('alamat_rw', 'Nomor RW', 'required');
+        $this->form_validation->set_rules('alamat_rw', 'RW', 'required');
         //set
         $this->form_validation->set_rules('alamat_desa', 'Alamat Desa', 'required');
         //set
-        $this->form_validation->set_rules('alamat_kecamatan', 'Nama Kecamatan', 'required');
+        $this->form_validation->set_rules('alamat_kecamatan', 'Kecamatan', 'required');
         //set
-        $this->form_validation->set_rules('alamat_kabupaten', 'Nama Kabupaten', 'required');
+        $this->form_validation->set_rules('alamat_kabupaten', 'Kabupaten', 'required');
         //set
         $this->form_validation->set_rules('alamat_pos', 'Kode POS', 'required');
         //set
-        $this->form_validation->set_rules('alamat_provinsi', 'Nama Provinsi', 'required');
+        $this->form_validation->set_rules('alamat_provinsi', 'Provinsi', 'required');
         //set
         $this->form_validation->set_rules('keterangan_ayah', 'Keterangan Ayah', 'required');
         //set
@@ -131,6 +122,7 @@ class Daftar extends CI_Controller {
         $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">
                                                         <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
                                                      </div>');
+
         $this->form_validation->set_message('callback_getResponseCaptcha',
             '<div class="alert alert-danger" style="font-family:Roboto">
                                                           i class="fa fa-exclamation-circle"></i> {field} {g-recaptcha-response} harus diisi.
