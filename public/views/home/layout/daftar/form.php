@@ -335,10 +335,10 @@
                         <h4 style="margin-top: 30px">C. KETERANGAN ORANG TUA KANDUNG</h4>
                         <hr>
                         <div class="form-group">
-                            <label> Nama Lengkap</label>
+                            <label> Nama Lengkap <span class="required" style="color: red">*</span></label>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>a. Ayah <i>(Sesuai Dengan Ijazah SIswa)</i></label>
+                                    <label>a. Ayah <i>(Sesuai Dengan Ijazah SIswa) </i></label>
                                     <br/>
                                     <label style="padding-top:30px">b. Ibu </label>
                                 </div>
@@ -352,7 +352,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label> Nomor KTP/NIK</label>
+                            <label> Nomor KTP/NIK <span class="required" style="color: red">*</span></label>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>a. Ayah </label>
@@ -373,6 +373,7 @@
                                 <ins>Pekerjaan</ins>
                                 &
                                 <ins>Pendidikan</ins>
+                                <span class="required" style="color: red">*</span>
                             </label>
                             <div class="row">
                                 <div class="col-md-6">
@@ -398,7 +399,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label> Alamat Tempat Tinggal <i>(Sesuai KK)</i></label>
+                            <label> Alamat Tempat Tinggal <i>(Sesuai KK) <span class="required" style="color: red">*</span></i></label>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -410,13 +411,13 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label>RT</label>
-                                        <input type="text" class="form-control" name="rt" style="border-radius: 0px">
+                                        <input type="text" class="form-control" name="rt" style="border-radius: 0px" placeholder="RT">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label>RW</label>
-                                        <input type="text" class="form-control" name="rw" style="border-radius: 0px">
+                                        <input type="text" class="form-control" name="rw" style="border-radius: 0px" placeholder="RW">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -507,7 +508,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label> Keterangan Dan Nomor HP</label>
+                                <label> Keterangan Dan Nomor HP <span class="required" style="color: red">*</span></label>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>a. Ayah </label>
@@ -564,7 +565,7 @@
                             <label for="jenis_kelamin_wali"> JENIS KELAMIN <span class="required"
                                                                             style="color: red">*</span></label>
                             <select id="jenis_kelamin_wali" class="form-control" name="">
-                                <option value="">--Pilih--</option>
+                                <option value="">-- Pilih --</option>
                                 <option value="">Laki-laki</option>
                                 <option value="">Perempuan</option>
                             </select>
@@ -615,13 +616,13 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label>RT</label>
-                                        <input type="text" class="form-control" name="" style="border-radius: 0px">
+                                        <input type="text" class="form-control" name="" style="border-radius: 0px" placeholder="RT">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label>RW</label>
-                                        <input type="text" class="form-control" name="" style="border-radius: 0px">
+                                        <input type="text" class="form-control" name="" style="border-radius: 0px" placeholder="RW">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
