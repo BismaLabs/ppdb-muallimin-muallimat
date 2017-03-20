@@ -103,7 +103,7 @@
                                 <label for="jenis_kelamin"> JENIS KELAMIN <span class="required"
                                                                                 style="color: red">*</span></label>
                                 <select id="jenis_kelamin" class="form-control" name="">
-                                    <option value="">--Pilih--</option>
+                                    <option value="">-- Pilih --</option>
                                     <option value="">Laki-laki</option>
                                     <option value="">Perempuan</option>
                                 </select>
