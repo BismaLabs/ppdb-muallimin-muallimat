@@ -17,7 +17,7 @@ class Cetak extends CI_Controller
     if ($this->apps->apps_id()) {
         $data = array(
             'title' => 'Cetak',
-            'dashboard' => TRUE,
+            'cetak' => TRUE,
         );
     $this->load->view('apps/part/header',$data);
     $this->load->view('apps/part/sidebar');

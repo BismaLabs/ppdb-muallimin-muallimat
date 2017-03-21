@@ -22,7 +22,7 @@
                     <div class="box-body">
                         <form method="GET" action="<?php echo base_url('apps/pages/search');?>" style="margin-top: 10px">
                             <div class = "input-group">
-                                <input type = "text" name = "q" class = "form-control input-md" placeholder="Masukkan kata kunci dan enter" autocomplete="off" id="articles">
+                                <input type = "text" name = "q" class = "form-control input-md" placeholder="Masukkan Judul Pages dan Enter" autocomplete="off" id="articles">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <span class = "input-group-btn">
                               <button class = "btn btn-default btn-md" type = "submit">

@@ -20,10 +20,10 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form method="GET" action="<?php echo base_url('apps/users/search');?>" style="margin-top: 10px">
+                        <form method="GET" action="<?php echo base_url('apps/ppdb/search');?>" style="margin-top: 10px">
                             <div class = "input-group">
-                                <input type = "text" name = "q" class = "form-control input-md" placeholder="Masukkan No NISN dan enter" autocomplete="off" id="articles">
-                                <input type="hidden" name="<?php //echo $this->security->get_csrf_token_name(); ?>" value="<?php //echo $this->security->get_csrf_hash(); ?>">
+                                <input type = "text" name = "q" class = "form-control input-md" placeholder="Masukkan Kode Pendaftaran atau Nama  dan Enter" autocomplete="off" id="articles">
+                                <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <span class = "input-group-btn">
                               <button class = "btn btn-default btn-md" type = "submit">
                                  <i class="fa fa-search"></i> Search

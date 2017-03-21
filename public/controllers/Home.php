@@ -8,10 +8,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Home extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        //load model
+        $this->load->model('web');
+    }
+
 	public function index()
 	{
 	    $data = array(
-	                'home' => TRUE,
+	                'home'          => TRUE,
+                    'pengumuman'    => $this->web->get_pages(1)
         );
 		$this->load->view('home/part/header', $data);
         $this->load->view('home/layout/home/home');

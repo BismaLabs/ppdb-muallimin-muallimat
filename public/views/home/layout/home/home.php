@@ -7,17 +7,7 @@
                     <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
                         <i class="icon-bell fa-3x"></i>
                         <div class="card-content" style="text-align: center;padding: 5px">
-                          PENGUMUMAN
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="<?php echo base_url() ?>daftar/" style="text-decoration: none;color:#23527c;">
-                    <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
-                        <i class="icon-user-follow fa-3x"></i>
-                        <div class="card-content" style="text-align: center;padding: 5px">
-                            DAFTAR ONLINE
+                            PENGUMUMAN
                         </div>
                     </div>
                 </a>
@@ -28,6 +18,16 @@
                         <i class="icon-book-open fa-3x"></i>
                         <div class="card-content" style="text-align: center;padding: 5px">
                             PANDUAN
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="<?php echo base_url() ?>daftar/" style="text-decoration: none;color:#23527c;">
+                    <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
+                        <i class="icon-user-follow fa-3x"></i>
+                        <div class="card-content" style="text-align: center;padding: 5px">
+                            DAFTAR ONLINE
                         </div>
                     </div>
                 </a>
@@ -46,8 +46,13 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
-                            <i class="icon-bell"></i> Informasi Pendaftaran
+                            <?php foreach ($pengumuman->result() as $hasil) { ?>
+                            <i class="icon-bell"></i> <?php echo $hasil->judul_page; ?>
                             <hr>
+                                <?php echo $hasil->isi_page; ?>
+                            <hr>
+                                <span style="font-size: 13px;color: #9d9d9d;">Last Update : <?php echo $this->apps->time_elapsed_string($hasil->updated_at) ?> </span>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

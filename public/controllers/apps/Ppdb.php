@@ -17,7 +17,7 @@ class Ppdb extends CI_Controller
     if ($this->apps->apps_id()){
         $data = array(
             'title' => 'Data Pendaftar',
-            'dashboard' => TRUE,
+            'ppdb'  => TRUE,
         );
     $this->load->view('apps/part/header',$data);
     $this->load->view('apps/part/sidebar');

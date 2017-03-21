@@ -13,21 +13,21 @@
               </a>
           </div>
             <div class="col-md-3">
-                <a href="<?php echo base_url() ?>daftar/" style="text-decoration: none;color:#23527c;">
-                    <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
-                        <i class="icon-user-follow fa-3x"></i>
-                        <div class="card-content" style="text-align: center;padding: 5px">
-                            DAFTAR ONLINE
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3">
                 <a href="<?php echo base_url() ?>panduan/" style="text-decoration: none;color:#23527c;">
                     <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
                         <i class="icon-book-open fa-3x"></i>
                         <div class="card-content" style="text-align: center;padding: 5px">
                             PANDUAN
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="<?php echo base_url() ?>daftar/" style="text-decoration: none;color:#23527c;">
+                    <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
+                        <i class="icon-user-follow fa-3x"></i>
+                        <div class="card-content" style="text-align: center;padding: 5px">
+                            DAFTAR ONLINE
                         </div>
                     </div>
                 </a>
@@ -47,11 +47,11 @@
                     <div class="card-content">
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
                           <a href="<?php echo base_url() ?>panduan/alur-pendaftaran/" style="text-decoration: none">
-                              <i class="icon-info"></i> Alur Pendaftaran
+                              <i class="icon-book-open"></i> Alur Pendaftaran
                           </a>
                           <hr>
-                            <a href="<?php echo base_url() ?>panduan/ketentuan/" style="text-decoration: none">
-                                <i class="icon-info"></i> Ketentuan & Persyaratan
+                            <a href="<?php echo base_url() ?>panduan/syarat-pendaftaran/" style="text-decoration: none">
+                                <i class="icon-book-open"></i>  Persyaratan Pendaftaran
                             </a>
                         </div>
                     </div>

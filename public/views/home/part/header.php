@@ -37,7 +37,7 @@
                     <a href="#" style="color: #fff" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-book-open"></i> Panduan <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url() ?>panduan/alur-pendaftaran/"><i class="icon-arrow-right"></i> Alur Pendaftaran</a></li>
-                        <li><a href="<?php echo base_url() ?>panduan/ketentuan/"><i class="icon-arrow-right"></i> Ketentuan & Persyartan</a></li>
+                        <li><a href="<?php echo base_url() ?>panduan/syarat-pendaftaran/"><i class="icon-arrow-right"></i> Syarat Pendaftaran </a></li>
                     </ul>
                 </li>
                 <li class="<?php if(isset($daftar)) { echo 'active-menu-navbar'; } ?>"><a href="<?php echo base_url() ?>daftar/" style="color: #fff"><i class="icon-user-follow"></i> Daftar Online</a></li>
@@ -51,7 +51,7 @@
     <div class="container">
         <div class="col-md-10">
             <p style="padding-top:70px;font-size:30px;color:#fff;font-family: Roboto;font-weight: 300"><i class="icon-graduation"></i> Selamat Datang di PPDB Madrasah Mu'allimin Mu'allimat </p>
-            <p style="margin-left:40px;color:#fff;font-family: Roboto;font-weight: 300"><i class="icon-pointer"></i> Tambak Beras, Jombang, Jawa Timur</p>
+            <p style="margin-left:35px;color:#fff;font-family: Roboto;font-weight: 300"><i class="icon-pointer"></i> Tambak Beras, Jombang, Jawa Timur</p>
         </div>
         <div class="col-md-2">
             <img src="<?php echo base_url() ?>resources/public/images/logo.png" style="width: 130px;margin-top: 50px">

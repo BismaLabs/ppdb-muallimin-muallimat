@@ -54,4 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
-$route['hasil-seleksi'] = "hasil";
+$route['panduan/syarat-pendaftaran'] = "panduan/syarat_pendaftaran";
+$route['panduan/alur-pendaftaran'] = "panduan/alur_pendaftaran";
