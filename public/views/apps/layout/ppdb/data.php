@@ -54,11 +54,11 @@
                                 <td>MI-BU</td>
                                 <td>1A</td>
                                 <td>Laki-Laki</td>
-                                <td>Lulus</td>
+                                <td><span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i> Validated</span>
+                                             <span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Delete ?"><i class="fa fa-trash"></i> Delete</span></td>
                                 <td>
                                   <div class="btn-group pull-right" role="group" >
-                                    <button type="button" class="btn btn-success">Edit</button>
-                                    <button type="button" class="btn btn-danger">Hapus</button>
+                                    <button type="button" class="btn btn-success">Validasi</button>
                                   </div>
                                 </td>
                               </tr>

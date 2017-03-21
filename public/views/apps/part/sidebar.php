@@ -29,7 +29,7 @@
             <li <?php if(isset($dashboard)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/dashboard/"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li <?php if(isset($users)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/users/"><i class="fa fa-user-circle-o"></i> <span>Users</span></a></li>
             <li <?php if(isset($pages)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/pages/"><i class="fa fa-television"></i> <span>Pages</span></a></li>
-            <li <?php if(isset($ppdb)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/ppdb/"><i class="fa fa-users"></i> <span>PPDB</span></a></li>
+            <li <?php if(isset($ppdb)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/ppdb/"><i class="fa fa-users"></i> <span>Data Pendaftar</span></a></li>
             <li <?php if(isset($cetak)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/cetak/"><i class="fa fa-print"></i> <span>Cetak</span></a></li>
             <li class="header">MAIN SYSTEM</li>
             <li <?php if(isset($systems)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>apps/systems/"><i class="fa fa-cogs"></i> <span>Setting System</span></a></li>
