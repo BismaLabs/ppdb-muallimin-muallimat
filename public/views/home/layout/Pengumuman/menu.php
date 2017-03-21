@@ -46,13 +46,9 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
-                          <a href="<?php echo base_url() ?>panduan/alur-pendaftaran/" style="text-decoration: none">
-                              <i class="icon-info"></i> Alur Pendaftaran
-                          </a>
-                          <hr>
-                            <a href="<?php echo base_url() ?>panduan/ketentuan/" style="text-decoration: none">
-                                <i class="icon-info"></i> Ketentuan & Persyaratan
-                            </a>
+                            <i class="icon-info"></i> Informasi
+                            <hr>
+                            <i class="icon-bell"></i> Pengumuman
                         </div>
                     </div>
                 </div>

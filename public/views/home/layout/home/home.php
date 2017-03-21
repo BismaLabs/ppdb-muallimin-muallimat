@@ -3,11 +3,11 @@
     <div class="row">
         <div class="col-md-8">
             <div class="col-md-3">
-                <a href="<?php echo base_url() ?>panduan/" style="text-decoration: none;color:#23527c;">
+                <a href="<?php echo base_url() ?>Pengumuman/" style="text-decoration: none;color:#23527c;">
                     <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
                         <i class="icon-book-open fa-3x"></i>
                         <div class="card-content" style="text-align: center;padding: 5px">
-                            PANDUAN
+                          PENGUMUMAN
                         </div>
                     </div>
                 </a>
@@ -23,11 +23,11 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a href="<?php echo base_url() ?>hasil-seleksi/" style="text-decoration: none;color:#23527c;">
+                <a href="<?php echo base_url() ?>panduan/" style="text-decoration: none;color:#23527c;">
                     <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
-                        <i class="icon-user-following fa-3x"></i>
+                        <i class="icon-book-open fa-3x"></i>
                         <div class="card-content" style="text-align: center;padding: 5px">
-                            HASIL SELEKSI
+                            PANDUAN
                         </div>
                     </div>
                 </a>

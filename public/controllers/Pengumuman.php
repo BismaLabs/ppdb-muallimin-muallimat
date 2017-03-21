@@ -6,12 +6,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @since    : 2017
  * @license  : https://maulayya.com/portofolio/ppdb-muallimin-muallimat/
  */
-class Panduan extends CI_Controller {
+class Pengumuman extends CI_Controller {
 
-    public function index()
-    {
-        $this->load->view('home/part/header');
-        $this->load->view('home/layout/Panduan/menu');
+	public function index()
+	{
+	    $data = array(
+	                'pengumuman' => TRUE,
+        );
+		$this->load->view('home/part/header', $data);
+        $this->load->view('home/layout/pengumuman/menu');
         $this->load->view('home/part/footer');
-    }
+	}
 }
