@@ -5,7 +5,7 @@
     <section class="content-header">
         <h1>
             <?php echo $title ?>
-            <small>Web Applications</small>
+            <small>PPDB Applications</small>
         </h1>
     </section>
 
@@ -18,7 +18,7 @@
                     <div class="inner">
                         <h3><?php //print $this->db->count_all('tbl_users') ?></h3>
 
-                        <p>USERS</p>
+                        <p style="text-align: center;font-size: 20px"><i class="fa fa-user-circle-o"></i> USERS</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
@@ -33,7 +33,7 @@
                     <div class="inner">
                         <h3><?php //print $week_visit ?></h3>
 
-                        <p>DATA PENDAFTAR</p>
+                        <p style="text-align: center;font-size: 20px"><i class="fa fa-users"></i> DATA PENDAFTAR</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -48,7 +48,7 @@
                     <div class="inner">
                         <h3><?php //print $month_visit ?></h3>
 
-                        <p>EXPORT</p>
+                        <p style="text-align: center;font-size: 20px"><i class="fa fa-file-excel-o"></i> EXPORT</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
@@ -63,12 +63,12 @@
                     <div class="inner">
                         <h3><?php //print $year_visit ?></h3>
 
-                        <p>SYSTEMS</p>
+                        <p style="text-align: center;font-size: 20px"><i class="fa fa-print"></i> CETAK</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="<?php echo base_url() ?>apps/systems/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="<?php echo base_url() ?>apps/cetak/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
             <div class="col-md-12">
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Grafik Pendaftaran</h3>
+                        <h3 class="box-title"><i class="fa fa-bar-chart-o"></i> Rekap Pendaftar</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">

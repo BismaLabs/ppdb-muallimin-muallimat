@@ -122,23 +122,23 @@
                                 <?php echo form_error('jenis_kelamin'); ?>
                             </div>
                             <div class="form-group">
-                                <label for="nisn"> NISN <i>(Nomor Induk Siswa Nasional) <span class="required"
+                                <label for="NISN"> NISN <i>(Nomor Induk Siswa Nasional) <span class="required"
                                                                                               style="color: red">*</span></i></label>
-                                <input type="text" class="form-control" id="nisn" name="nisn" value="<?php echo set_value('NISN') ?>"
+                                <input type="text" class="form-control" id="NISN" name="NISN" value="<?php echo set_value('NISN') ?>"
                                        placeholder="Masukkan NISN" style="border-radius: 0px">
                                 <?php echo form_error('NISN'); ?>
                             </div>
                             <div class="form-group">
-                                <label for="nik"> NIK <i>(Nomor Induk Kependudukan) <span class="required"
+                                <label for="NIK"> NIK <i>(Nomor Induk Kependudukan) <span class="required"
                                                                                           style="color: red">*</span></i></label>
-                                <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK"
+                                <input type="text" class="form-control" id="NIK" name="NIK" value="<?php echo set_value('NIK') ?>" placeholder="Masukkan NIK"
                                        style="border-radius: 0px">
                                 <?php echo form_error('NIK'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="tempat"> Tempat Lahir <span class="required"
                                                                         style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="tempat" name="tempat_lahir"
+                                <input type="text" class="form-control" id="tempat" name="tempat_lahir" value="<?php echo set_value('tempat_lahir') ?>"
                                        placeholder="Masukkan Tempat Lahir" style="border-radius: 0px">
                                 <?php echo form_error('tempat_lahir'); ?>
                             </div>
@@ -163,6 +163,7 @@
                                         <label for="bulan">Bulan <span class="required"
                                                                        style="color: red">*</span></label>
                                         <select style="" class="form-control" name="bulan_lahir">
+                                            <option value="">-- Pilih --</option>
                                             <option value="">Januari</option>
                                             <option value="">Februari</option>
                                             <option value="">Maret</option>
@@ -202,7 +203,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="anak_ke" placeholder="Jumlah"
-                                                   name="anak_ke" style="border-radius: 0px">
+                                                   name="anak_ke" value="<?php echo set_value('anak_ke') ?>" style="border-radius: 0px">
                                             <?php echo form_error('anak_ke'); ?>
                                         </div>
                                     </div>
@@ -211,8 +212,8 @@
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <input type="text" placeholder="Jumlah" name="jumlah_anak_ke" class="pull-left form-control"
-                                                   style="border-radius: 0px">
+                                            <input type="text" class="form-control" id="anak_ke" placeholder="Jumlah"
+                                                   name="jumlah_anak_ke" value="<?php echo set_value('jumlah_anak_ke') ?>" style="border-radius: 0px">
                                             <?php echo form_error('jumlah_anak_ke'); ?>
                                         </div>
                                     </div>
@@ -224,8 +225,8 @@
                             <div class="form-group">
                                 <label for="saudara_kandung"> Jumlah Saudara Kandung <span class="required"
                                                                                            style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="saudara_kandung" name="saudara_kandung"
-                                       placeholder="Saudara Kandung" style="border-radius: 0px">
+                                <input type="text" class="form-control" id="saudara_kandung" name="jumlah_saudara_kandung"
+                                       value="<?php echo set_value('jumlah_saudara_kandung') ?>" placeholder="Saudara Kandung" style="border-radius: 0px">
                                 <?php echo form_error('jumlah_saudara_kandung'); ?>
                             </div>
                             <div class="form-group">
@@ -234,14 +235,14 @@
                                         <div class="form-group">
                                             <label>Jumlah Adik <span class="required"
                                                                      style="color: red">*</span></label>
-                                            <input type="text" name="jumlah_adik" placeholder="Jumlah" class="form-control"
+                                            <input type="text" name="jumlah_adik" value="<?php echo set_value('jumlah_adik') ?>" placeholder="Jumlah" class="form-control"
                                                    style="border-radius: 0px">
                                             <?php echo form_error('jumlah_adik'); ?>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <label>Jumlah Kakak <span class="required" style="color: red">*</span></label>
-                                        <input type="text" name="jumlah_kakak" placeholder="Jumlah" class="form-control"
+                                        <input type="text" name="jumlah_kakak" value="<?php echo set_value('jumlah_kakak') ?>" placeholder="Jumlah" class="form-control"
                                                style="border-radius: 0px">
                                         <?php echo form_error('jumlah_kakak'); ?>
                                     </div>
@@ -249,13 +250,13 @@
                             </div>
                             <div class="form-group">
                                 <label>Asrama <i>(Bagi yang Tinggal Dipondok)</i></label>
-                                <input type="text" placeholder="Asrama" class="form-control" name="asrama"
+                                <input type="text" placeholder="Asrama" class="form-control" name="asrama" value="<?php echo set_value('asrama') ?>"
                                        style="border-radius: 0px">
                             </div>
                             <div class="form-group">
                                 <label>Nomor Kartu Keluarga <i>(KK) <span class="required"
                                                                           style="color: red">*</span></i></label>
-                                <input type="text" placeholder="Nomor Kartu Keluarga" class="form-control" name="kk"
+                                <input type="text" placeholder="Nomor Kartu Keluarga" class="form-control" name="kk" value="<?php echo set_value('kk') ?>"
                                        style="border-radius: 0px">
                                 <?php echo form_error('kk'); ?>
                             </div>
@@ -275,14 +276,14 @@
                                         <div class="form-group">
                                             <label>Nama Madrasah Asal <i>(*Disertai Kota Madrasah) <span
                                                             class="required" style="color: red">*</span></i></label>
-                                            <input type="text" placeholder="Nama Madrasah" name="madrasah_asal"
+                                            <input type="text" placeholder="Nama Madrasah" name="madrasah_asal" value="<?php echo set_value('madrasah_asal') ?>"
                                                    class="form-control" style="border-radius: 0px">
                                             <?php echo form_error('madrasah_asal'); ?>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <label>Kota <span class="required" style="color: red">*</span></label>
-                                        <input type="text" placeholder="Kota/Kabupaten" name="kota_madrasah" class="form-control"
+                                        <input type="text" placeholder="Kota/Kabupaten" name="kota_madrasah" value="<?php echo set_value('kota_madrasah') ?>" class="form-control"
                                                style="border-radius: 0px">
                                         <?php echo form_error('kota_madrasah'); ?>
                                     </div>
@@ -290,7 +291,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Nomor NPSN <span class="required" style="color: red">*</span></label>
-                                <input type="text" placeholder="No NPSN" class="form-control" name="no_npsn"
+                                <input type="text" placeholder="No NPSN" class="form-control" name="NPSN" value="<?php echo set_value('NPSN') ?>"
                                        style="border-radius: 0px">
                                 <?php echo form_error('NPSN'); ?>
                             </div>
@@ -312,7 +313,7 @@
                                 <div class="form-group">
                                     <label>Nomor Peserta Ujian Nasional <span class="required"
                                                                               style="color: red">*</span></label>
-                                    <input type="text" placeholder="No UN" name="no_un" class="form-control"
+                                    <input type="text" placeholder="No UN" name="no_un" value="<?php echo set_value('no_un') ?>" class="form-control"
                                            style="border-radius: 0px">
                                     <?php echo form_error('no_un'); ?>
                                 </div>
@@ -605,8 +606,7 @@
                               <input type="text" class="form-control" name="nama_wali" value="Nama Lengkap">
                         </div>
                         <div class="form-group">
-                            <label for="jenis_kelamin_wali"> JENIS KELAMIN <span class="required"
-                                                                            style="color: red">*</span></label>
+                            <label for="jenis_kelamin_wali"> JENIS KELAMIN</label>
                             <select id="jenis_kelamin_wali" class="form-control" name="jenis_kelamin_wali">
                                 <option value="">-- Pilih --</option>
                                 <option value="Laki-laki">Laki-laki</option>

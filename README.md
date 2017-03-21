@@ -1,2 +1,2 @@
 # ppdb-muallimin-muallimat
-Repository PPDB Web Applications 
+Repository PPDB PPDB Applications 
