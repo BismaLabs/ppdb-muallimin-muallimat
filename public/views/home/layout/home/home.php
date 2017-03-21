@@ -70,7 +70,7 @@
             <div class="card">
                 <div class="card-content" style="min-height: 60px">
                     <i class="fa fa-building"></i> Alamat Kantor : <br />
-                    Jl. KH. Wahab Hasbullah, Gg. PPBU No. 28, RT02/RW03, Bahrul Ulum, Tambakberas, Tambakrejo, Tambak Rejo, Kec. Jombang, Kabupaten Jombang, Jawa Timur 61451, Indonesia
+                    Jl. KH. Wahab Hasbullah, Gg. PPBU No. 28, RT02/RW03, Bahrul Ulum, Tambakberas, Jombang, Jawa Timur, Indonesia
                     <br>
                     <br>
                     <i class="fa fa-phone"></i> Telephone : <br />

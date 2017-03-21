@@ -10,7 +10,10 @@ class Hasil extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('home/part/header');
+        $data = array(
+            'hasil' => TRUE
+        );
+        $this->load->view('home/part/header', $data);
         $this->load->view('home/layout/hasil/data');
         $this->load->view('home/part/footer');
     }
