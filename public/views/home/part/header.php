@@ -15,6 +15,8 @@
     <link href="<?php echo base_url() ?>resources/public/css/custom.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/css/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/css/line-icons/line-icons.css" rel="stylesheet">
+    <script src="<?php echo base_url() ?>resources/public/js/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>resources/public/js/bootstrap.min.js"></script>
 </head>
 
 <body style="background-color: #f1f1f1">
