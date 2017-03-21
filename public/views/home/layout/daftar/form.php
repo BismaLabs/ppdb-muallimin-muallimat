@@ -109,7 +109,7 @@
                             <div class="form-group">
                                 <label for="nama_lengkap"> NAMA LENGKAP <i>(Sesuai Ijazah) <span class="required"
                                                                                                  style="color: red">*</span></i></label>
-                                <input type="text" class="form-control" id="nama_lengkap" value="<?php echo set_value('nama') ?>" name="nama_lengkap"
+                                <input type="text" class="form-control" id="nama_lengkap" value="<?php echo set_value('nama') ?>" name="nama"
                                        placeholder="Masukkan Nama Lengkap" style="border-radius: 0px">
                                 <?php echo form_error('nama'); ?>
                             </div>
@@ -126,7 +126,7 @@
                             <div class="form-group">
                                 <label for="nisn"> NISN <i>(Nomor Induk Siswa Nasional) <span class="required"
                                                                                               style="color: red">*</span></i></label>
-                                <input type="text" class="form-control" id="nisn" name="nisn"
+                                <input type="text" class="form-control" id="nisn" name="nisn" value="<?php echo set_value('NISN') ?>"
                                        placeholder="Masukkan NISN" style="border-radius: 0px">
                                 <?php echo form_error('NISN'); ?>
                             </div>
