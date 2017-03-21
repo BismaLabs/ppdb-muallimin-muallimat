@@ -108,6 +108,59 @@ class Apps extends CI_Model{
         return $this->db->get_where('tbl_users', $id_user);
     }
 
+    // fungsi pages
+    function count_pages()
+    {
+        return $this->db->get('tbl_pages');
+    }
+
+    function index_pages($halaman,$batas)
+    {
+        $query = "SELECT * FROM tbl_pages as a JOIN tbl_users as b ON a.user_id = b.id_user  ORDER BY judul_page ASC limit $halaman, $batas";
+        return $this->db->query($query);
+    }
+
+    function edit_pages($id_page)
+    {
+        $id_page  =  array('id_page'=> $id_page);
+        return $this->db->get_where('tbl_pages',$id_page);
+    }
+
+    function total_search_pages($keyword)
+    {
+        $query = $this->db->like('judul_page',$keyword)->get('tbl_pages');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    public function search_index_pages($keyword,$limit,$offset)
+    {
+        $query = $this->db->select('*')
+            ->from('tbl_pages a')
+            ->join('tbl_users b','a.user_id = b.id_user')
+            ->limit($limit,$offset)
+            ->like('a.judul_page',$keyword)
+            ->limit($limit,$offset)
+            ->order_by('a.judul_page','ASC')
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query;
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
     //fungsi date ago
     function time_elapsed_string($datetime, $full = false) {
         $today = time();
