@@ -33,7 +33,7 @@
                         </form>
                         <!-- Table Data -->
                         <div class="table-responsive">
-                          <table class="table table-striped table-bordered">
+                          <table class="table table-bordered table-striped table-hover" style="margin-top:20px;font-family: Roboto;font-weight: 300;">
                             <thead>
                               <tr>
                                 <th>No. Pendaftaran</th>
@@ -54,11 +54,12 @@
                                 <td>MI-BU</td>
                                 <td>1A</td>
                                 <td>Laki-Laki</td>
-                                <td><span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i> Validated</span>
-                                             <span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Delete ?"><i class="fa fa-trash"></i> Delete</span></td>
+                                <td>
+                                    <span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Valid"> Valid</span>
+                                    <span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Invalid"> Invalid</span></td>
                                 <td>
                                   <div class="btn-group pull-right" role="group" >
-                                    <button type="button" class="btn btn-success">Validasi</button>
+                                    <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-pencil"></i> Update</a>
                                   </div>
                                 </td>
                               </tr>
