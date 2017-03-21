@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login - PPDB Mu'allimin Mu'allimat, Tambak Beras, Jombang</title>
+    <title>Login - <?php echo systems('admin_title') ?></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/frontend/font-awesome/css/font-awesome.min.css">
@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="text-center" style="margin-top: 10px;font-size: 15px;padding: 6px 6px">
-        <?php //echo systems('admin_footer') ?>
+        <?php echo systems('admin_footer') ?>
     </div>
 </div>
 <script src="<?php echo base_url() ?>resources/backend/plugins/jQuery/jquery-2.2.3.min.js"></script>
