@@ -16,7 +16,7 @@
                 <?php echo $this->session->flashdata('notif') ?>
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-television"></i> Data Pges</h3>
+                        <h3 class="box-title"><i class="fa fa-television"></i> Data Pages</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">

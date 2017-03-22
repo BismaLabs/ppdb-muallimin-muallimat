@@ -28,4 +28,37 @@ class Cetak extends CI_Controller
      return FALSE;
  }
 }
+
+public function data_valid(){
+  if ($this->apps->apps_id()) {
+      $data = array(
+          'title' => 'Cetak',
+          'cetak' => TRUE,
+      );
+  $this->load->view('apps/part/header',$data);
+  $this->load->view('apps/part/sidebar');
+  $this->load->view('apps/layout/cetak/data_valid');
+  $this->load->view('apps/part/footer');
+}else {
+   show_404();
+   return FALSE;
+}
+}
+
+public function data_invalid(){
+  if ($this->apps->apps_id()) {
+      $data = array(
+          'title' => 'Cetak',
+          'cetak' => TRUE,
+      );
+  $this->load->view('apps/part/header',$data);
+  $this->load->view('apps/part/sidebar');
+  $this->load->view('apps/layout/cetak/data_invalid');
+  $this->load->view('apps/part/footer');
+}else {
+   show_404();
+   return FALSE;
+}
+}
+
 }

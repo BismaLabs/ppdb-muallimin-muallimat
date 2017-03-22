@@ -16,7 +16,7 @@
                 <?php echo $this->session->flashdata('notif') ?>
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-users"></i> Data PPDB</h3>
+                        <h3 class="box-title"><i class="fa fa-users"></i> Data Siswa</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -43,7 +43,11 @@
                                 <th>Kelas</th>
                                 <th>Jenis Kelamin</th>
                                 <th>Keterangan</th>
-                                <th></th>
+                                <th>
+                                  <div class="btn-group pull-right" role="group" >
+                                  <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-pencil"></i> Cetak Data Siswa</a>
+                                </div>
+                              </th>
                               </tr>
                             </thead>
                             <tbody>
@@ -56,13 +60,6 @@
                                 <td>Laki-Laki</td>
                                 <td>
                                     <span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Valid"> Valid</span>
-                                    <span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Invalid"> Invalid</span></td>
-                                <td>
-                                  <div class="btn-group pull-right" role="group" >
-                                    <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-print"></i> Cetak</a>
-                                    <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-pencil"></i> Update</a>
-                                  </div>
-                                </td>
                               </tr>
                             </tbody>
                         </table>
