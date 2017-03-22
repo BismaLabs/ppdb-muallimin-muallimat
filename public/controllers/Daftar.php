@@ -160,9 +160,7 @@ class Daftar extends CI_Controller {
                            'kode_pendaftaran' => $random,
                 );
                 //load view with data
-                $this->load->view('home/part/header', $data);
-                $this->load->view('home/layout/daftar/success');
-                $this->load->view('home/part/footer');
+                $this->load->view('home/layout/daftar/success', $data);
 
             }
 

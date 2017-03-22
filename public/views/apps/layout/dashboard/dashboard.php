@@ -77,7 +77,7 @@
             <div class="col-md-12">
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-bar-chart-o"></i> Rekap Pendaftar</h3>
+                        <h3 class="box-title"><i class="fa fa-bar-chart-o"></i> Rekap Semua Data Pendaftar</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
