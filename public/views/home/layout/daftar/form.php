@@ -119,8 +119,8 @@
                                                                             style="color: red">*</span></label>
                             <select id="jenis_kelamin" class="form-control" name="">
                                 <option value="">-- Pilih --</option>
-                                <option value="">Laki-laki</option>
-                                <option value="">Perempuan</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
                             </select>
                             <?php echo form_error('jenis_kelamin'); ?>
                         </div>
