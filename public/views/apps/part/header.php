@@ -33,6 +33,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
+            <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="<?php echo base_url() ?>" target="_blank">Visit Site <i class="fa fa-sign-out"></i></a>
+                </li>
+            </ul>
+            </div>
 
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
@@ -65,7 +72,7 @@
                                     <a href="<?php echo base_url() ?>apps/users/edit/<?php echo $this->encryption->encode($this->session->userdata('apps_id')) ?>/" class="btn btn-default btn-flat"><i class="fa fa-user-circle-o"></i> Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="<?php echo base_url() ?>apps/dashboard/logout/" class="btn btn-default btn-flat"> Logout <i class="fa fa-sign-out"></i></a>
+                                    <a href="<?php echo base_url() ?>apps/dashboard/logout/" class="btn btn-default btn-flat"> Logout <i class="fa fa-ban"></i></a>
                                 </div>
                             </li>
                         </ul>
