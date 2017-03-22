@@ -229,6 +229,166 @@
                     <!-- /.box-body -->
                 </div>
             </div>
+
+<!-- data sudah divalidasi -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title"><i class="fa fa-bar-chart-o"></i> Rekap Data Pendaftar Tervalidasi</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover" style="font-family: Roboto;font-weight: 300;">
+                                <tbody>
+                                <thead>
+                                <tr>
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-mortar-board"></i> KELAS</th>
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-male"></i> LAKI - LAKI</th>
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-female"></i> PEREMPUAN</th>
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-list-ul"></i> JUMLAH</th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td class="text-center">1A</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            echo $angka1 + $angka2;
+                                            ?>
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">1B</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            echo $angka1 + $angka2;
+                                            ?>
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2A</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            echo $angka1 + $angka2;
+                                            ?>
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2B</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            echo $angka1 + $angka2;
+                                            ?>
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            echo $angka1 + $angka2;
+                                            ?>
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            echo $angka1 + $angka2;
+                                            ?>
+                                        </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><b>JUMLAH</b></td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+
+                                            echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5 + $angka6;
+                                            ?>
+                                        </b>
+                                    </td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+
+                                            echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5 + $angka6;
+                                            ?>
+                                        </b>
+                                    </td>
+                                    <td>
+                                        <b>
+                                            <?php
+                                            $jumlah1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") + $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+
+                                            echo $jumlah1 + $jumlah2 + $jumlah3 + $jumlah4 + $jumlah5 + $jumlah6;
+                                            ?>
+                                        </b>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+
         </div>
 
     </div>
