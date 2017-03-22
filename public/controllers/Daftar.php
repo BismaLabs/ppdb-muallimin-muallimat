@@ -11,7 +11,9 @@ class Daftar extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-
+        //load model
+        $this->load->model('apps');
+        //load library
         $this->load->library(array('form_validation', 'recaptcha'));
 
     }
@@ -132,6 +134,38 @@ class Daftar extends CI_Controller {
         if($this->form_validation->run() == TRUE)
         {
 
+            $this->load->helper('string');
+            $random = strtoupper(random_string('alnum', 6));
+
+            $checking_kode = $this->apps->check_one('tbl_siswa', array('kode_pendaftaran' => $random));
+
+            if($checking_kode != FALSE)
+            {
+                $this->session->set_flashdata('notif', '<div class="alert alert-danger alert-dismissible" style="font-family:Roboto">
+			                                                    <i class="fa fa-exclamation-circle"></i> System error! silahkan ulangi lagi.
+			                                                </div>');
+                //redirect halaman
+                redirect('daftar?source=error&utf8=✓');
+            }else {
+
+                $insert = array(
+
+                          '',
+                );
+
+                $this->db->insert("tbl_siswa", $insert);
+
+                $data = array (
+
+                           'kode_pendaftaran' => $random,
+                );
+                //load view with data
+                $this->load->view('home/part/header', $data);
+                $this->load->view('home/layout/daftar/success');
+                $this->load->view('home/part/footer');
+
+            }
+
         }else{
             $this->load->view('home/part/header', $data);
             $this->load->view('home/layout/daftar/form');
@@ -155,5 +189,18 @@ class Daftar extends CI_Controller {
                                                                         </div>' );
             return false;
         }
+    }
+
+    function test_random()
+    {
+        $this->load->helper('string');
+        $random = strtoupper(random_string('alnum', 6));
+
+        $data = array (
+
+            'kode_pendaftaran' => $random,
+        );
+        //load view with data
+        $this->load->view('home/layout/daftar/success', $data);
     }
 }
