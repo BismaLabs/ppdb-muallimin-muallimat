@@ -16,7 +16,7 @@
                 <?php echo $this->session->flashdata('notif') ?>
                 <div class="box box-solid">
                     <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-users"></i> Data PPDB</h3>
+                        <h3 class="box-title"><i class="fa fa-users"></i> Data Pendaftar</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
