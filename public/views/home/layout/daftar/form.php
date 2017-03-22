@@ -75,18 +75,18 @@
                                     <div id="form1" style="display:none">
                                         <select class="form-control" name="pendaftaran_kelas">
                                             <option value="">-- Pilih --</option>
-                                            <option value="Kelas 1A">Kelas 1A</option>
-                                            <option value="Kelas 1B">Kelas 1B</option>
-                                            <option value="Kelas 2A">Kelas 2A</option>
-                                            <option value="Kelas 2B">Kelas 2B</option>
+                                            <option value="1A">Kelas 1A</option>
+                                            <option value="1B">Kelas 1B</option>
+                                            <option value="2A">Kelas 2A</option>
+                                            <option value="2B">Kelas 2B</option>
                                         </select>
                                     </div>
                                     <div id="form2" style="display:none">
                                         <select class="form-control" name="pendaftaran_kelas">
                                             <option value="">-- Pilih --</option>
-                                            <option value="Kelas 2">Kelas 2</option>
-                                            <option value="Kelas 3">Kelas 3</option>
-                                            <option value="Kelas 4">Kelas 4</option>
+                                            <option value="2">Kelas 2</option>
+                                            <option value="3">Kelas 3</option>
+                                            <option value="4">Kelas 4</option>
                                         </select>
                                     </div>
                                     <?php echo form_error('pendaftaran_kelas'); ?>

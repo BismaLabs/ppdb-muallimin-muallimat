@@ -36,33 +36,30 @@
                           <table class="table table-bordered table-striped table-hover" style="margin-top:20px;font-family: Roboto;font-weight: 300;">
                             <thead>
                               <tr>
-                                <th>No. Pendaftaran</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Asal Sekolah</th>
-                                <th>Kelas</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Keterangan</th>
-                                <th></th>
+                                <th class="text-center" style="color: #000;"><i class="fa fa-list-ul"></i> NO. PENDAFTARAN</th>
+                                <th class="text-center" style="color: #000;"><i class="fa fa-user-circle"></i> NAMA LENGKAP</th>
+                                <th class="text-center" style="color: #000;"><i class="fa fa-graduation-cap"></i> ASAL SEKOLAH</th>
+                                <th class="text-center" style="color: #000;"><i class="fa fa-building-o"></i> KELAS</th>
+                                <th class="text-center" style="color: #000;"><i class="fa fa-mars"></i> JENIS KELAMIN</th>
+                                <th class="text-center" style="color: #000;"><i class="fa fa-info-circle"></i> STATUS</th>
+                                <th class="text-center" style="color: #000;"><i class="fa fa-cogs"></i> OPTIONS</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td>1</td>
                                 <td>Ishak</td>
-                                <td>Jombang</td>
                                 <td>MI-BU</td>
                                 <td>1A</td>
                                 <td>Laki-Laki</td>
-                                <td>
-                                    <span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Valid"> Valid</span>
-                                    <span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Invalid"> Invalid</span></td>
+                                <td style="text-align: center">
+                                    <span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Invalid"><i class="fa fa-ban"></i> Invalid</span>
                                 <td>
                                   <div class="btn-group pull-right" role="group" >
-                                    <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-print"></i> Cetak</a>
-                                    <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-pencil"></i> Update</a>
+                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #003684;" data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-check-circle-o"></i> Update</a>
+                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-print"></i> Cetak</a>
                                   </div>
-                                </td>
+                                 </td>
                               </tr>
                             </tbody>
                         </table>
