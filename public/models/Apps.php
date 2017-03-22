@@ -161,6 +161,13 @@ class Apps extends CI_Model{
         }
     }
 
+    //get export
+    function get_export()
+    {
+        $query = "SELECT * FROM tbl_siswa";
+        return $this->db->query($query);
+    }
+
     //fungsi date ago
     function time_elapsed_string($datetime, $full = false) {
         $today = time();
