@@ -21,10 +21,6 @@
                   <div class="box-body">
                     <div class="card-content">
                         <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
-                          <a href="#" style="text-decoration: none">
-                              <i class="fa fa-file"></i> Cetak Formulir Pendaftar
-                          </a>
-                          <hr>
                             <a href="<?php echo base_url() ?>apps/cetak/data_valid" style="text-decoration: none">
                                 <i class="fa fa-file-excel-o"></i>  Data Pendaftar Valid
                             </a>

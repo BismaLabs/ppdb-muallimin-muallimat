@@ -59,13 +59,13 @@
                                     <span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Invalid"> Invalid</span></td>
                                 <td>
                                   <div class="btn-group pull-right" role="group" >
+                                    <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-print"></i> Cetak</a>
                                     <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-pencil"></i> Update</a>
                                   </div>
                                 </td>
                               </tr>
                             </tbody>
                         </table>
-                        <p class="pull-left">Jombang: Tangal-Bulan-Tahun</p>
                         </div>
                     </div>
                     <!-- /.box-body -->

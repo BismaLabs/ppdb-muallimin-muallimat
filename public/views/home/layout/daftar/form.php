@@ -76,6 +76,8 @@
                                         <select class="form-control" name="pendaftaran_kelas">
                                             <option value="">-- Pilih --</option>
                                             <option value="Kelas 1A">Kelas 1A</option>
+                                            <option value="Kelas 1B">Kelas 1B</option>
+                                            <option value="Kelas 2A">Kelas 2A</option>
                                             <option value="Kelas 2B">Kelas 2B</option>
                                         </select>
                                     </div>

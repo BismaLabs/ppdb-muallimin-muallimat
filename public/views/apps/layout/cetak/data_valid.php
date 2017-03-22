@@ -63,7 +63,6 @@
                               </tr>
                             </tbody>
                         </table>
-                        <p class="pull-left">Jombang: Tangal-Bulan-Tahun</p>
                         </div>
                     </div>
                     <!-- /.box-body -->
