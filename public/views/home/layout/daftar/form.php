@@ -69,12 +69,11 @@
                                         <span class="required" style="color: red">*</span></label>
                                     <div id="form">
                                         <select class="form-control" name="">
-                                            <option value=""></option>
+
                                         </select>
                                     </div>
                                     <div id="form1" style="display:none">
                                         <select class="form-control" name="pendaftaran_kelas">
-                                            <option value="">-- Pilih --</option>
                                             <option value="1A">Kelas 1A</option>
                                             <option value="1B">Kelas 1B</option>
                                             <option value="2A">Kelas 2A</option>
@@ -83,7 +82,6 @@
                                     </div>
                                     <div id="form2" style="display:none">
                                         <select class="form-control" name="pendaftaran_kelas">
-                                            <option value="">-- Pilih --</option>
                                             <option value="2">Kelas 2</option>
                                             <option value="3">Kelas 3</option>
                                             <option value="4">Kelas 4</option>
@@ -119,7 +117,7 @@
                         <div class="form-group">
                             <label for="jenis_kelamin"> JENIS KELAMIN <span class="required"
                                                                             style="color: red">*</span></label>
-                            <select id="jenis_kelamin" class="form-control" name="">
+                            <select id="jenis_kelamin" class="form-control" name="jenis_kelamin">
                                 <option value="">-- Pilih --</option>
                                 <option value="Laki-laki">Laki-laki</option>
                                 <option value="Perempuan">Perempuan</option>
@@ -129,18 +127,18 @@
                         <div class="form-group">
                             <label for="NISN"> NISN <i>(Nomor Induk Siswa Nasional) <span class="required"
                                                                                           style="color: red">*</span></i></label>
-                            <input type="text" class="form-control" id="NISN" name="NISN"
+                            <input type="text" class="form-control" id="nisn" name="nisn"
                                    value="<?php echo set_value('NISN') ?>"
                                    placeholder="Masukkan NISN" style="border-radius: 0px">
-                            <?php echo form_error('NISN'); ?>
+                            <?php echo form_error('nisn'); ?>
                         </div>
                         <div class="form-group">
                             <label for="NIK"> NIK <i>(Nomor Induk Kependudukan) <span class="required"
                                                                                       style="color: red">*</span></i></label>
-                            <input type="text" class="form-control" id="NIK" name="NIK"
-                                   value="<?php echo set_value('NIK') ?>" placeholder="Masukkan NIK"
+                            <input type="text" class="form-control" id="NIK" name="nik"
+                                   value="<?php echo set_value('nik') ?>" placeholder="Masukkan NIK"
                                    style="border-radius: 0px">
-                            <?php echo form_error('NIK'); ?>
+                            <?php echo form_error('nik'); ?>
                         </div>
                         <div class="form-group">
                             <label for="tempat"> Tempat Lahir <span class="required"
@@ -198,18 +196,18 @@
                                                                    style="color: red">*</span></label>
                                     <select style="" class="form-control" name="bulan_lahir">
                                         <option value="">-- Pilih --</option>
-                                        <option value="">Januari</option>
-                                        <option value="">Februari</option>
-                                        <option value="">Maret</option>
-                                        <option value="">April</option>
-                                        <option value="">Mei</option>
-                                        <option value="">Juni</option>
-                                        <option value="">Juli</option>
-                                        <option value="">Agustus</option>
-                                        <option value="">September</option>
-                                        <option value="">Oktober</option>
-                                        <option value="">November</option>
-                                        <option value="">Desember</option>
+                                        <option value="Januari">Januari</option>
+                                        <option value="Februari">Februari</option>
+                                        <option value="Maret">Maret</option>
+                                        <option value="April">April</option>
+                                        <option value="Mei">Mei</option>
+                                        <option value="Juni">Juni</option>
+                                        <option value="Juli">Juli</option>
+                                        <option value="Agustus">Agustus</option>
+                                        <option value="September">September</option>
+                                        <option value="Oktober">Oktober</option>
+                                        <option value="November">November</option>
+                                        <option value="Desember">Desember</option>
                                     </select>
                                     <?php echo form_error('bulan_lahir'); ?>
                                 </div>
@@ -358,10 +356,10 @@
                         </div>
                         <div class="form-group">
                             <label>Nomor NPSN <span class="required" style="color: red">*</span></label>
-                            <input type="text" placeholder="No NPSN" class="form-control" name="NPSN"
-                                   value="<?php echo set_value('NPSN') ?>"
+                            <input type="text" placeholder="No NPSN" class="form-control" name="npsn"
+                                   value="<?php echo set_value('npsn') ?>"
                                    style="border-radius: 0px">
-                            <?php echo form_error('NPSN'); ?>
+                            <?php echo form_error('npsn'); ?>
                         </div>
                         <div class="form-group">
                             <div class="row">
@@ -436,11 +434,11 @@
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="nama_ayah"
                                            placeholder="Masukkan Nama Lengkap Ayah" style="border-radius: 0px">
-                                    <?php echo form_error('nama_ayah_kandung'); ?>
+                                    <?php echo form_error('nama_ayah'); ?>
                                     <br/>
                                     <input type="text" class="form-control" name="nama_ibu"
                                            placeholder="Masukkan Nama Ibu" style="border-radius: 0px">
-                                    <?php echo form_error('nama_ibu_kandung'); ?>
+                                    <?php echo form_error('nama_ibu'); ?>
                                 </div>
                             </div>
                         </div>
@@ -481,7 +479,7 @@
                                            placeholder="Masukkan Pekerjaan Ayah" style="border-radius: 0px">
                                     <?php echo form_error('pekerjaan_ayah'); ?>
                                     <br>
-                                    <input type="text" class="form-control" name="pekerjan_ibu"
+                                    <input type="text" class="form-control" name="pekerjaan_ibu"
                                            placeholder="Masukkan Pekerjaan Ibu" style="border-radius: 0px">
                                     <?php echo form_error('pekerjaan_ibu'); ?>
                                 </div>
@@ -491,7 +489,7 @@
                                            placeholder="Masukkan Pendidikan Ayah" style="border-radius: 0px">
                                     <?php echo form_error('pendidikan_ayah'); ?>
                                     <br>
-                                    <input type="text" class="form-control" name="penddikan_ibu"
+                                    <input type="text" class="form-control" name="pendidikan_ibu"
                                            placeholder="Masukkan Pendidikan Ibu" style="border-radius: 0px">
                                     <?php echo form_error('pendidikan_ibu'); ?>
                                 </div>
@@ -506,7 +504,7 @@
                                         <label>Jln Dsn.</label>
                                         <input type="text" class="form-control" name="jln_dsn"
                                                placeholder="Masukkan Jalan Dusun " style="border-radius: 0px">
-                                        <?php echo form_error('alamat_jalan'); ?>
+                                        <?php echo form_error('jln_dsn'); ?>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
@@ -514,7 +512,7 @@
                                         <label>RT</label>
                                         <input type="text" class="form-control" name="rt" style="border-radius: 0px"
                                                placeholder="RT">
-                                        <?php echo form_error('alamat_rt'); ?>
+                                        <?php echo form_error('rt'); ?>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
@@ -522,7 +520,7 @@
                                         <label>RW</label>
                                         <input type="text" class="form-control" name="rw" style="border-radius: 0px"
                                                placeholder="RW">
-                                        <?php echo form_error('alamat_rw'); ?>
+                                        <?php echo form_error('rw'); ?>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -530,7 +528,7 @@
                                         <label>Desa.</label>
                                         <input type="text" class="form-control" name="desa" placeholder="Desa"
                                                style="border-radius: 0px">
-                                        <?php echo form_error('alamat_desa'); ?>
+                                        <?php echo form_error('desa'); ?>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -538,7 +536,7 @@
                                         <label>Kec.</label>
                                         <input type="text" class="form-control" name="kecamatan" placeholder="Kecamatan"
                                                style="border-radius: 0px">
-                                        <?php echo form_error('alamat_kecamatan'); ?>
+                                        <?php echo form_error('kecamatan'); ?>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -546,7 +544,7 @@
                                         <label>Kab.</label>
                                         <input type="text" class="form-control" name="kabupaten"
                                                placeholder="Masukkan Kabupaten/Kota " style="border-radius: 0px">
-                                        <?php echo form_error('alamat_kabupaten'); ?>
+                                        <?php echo form_error('kabupaten'); ?>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -554,7 +552,7 @@
                                         <label>Kode POS</label>
                                         <input type="text" class="form-control" name="kode_pos"
                                                placeholder="Masukkan Kode POS " style="border-radius: 0px">
-                                        <?php echo form_error('alamat_pos'); ?>
+                                        <?php echo form_error('kode_pos'); ?>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -679,7 +677,7 @@
                         <hr>
                         <div class="form-group">
                             <label> Nama Lengkap</label>
-                            <input type="text" class="form-control" name="nama_wali" value="Nama Lengkap">
+                            <input type="text" class="form-control" name="nama_wali">
                         </div>
                         <div class="form-group">
                             <label for="jenis_kelamin_wali"> JENIS KELAMIN</label>
@@ -837,7 +835,7 @@
                         </div>
                         <div class="form-group">
                             <label> Recaptcha <span class="required" style="color: red">*</span></label>
-                            <?php echo $recaptcha_html; ?>
+                            <?php echo $recaptcha_html;?>
                             <?php echo form_error('g-recaptcha-response'); ?>
                         </div>
                         <hr>
