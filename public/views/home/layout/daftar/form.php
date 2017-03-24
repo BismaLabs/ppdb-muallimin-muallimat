@@ -387,6 +387,8 @@
                                 <?php echo form_error('no_un'); ?>
                             </div>
                         </div>
+                      </div>
+                    </div>
 
 
 
@@ -836,6 +838,7 @@
                                         </div>
                                     </div>
                                 </div>
+                              </div>
 
                         <div class="form-group">
                             <?php echo $recaptcha_html;?>
