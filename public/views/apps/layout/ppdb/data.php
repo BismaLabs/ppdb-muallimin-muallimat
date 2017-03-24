@@ -38,10 +38,10 @@
                               <tr>
                                 <th class="text-center" style="color: #000;"><i class="fa fa-list-ul"></i> NO. PENDAFTARAN</th>
                                 <th class="text-center" style="color: #000;"><i class="fa fa-user-circle"></i> NAMA LENGKAP</th>
-                                <th class="text-center" style="color: #000;"><i class="fa fa-graduation-cap"></i> ASAL SEKOLAH</th>
                                 <th class="text-center" style="color: #000;"><i class="fa fa-building-o"></i> KELAS</th>
                                 <th class="text-center" style="color: #000;"><i class="fa fa-mars"></i> JENIS KELAMIN</th>
                                 <th class="text-center" style="color: #000;"><i class="fa fa-info-circle"></i> STATUS</th>
+                                  <th class="text-center" style="color: #000;"><i class="fa fa-print"></i> CETAK</th>
                                 <th class="text-center" style="color: #000;"><i class="fa fa-cogs"></i> OPTIONS</th>
                               </tr>
                             </thead>
@@ -49,15 +49,18 @@
                               <tr>
                                 <td>1</td>
                                 <td>Ishak</td>
-                                <td>MI-BU</td>
                                 <td>1A</td>
                                 <td>Laki-Laki</td>
                                 <td style="text-align: center">
                                     <span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Invalid"><i class="fa fa-ban"></i> Invalid</span>
-                                <td>
+                                </td>
+                                  <td style="text-align: center">
+                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Cetak Formulir" href="#"><i class="fa fa-print"></i> Formulir</a>
+                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Cetak Kartu Ujian" href="#"><i class="fa fa-print"></i> Kartu Ujian</a>
+                                  </td>
+                                  <td>
                                   <div class="btn-group pull-right" role="group" >
                                       <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #003684;" data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-check-circle-o"></i> Update</a>
-                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-print"></i> Cetak</a>
                                   </div>
                                  </td>
                               </tr>

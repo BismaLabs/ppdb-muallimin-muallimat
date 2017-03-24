@@ -21,8 +21,12 @@
                     <div class="box-body">
                         <div class="card-content">
                             <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
-                                <a href="<?php echo base_url() ?>apps/export/xls/" style="text-decoration: none" class="btn btn-success btn-save btn-fill">
-                                    <i class="fa fa-file-excel-o"></i>  Export Data
+                                <a href="<?php echo base_url() ?>apps/export/xls_all/" style="text-decoration: none" class="btn btn-success btn-save btn-fill">
+                                    <i class="fa fa-file-excel-o"></i>  Export Semua Data Pendaftar
+                                </a>
+                                <hr>
+                                <a href="<?php echo base_url() ?>apps/export/xls_validasi/" style="text-decoration: none" class="btn btn-success btn-save btn-fill">
+                                    <i class="fa fa-file-excel-o"></i>  Export Data Pendaftar Tervalidasi
                                 </a>
                             </div>
                         </div>

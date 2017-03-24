@@ -162,9 +162,15 @@ class Apps extends CI_Model{
     }
 
     //get export
-    function get_export()
+    function get_export_all()
     {
         $query = "SELECT * FROM tbl_siswa";
+        return $this->db->query($query);
+    }
+
+    function get_export_validasi()
+    {
+        $query = "SELECT * FROM tbl_siswa WHERE status = '1'";
         return $this->db->query($query);
     }
 
