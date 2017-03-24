@@ -43,13 +43,12 @@
                 </a>
             </div>
             <div class="col-md-12">
-                <?php echo $this->session->flashdata('notif') ?>
+                <?php
+                    $attributes = array('id' => 'frm_login');
+                    echo form_open_multipart('daftar?source=send&feedback&utf8=✓', $attributes)
+                ?>
                 <div class="card">
                     <div class="card-content">
-                        <?php
-                        $attributes = array('id' => 'frm_login');
-                        echo form_open_multipart('daftar?source=send&feedback&utf8=✓', $attributes)
-                        ?>
                         <h4>A. KETERANGAN CALON PESERTA DIDIK</h4>
                         <hr>
                         <div class="form-group">
@@ -93,21 +92,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- tambahkan jquery-->
-                        <script type="text/javascript">
-                            $(function () {
-                                $(":radio.rad").click(function () {
-                                    $("#form1, #form2").hide()
-                                    if ($(this).val() == "SD/MI") {
-                                        $("#form1").show();
-                                        $("#form").hide();
-                                    } else {
-                                        $("#form2").show();
-                                        $("#form").hide();
-                                    }
-                                });
-                            });
-                        </script>
                         <div class="form-group">
                             <label for="nama_lengkap"> NAMA LENGKAP <i>(Sesuai Ijazah) <span class="required"
                                                                                              style="color: red">*</span></i></label>
@@ -130,7 +114,7 @@
                             <label for="NISN"> NISN <i>(Nomor Induk Siswa Nasional) <span class="required"
                                                                                           style="color: red">*</span></i></label>
                             <input type="text" class="form-control" id="nisn" name="nisn"
-                                   value="<?php echo set_value('NISN') ?>"
+                                   value="<?php echo set_value('nisn') ?>"
                                    placeholder="Masukkan NISN" style="border-radius: 0px">
                             <?php echo form_error('nisn'); ?>
                         </div>
@@ -387,469 +371,465 @@
                                 <?php echo form_error('no_un'); ?>
                             </div>
                         </div>
-                      </div>
                     </div>
+                </div>
 
+                <div class="card">
+                    <div class="card-content">
+                        <h4 style="margin-top: 30px">B. KETERANGAN BAKAT DAN MINAT CALON PESERTA DIDIK</h4>
+                        <hr>
+                        <div class="form-group">
+                            <label> Hobi</label>
+                            <input type="text" class="form-control" name="hobi" placeholder="Masukkan Hobi Anda"
+                                   style="border-radius: 0px">
+                        </div>
+                        <div class="form-group">
+                            <label> Bidang Studi yang Paling Digemari</label>
+                            <input type="text" class="form-control" name="bidang_studi_digemari"
+                                   placeholder="Masukkan Bidang Studi Anda" style="border-radius: 0px">
+                        </div>
+                        <div class="form-group">
+                            <label> Bakat yang Dimiliki</label>
+                            <input type="text" class="form-control" name="bakat_dimiliki"
+                                   placeholder="Masukkan Bakat Anda"
+                                   style="border-radius: 0px">
+                        </div>
+                        <div class="form-group">
+                            <label> Olahraga yang Paling Digemari</label>
+                            <input type="text" class="form-control" name="olahraga_digemari"
+                                   placeholder="Masukkan Olahraga yang Digemari" style="border-radius: 0px">
+                        </div>
+                        <div class="form-group">
+                            <label> Cita-cita</label>
+                            <input type="text" class="form-control" name="cita_cita"
+                                   placeholder="Masukkan Cita-cita Anda" style="border-radius: 0px">
+                        </div>
+                    </div>
+                </div>
 
-
-                        <div class="card">
-                            <div class="card-content">
-                                <h4 style="margin-top: 30px">B. KETERANGAN BAKAT DAN MINAT CALON PESERTA DIDIK</h4>
-                                <hr>
-                                <div class="form-group">
-                                    <label> Hobi</label>
-                                    <input type="text" class="form-control" name="hobi" placeholder="Masukkan Hobi Anda"
-                                           style="border-radius: 0px">
+                <div class="card">
+                    <div class="card-content">
+                        <h4 style="margin-top: 30px">C. KETERANGAN ORANG TUA KANDUNG</h4>
+                        <hr>
+                        <div class="form-group">
+                            <label> Nama Lengkap <span class="required" style="color: red">*</span></label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>a. Ayah <i>(Sesuai Dengan Ijazah SIswa) </i></label>
+                                    <br/>
+                                    <label style="padding-top:30px">b. Ibu </label>
                                 </div>
-                                <div class="form-group">
-                                    <label> Bidang Studi yang Paling Digemari</label>
-                                    <input type="text" class="form-control" name="bidang_studi_digemari"
-                                           placeholder="Masukkan Bidang Studi Anda" style="border-radius: 0px">
-                                </div>
-                                <div class="form-group">
-                                    <label> Bakat yang Dimiliki</label>
-                                    <input type="text" class="form-control" name="bakat_dimiliki"
-                                           placeholder="Masukkan Bakat Anda"
-                                           style="border-radius: 0px">
-                                </div>
-                                <div class="form-group">
-                                    <label> Olahraga yang Paling Digemari</label>
-                                    <input type="text" class="form-control" name="olahraga_digemari"
-                                           placeholder="Masukkan Olahraga yang Digemari" style="border-radius: 0px">
-                                </div>
-                                <div class="form-group">
-                                    <label> Cita-cita</label>
-                                    <input type="text" class="form-control" name="cita_cita"
-                                           placeholder="Masukkan Cita-cita Anda" style="border-radius: 0px">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="nama_ayah" value="<?php echo set_value('nama_ayah') ?>"
+                                           placeholder="Masukkan Nama Lengkap Ayah" style="border-radius: 0px">
+                                    <?php echo form_error('nama_ayah'); ?>
+                                    <br/>
+                                    <input type="text" class="form-control" name="nama_ibu" value="<?php echo set_value('nama_ibu') ?>"
+                                           placeholder="Masukkan Nama Ibu" style="border-radius: 0px">
+                                    <?php echo form_error('nama_ibu'); ?>
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label> Nomor KTP/NIK <span class="required" style="color: red">*</span></label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>a. Ayah </label>
+                                    <br/>
+                                    <label style="padding-top:30px">b. Ibu </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="no_ktp_ayah" value="<?php echo set_value('no_ktp_ayah') ?>"
+                                           placeholder="Masukkan Nomor KTP/NIK" style="border-radius: 0px">
+                                    <?php echo form_error('no_ktp_ayah'); ?>
+                                    <br/>
+                                    <input type="text" class="form-control" name="no_ktp_ibu" value="<?php echo set_value('no_ktp_ibu') ?>"
+                                           placeholder="Masukkan Nomor KTP/NIK" style="border-radius: 0px">
+                                    <?php echo form_error('no_ktp_ibu'); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <ins>Pekerjaan</ins>
+                                &
+                                <ins>Pendidikan</ins>
+                                <span class="required" style="color: red">*</span>
+                            </label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>a. Ayah </label>
+                                    <br/>
+                                    <label style="padding-top:30px">b. Ibu </label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" name="pekerjaan_ayah" value="<?php echo set_value('pekerjaan_ayah') ?>"
+                                           placeholder="Masukkan Pekerjaan Ayah" style="border-radius: 0px">
+                                    <?php echo form_error('pekerjaan_ayah'); ?>
+                                    <br>
+                                    <input type="text" class="form-control" name="pekerjaan_ibu" value="<?php echo set_value('pekerjaan_ibu') ?>"
+                                           placeholder="Masukkan Pekerjaan Ibu" style="border-radius: 0px">
+                                    <?php echo form_error('pekerjaan_ibu'); ?>
+                                </div>
 
-                        <div class="card">
-                            <div class="card-content">
-                                <h4 style="margin-top: 30px">C. KETERANGAN ORANG TUA KANDUNG</h4>
-                                <hr>
-                                <div class="form-group">
-                                    <label> Nama Lengkap <span class="required" style="color: red">*</span></label>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>a. Ayah <i>(Sesuai Dengan Ijazah SIswa) </i></label>
-                                            <br/>
-                                            <label style="padding-top:30px">b. Ibu </label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" name="nama_ayah"
-                                                   placeholder="Masukkan Nama Lengkap Ayah" value="<?php echo set_value('nama_ayah') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('nama_ayah'); ?>
-                                            <br/>
-                                            <input type="text" class="form-control" name="nama_ibu"
-                                                   placeholder="Masukkan Nama Ibu" value="<?php echo set_value('nama_ibu') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('nama_ibu'); ?>
-                                        </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" name="pendidikan_ayah" value="<?php echo set_value('pendidikan_ayah') ?>"
+                                           placeholder="Masukkan Pendidikan Ayah" style="border-radius: 0px">
+                                    <?php echo form_error('pendidikan_ayah'); ?>
+                                    <br>
+                                    <input type="text" class="form-control" name="pendidikan_ibu" value="<?php echo set_value('pendidikan_ibu') ?>"
+                                           placeholder="Masukkan Pendidikan Ibu" style="border-radius: 0px">
+                                    <?php echo form_error('pendidikan_ibu'); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label> Alamat Tempat Tinggal <i>(Sesuai KK) <span class="required"
+                                                                               style="color: red">*</span></i></label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Jln Dsn.</label>
+                                        <input type="text" class="form-control" name="jln_dsn" value="<?php echo set_value('jln_dsn') ?>"
+                                               placeholder="Masukkan Jalan Dusun " style="border-radius: 0px">
+                                        <?php echo form_error('jln_dsn'); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label> Nomor KTP/NIK <span class="required" style="color: red">*</span></label>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>a. Ayah </label>
-                                            <br/>
-                                            <label style="padding-top:30px">b. Ibu </label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" name="no_ktp_ayah"
-                                                   placeholder="Masukkan Nomor KTP/NIK" value="<?php echo set_value('no_ktp_ayah') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('no_ktp_ayah'); ?>
-                                            <br/>
-                                            <input type="text" class="form-control" name="no_ktp_ibu"
-                                                   placeholder="Masukkan Nomor KTP/NIK" value="<?php echo set_value('no_ktp_ibu') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('no_ktp_ibu'); ?>
-                                        </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>RT</label>
+                                        <input type="text" class="form-control" name="rt" style="border-radius: 0px" value="<?php echo set_value('rt') ?>"
+                                               placeholder="RT">
+                                        <?php echo form_error('rt'); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label>
-                                        <ins>Pekerjaan</ins>
-                                        &
-                                        <ins>Pendidikan</ins>
-                                        <span class="required" style="color: red">*</span>
-                                    </label>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>a. Ayah </label>
-                                            <br/>
-                                            <label style="padding-top:30px">b. Ibu </label>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <input type="text" class="form-control" name="pekerjaan_ayah"
-                                                   placeholder="Masukkan Pekerjaan Ayah" value="<?php echo set_value('pekerjaan_ayah') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('pekerjaan_ayah'); ?>
-                                            <br>
-                                            <input type="text" class="form-control" name="pekerjaan_ibu"
-                                                   placeholder="Masukkan Pekerjaan Ibu" value="<?php echo set_value('pelerjaan_ibu') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('pekerjaan_ibu'); ?>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <input type="text" class="form-control" name="pendidikan_ayah"
-                                                   placeholder="Masukkan Pendidikan Ayah" value="<?php echo set_value('pendidikan_ayah') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('pendidikan_ayah'); ?>
-                                            <br>
-                                            <input type="text" class="form-control" name="pendidikan_ibu"
-                                                   placeholder="Masukkan Pendidikan Ibu" value="<?php echo set_value('pendidikan_ibu') ?>" style="border-radius: 0px">
-                                            <?php echo form_error('pendidikan_ibu'); ?>
-                                        </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>RW</label>
+                                        <input type="text" class="form-control" name="rw" style="border-radius: 0px" value="<?php echo set_value('rw') ?>"
+                                               placeholder="RW">
+                                        <?php echo form_error('rw'); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label> Alamat Tempat Tinggal <i>(Sesuai KK) <span class="required"
-                                                                                       style="color: red">*</span></i></label>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Jln Dsn.</label>
-                                                <input type="text" class="form-control" name="jln_dsn"
-                                                       placeholder="Masukkan Jalan Dusun " value="<?php echo set_value('jln_dsn') ?>" style="border-radius: 0px">
-                                                <?php echo form_error('jln_dsn'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label>RT</label>
-                                                <input type="text" class="form-control" name="rt" value="<?php echo set_value('rt') ?>" style="border-radius: 0px"
-                                                       placeholder="RT">
-                                                <?php echo form_error('rt'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label>RW</label>
-                                                <input type="text" class="form-control" value="<?php echo set_value('rw') ?>" name="rw" style="border-radius: 0px"
-                                                       placeholder="RW">
-                                                <?php echo form_error('rw'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Desa.</label>
-                                                <input type="text" class="form-control" value="<?php echo set_value('desa') ?>" name="desa" placeholder="Desa"
-                                                       style="border-radius: 0px">
-                                                <?php echo form_error('desa'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Kec.</label>
-                                                <input type="text" class="form-control" name="kecamatan" value="<?php echo set_value('kecamatan') ?>" placeholder="Kecamatan"
-                                                       style="border-radius: 0px">
-                                                <?php echo form_error('kecamatan'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Kab.</label>
-                                                <input type="text" class="form-control" name="kabupaten"
-                                                       placeholder="Masukkan Kabupaten/Kota " value="<?php echo set_value('kabupaten') ?>" style="border-radius: 0px">
-                                                <?php echo form_error('kabupaten'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Kode POS</label>
-                                                <input type="text" class="form-control" name="kode_pos"
-                                                       placeholder="Masukkan Kode POS " value="<?php echo set_value('kode_pos') ?>" style="border-radius: 0px">
-                                                <?php echo form_error('kode_pos'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Provinsi</label>
-                                                <select class="form-control" name="provinsi">
-                                                    <option value="">-- Pilih --</option>
-                                                    <option value="Aceh"> Aceh</option>
-                                                    <option value="Bali"> Bali</option>
-                                                    <option value="Banten"> Banten</option>
-                                                    <option value="Bengkulu"> Bengkulu</option>
-                                                    <option value="Gorontalo"> Gorontalo</option>
-                                                    <option value="Jakarta"> Jakarta</option>
-                                                    <option value="Jambi"> Jambi</option>
-                                                    <option value="Jawa Barat"> Jawa Barat</option>
-                                                    <option value="Jawa Tengah"> Jawa Tengah</option>
-                                                    <option value="Jawa Timur"> Jawa Timur</option>
-                                                    <option value="Kalimantan Barat"> Kalimantan Barat</option>
-                                                    <option value="Kalimat Selatan"> Kalimantan Selatan</option>
-                                                    <option value="Kalimantan Tengah"> Kalimantan Tengah</option>
-                                                    <option value="Kalimantan Timur"> Kalimantan Timur</option>
-                                                    <option value="Kalimantan Utara">Kalimantan Utara</option>
-                                                    <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
-                                                    <option value="Kepulauan Riau">Kepulauan Riau</option>
-                                                    <option value="Lampung">Lampung</option>
-                                                    <option value="Maluku">Maluku</option>
-                                                    <option value="Maluku Utara">Maluku Utara</option>
-                                                    <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
-                                                    <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
-                                                    <option value="Papua">Papua</option>
-                                                    <option value="Papua Barat">Papua Barat</option>
-                                                    <option value="Riau">Riau</option>
-                                                    <option value="Sulawesi Barat">Sulawesi Barat</option>
-                                                    <option value="Sulawesi Selatan">Sulawesi Selatan</option>
-                                                    <option value="Sulawesi Tengah">Sulawesi Tengah</option>
-                                                    <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
-                                                    <option value="Sulaesi Utara">Sulawesi Utara</option>
-                                                    <option value="Sumatera Barat">Sumatera Barat</option>
-                                                    <option value="Sumatera Selatan">Sumatera Selatan</option>
-                                                    <option value="Sumatera Utara">Sumatera Utara</option>
-                                                    <option value="Yogyakarta">Yogyakarta</option>
-                                                </select>
-                                                <?php echo form_error('alamat_provinsi'); ?>
-                                            </div>
-                                        </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Desa.</label>
+                                        <input type="text" class="form-control" name="desa" placeholder="Desa" value="<?php echo set_value('desa') ?>"
+                                               style="border-radius: 0px">
+                                        <?php echo form_error('desa'); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label> Penghasilan Rata-rata Perbulan</label>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>a. Ayah </label>
-                                            <br/>
-                                            <label style="padding-top:30px">b. Ibu </label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <select class="form-control" name="penghasilan_ayah">
-                                                <option value="">-- Pilih --</option>
-                                                <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
-                                                <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
-                                                <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
-                                            </select>
-                                            <br>
-                                            <select class="form-control" name="penghasilan_ibu">
-                                                <option value="">-- Pilih --</option>
-                                                <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
-                                                <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
-                                                <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
-                                            </select>
-                                        </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kec.</label>
+                                        <input type="text" class="form-control" name="kecamatan" placeholder="Kecamatan" value="<?php echo set_value('kecamatan') ?>"
+                                               style="border-radius: 0px">
+                                        <?php echo form_error('kecamatan'); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label> Keterangan Dan Nomor HP <span class="required" style="color: red">*</span></label>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>a. Ayah </label>
-                                            <br/>
-                                            <label style="padding-top:50px">b. Ibu </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-3">
-                                                <label>Keterangan</label>
-                                                <select class="form-control" name="keterangan_ayah">
-                                                    <option value="Masih Hidup">Masih Hidup</option>
-                                                    <option value="Meninggal Dunia">Meninggal Dunia</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-md-3">
-                                                    <label>Nomor HP Orang Tua</label>
-                                                    <input type="text" class="form-control" name="no_hp_ayah" value="<?php echo set_value('no_hp_ayah') ?>"
-                                                           placeholder="Nomor Telp/HP Orang Tua" style="border-radius: 0px">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-3">
-                                                <label>Keterangan</label>
-                                                <select class="form-control" name="keterangan_ibu">
-                                                    <option value="Masih Hidup">Masih Hidup</option>
-                                                    <option value="Meninggal Dunia">Meninggal Dunia</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-3">
-                                                <label>Nomor HP Orang Tua</label>
-                                                <input type="text" class="form-control" name="no_hp_ibu" value="<?php echo set_value('no_hp_ibu') ?>"
-                                                       placeholder="Nomor Telp/HP Orang Tua" style="border-radius: 0px">
-                                            </div>
-                                        </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kab.</label>
+                                        <input type="text" class="form-control" name="kabupaten" value="<?php echo set_value('kabupaten') ?>"
+                                               placeholder="Masukkan Kabupaten/Kota " style="border-radius: 0px">
+                                        <?php echo form_error('kabupaten'); ?>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kode POS</label>
+                                        <input type="text" class="form-control" name="kode_pos" value="<?php echo set_value('kode_pos') ?>"
+                                               placeholder="Masukkan Kode POS " style="border-radius: 0px">
+                                        <?php echo form_error('kode_pos'); ?>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Provinsi</label>
+                                        <select class="form-control" name="provinsi">
+                                            <option value="">-- Pilih --</option>
+                                            <option value="Aceh"> Aceh</option>
+                                            <option value="Bali"> Bali</option>
+                                            <option value="Banten"> Banten</option>
+                                            <option value="Bengkulu"> Bengkulu</option>
+                                            <option value="Gorontalo"> Gorontalo</option>
+                                            <option value="Jakarta"> Jakarta</option>
+                                            <option value="Jambi"> Jambi</option>
+                                            <option value="Jawa Barat"> Jawa Barat</option>
+                                            <option value="Jawa Tengah"> Jawa Tengah</option>
+                                            <option value="Jawa Timur"> Jawa Timur</option>
+                                            <option value="Kalimantan Barat"> Kalimantan Barat</option>
+                                            <option value="Kalimat Selatan"> Kalimantan Selatan</option>
+                                            <option value="Kalimantan Tengah"> Kalimantan Tengah</option>
+                                            <option value="Kalimantan Timur"> Kalimantan Timur</option>
+                                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                            <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                                            <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                            <option value="Lampung">Lampung</option>
+                                            <option value="Maluku">Maluku</option>
+                                            <option value="Maluku Utara">Maluku Utara</option>
+                                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                            <option value="Papua">Papua</option>
+                                            <option value="Papua Barat">Papua Barat</option>
+                                            <option value="Riau">Riau</option>
+                                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                            <option value="Sulaesi Utara">Sulawesi Utara</option>
+                                            <option value="Sumatera Barat">Sumatera Barat</option>
+                                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                            <option value="Sumatera Utara">Sumatera Utara</option>
+                                            <option value="Yogyakarta">Yogyakarta</option>
+                                        </select>
+                                        <?php echo form_error('alamat_provinsi'); ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card">
-                            <div class="card-content">
-                                <h4 style="margin-top: 30px">D. KETERANGAN WALI ( <i>diisi jika point <strong>C</strong> tidak
-                                        diisi</i> )</h4>
-                                <hr>
-                                <div class="form-group">
-                                    <label> Nama Lengkap</label>
-                                    <input type="text" class="form-control" name="nama_wali">
+                        <div class="form-group">
+                            <label> Penghasilan Rata-rata Perbulan</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>a. Ayah </label>
+                                    <br/>
+                                    <label style="padding-top:30px">b. Ibu </label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="jenis_kelamin_wali"> JENIS KELAMIN</label>
-                                    <select id="jenis_kelamin_wali" class="form-control" name="jenis_kelamin_wali">
+                                <div class="col-md-6">
+                                    <select class="form-control" name="penghasilan_ayah">
                                         <option value="">-- Pilih --</option>
-                                        <option value="Laki-laki">Laki-laki</option>
-                                        <option value="Perempuan">Perempuan</option>
+                                        <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                    </select>
+                                    <br>
+                                    <select class="form-control" name="penghasilan_ibu">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
                                     </select>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label> Keterangan Dan Nomor HP <span class="required" style="color: red">*</span></label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>a. Ayah </label>
+                                    <br/>
+                                    <label style="padding-top:50px">b. Ibu </label>
+                                </div>
                                 <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Nomor KK Wali</label>
-                                                <input type="text" placeholder="Nomor KK Wali" name="no_kk_wali"
-                                                       class="form-control" style="border-radius: 0px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label>Nomor KTP Wali</label>
-                                            <input type="text" placeholder="Nomor KTP Wali" name="no_ktp_wali"
-                                                   class="form-control" style="border-radius: 0px">
+                                    <div class="col-md-3">
+                                        <label>Keterangan</label>
+                                        <select class="form-control" name="keterangan_ayah">
+                                            <option value="Masih Hidup">Masih Hidup</option>
+                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <label>Nomor HP Orang Tua</label>
+                                            <input type="text" class="form-control" name="no_hp_ayah" value="<?php echo set_value('no_hp_ayah') ?>"
+                                                   placeholder="Nomor Telp/HP Orang Tua" style="border-radius: 0px">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Pekerjaan</label>
-                                                <input type="text" placeholder="Pekerjaan" name="pekerjaan_wali"
-                                                       class="form-control" style="border-radius: 0px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label>Pendidikan</label>
-                                            <input type="text" placeholder="Pendidikan" name="pendidikan_wali"
-                                                   class="form-control" style="border-radius: 0px">
-                                        </div>
+                                    <div class="col-md-3">
+                                        <label>Keterangan</label>
+                                        <select class="form-control" name="keterangan_ibu">
+                                            <option value="Masih Hidup">Masih Hidup</option>
+                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
+                                        </select>
                                     </div>
                                 </div>
-
                                 <div class="form-group">
-                                    <label> Alamat Tempat Tinggal <i>(Sesuai KK)</i></label>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Jln Dsn.</label>
-                                                <input type="text" class="form-control" name="jl_dsn_wali"
-                                                       placeholder="Masukkan Jalan Dusun " style="border-radius: 0px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label>RT</label>
-                                                <input type="text" class="form-control" name="rt_wali"
-                                                       style="border-radius: 0px" placeholder="RT">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label>RW</label>
-                                                <input type="text" class="form-control" name="rw_wali"
-                                                       style="border-radius: 0px" placeholder="RW">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Desa.</label>
-                                                <input type="text" class="form-control" name="desa_wali" placeholder="Desa"
-                                                       style="border-radius: 0px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Kec.</label>
-                                                <input type="text" class="form-control" name="kecamatan_wali"
-                                                       placeholder="Kecamatan"
-                                                       style="border-radius: 0px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Kab.</label>
-                                                <input type="text" class="form-control" name="kabupaten_wali"
-                                                       placeholder="Masukkan Kabupaten/Kota " style="border-radius: 0px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Kode POS</label>
-                                                <input type="text" class="form-control" name="kode_pos_wali"
-                                                       placeholder="Masukkan Kode POS " style="border-radius: 0px">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Provinsi</label>
-                                                <select class="form-control" name="provinsi_wali">
-                                                    <option value="">-- Pilih --</option>
-                                                    <option value="Aceh"> Aceh</option>
-                                                    <option value="Bali"> Bali</option>
-                                                    <option value="Banten"> Banten</option>
-                                                    <option value="Bengkulu"> Bengkulu</option>
-                                                    <option value="Gorontalo"> Gorontalo</option>
-                                                    <option value="Jakarta"> Jakarta</option>
-                                                    <option value="Jambi"> Jambi</option>
-                                                    <option value="Jawa Barat"> Jawa Barat</option>
-                                                    <option value="Jawa Tengah"> Jawa Tengah</option>
-                                                    <option value="Jawa Timur"> Jawa Timur</option>
-                                                    <option value="Kalimantan Barat"> Kalimantan Barat</option>
-                                                    <option value="Kalimat Selatan"> Kalimantan Selatan</option>
-                                                    <option value="Kalimantan Tengah"> Kalimantan Tengah</option>
-                                                    <option value="Kalimantan Timur"> Kalimantan Timur</option>
-                                                    <option value="Kalimantan Utara">Kalimantan Utara</option>
-                                                    <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
-                                                    <option value="Kepulauan Riau">Kepulauan Riau</option>
-                                                    <option value="Lampung">Lampung</option>
-                                                    <option value="Maluku">Maluku</option>
-                                                    <option value="Maluku Utara">Maluku Utara</option>
-                                                    <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
-                                                    <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
-                                                    <option value="Papua">Papua</option>
-                                                    <option value="Papua Barat">Papua Barat</option>
-                                                    <option value="Riau">Riau</option>
-                                                    <option value="Sulawesi Barat">Sulawesi Barat</option>
-                                                    <option value="Sulawesi Selatan">Sulawesi Selatan</option>
-                                                    <option value="Sulawesi Tengah">Sulawesi Tengah</option>
-                                                    <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
-                                                    <option value="Sulaesi Utara">Sulawesi Utara</option>
-                                                    <option value="Sumatera Barat">Sumatera Barat</option>
-                                                    <option value="Sumatera Selatan">Sumatera Selatan</option>
-                                                    <option value="Sumatera Utara">Sumatera Utara</option>
-                                                    <option value="Yogyakarta">Yogyakarta</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label> Penghasilan Rata-rata Perbulan</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <select class="form-control" name="penghasilan_wali">
-                                                <option value="">-- Pilih --</option>
-                                                <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
-                                                <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
-                                                <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
-                                            </select>
-                                        </div>
+                                    <div class="col-md-3">
+                                        <label>Nomor HP Orang Tua</label>
+                                        <input type="text" class="form-control" name="no_hp_ibu" value="<?php echo set_value('no_hp_ibu') ?>"
+                                               placeholder="Nomor Telp/HP Orang Tua" style="border-radius: 0px">
                                     </div>
                                 </div>
-                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <div class="card-content">
+                        <h4 style="margin-top: 30px">D. KETERANGAN WALI ( <i>diisi jika point <strong>C</strong> tidak
+                                diisi</i> )</h4>
+                        <hr>
+                        <div class="form-group">
+                            <label> Nama Lengkap</label>
+                            <input type="text" class="form-control" name="nama_wali">
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis_kelamin_wali"> JENIS KELAMIN</label>
+                            <select id="jenis_kelamin_wali" class="form-control" name="jenis_kelamin_wali">
+                                <option value="">-- Pilih --</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nomor KK Wali</label>
+                                        <input type="text" placeholder="Nomor KK Wali" name="no_kk_wali"
+                                               class="form-control" style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Nomor KTP Wali</label>
+                                    <input type="text" placeholder="Nomor KTP Wali" name="no_ktp_wali"
+                                           class="form-control" style="border-radius: 0px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Pekerjaan</label>
+                                        <input type="text" placeholder="Pekerjaan" name="pekerjaan_wali"
+                                               class="form-control" style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Pendidikan</label>
+                                    <input type="text" placeholder="Pendidikan" name="pendidikan_wali"
+                                           class="form-control" style="border-radius: 0px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label> Alamat Tempat Tinggal <i>(Sesuai KK)</i></label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Jln Dsn.</label>
+                                        <input type="text" class="form-control" name="jl_dsn_wali"
+                                               placeholder="Masukkan Jalan Dusun " style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>RT</label>
+                                        <input type="text" class="form-control" name="rt_wali"
+                                               style="border-radius: 0px" placeholder="RT">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>RW</label>
+                                        <input type="text" class="form-control" name="rw_wali"
+                                               style="border-radius: 0px" placeholder="RW">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Desa.</label>
+                                        <input type="text" class="form-control" name="desa_wali" placeholder="Desa"
+                                               style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kec.</label>
+                                        <input type="text" class="form-control" name="kecamatan_wali"
+                                               placeholder="Kecamatan"
+                                               style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kab.</label>
+                                        <input type="text" class="form-control" name="kabupaten_wali"
+                                               placeholder="Masukkan Kabupaten/Kota " style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Kode POS</label>
+                                        <input type="text" class="form-control" name="kode_pos_wali"
+                                               placeholder="Masukkan Kode POS " style="border-radius: 0px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Provinsi</label>
+                                        <select class="form-control" name="provinsi_wali">
+                                            <option value="">-- Pilih --</option>
+                                            <option value="Aceh"> Aceh</option>
+                                            <option value="Bali"> Bali</option>
+                                            <option value="Banten"> Banten</option>
+                                            <option value="Bengkulu"> Bengkulu</option>
+                                            <option value="Gorontalo"> Gorontalo</option>
+                                            <option value="Jakarta"> Jakarta</option>
+                                            <option value="Jambi"> Jambi</option>
+                                            <option value="Jawa Barat"> Jawa Barat</option>
+                                            <option value="Jawa Tengah"> Jawa Tengah</option>
+                                            <option value="Jawa Timur"> Jawa Timur</option>
+                                            <option value="Kalimantan Barat"> Kalimantan Barat</option>
+                                            <option value="Kalimat Selatan"> Kalimantan Selatan</option>
+                                            <option value="Kalimantan Tengah"> Kalimantan Tengah</option>
+                                            <option value="Kalimantan Timur"> Kalimantan Timur</option>
+                                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                            <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                                            <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                            <option value="Lampung">Lampung</option>
+                                            <option value="Maluku">Maluku</option>
+                                            <option value="Maluku Utara">Maluku Utara</option>
+                                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                            <option value="Papua">Papua</option>
+                                            <option value="Papua Barat">Papua Barat</option>
+                                            <option value="Riau">Riau</option>
+                                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                            <option value="Sulaesi Utara">Sulawesi Utara</option>
+                                            <option value="Sumatera Barat">Sumatera Barat</option>
+                                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                            <option value="Sumatera Utara">Sumatera Utara</option>
+                                            <option value="Yogyakarta">Yogyakarta</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label> Penghasilan Rata-rata Perbulan</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control" name="penghasilan_wali">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <?php echo $recaptcha_html;?>
                             <?php echo form_error('g-recaptcha-response'); ?>
                         </div>
                         <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." class="btn btn-sending btn-success btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Kirim Feedback <i class="fa fa-send"></i> </button>
                         <button type="reset" class="btn btn-warning btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Reset <i class="fa fa-repeat"></i></button>
-                        <?php echo form_close(); ?>
                     </div>
                 </div>
+                <?php echo form_close() ?>
             </div>
+
         </div>
         <div class="col-md-4">
             <div class="card">
@@ -857,27 +837,23 @@
                     <form>
                         <div class="form-group">
                             <label for="user_id"><i class="icon-user"></i> User ID</label>
-                            <input type="text" class="form-control" id="user_id" name="user_id"
-                                   placeholder="Masukkan User ID Anda" style="border-radius: 0px">
+                            <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Masukkan User ID Anda" style="border-radius: 0px">
                         </div>
-                        <button type="submit" class="btn btn-success"
-                                style="border-radius: 0px;padding: 5px 15px;font-family: Roboto;font-weight: normal;text-shadow: 0 -1px 0 rgba(0,0,0,0.15);background-color: #6cc644;background-image: -webkit-linear-gradient(#7bcc58, #60b838);background-image: linear-gradient(#7bcc58, #60b838);border-color: #55a532;">
-                            Masuk <i class="icon-login"></i></button>
+                        <button type="submit" class="btn btn-success" style="border-radius: 0px;padding: 5px 15px;font-family: Roboto;font-weight: normal;text-shadow: 0 -1px 0 rgba(0,0,0,0.15);background-color: #6cc644;background-image: -webkit-linear-gradient(#7bcc58, #60b838);background-image: linear-gradient(#7bcc58, #60b838);border-color: #55a532;">Masuk <i class="icon-login"></i> </button>
                     </form>
                 </div>
             </div>
             <div class="card">
                 <div class="card-content" style="min-height: 60px">
-                    <i class="fa fa-building"></i> Alamat Kantor : <br/>
-                    Jl. KH. Wahab Hasbullah, Gg. PPBU No. 28, RT02/RW03, Bahrul Ulum, Tambakberas, Jombang, Jawa Timur,
-                    Indonesia
+                    <i class="fa fa-building"></i> Alamat Kantor : <br />
+                    Jl. KH. Wahab Hasbullah, Gg. PPBU No. 28, RT02/RW03, Bahrul Ulum, Tambakberas, Jombang, Jawa Timur, Indonesia
                     <br>
                     <br>
-                    <i class="fa fa-phone"></i> Telephone : <br/>
+                    <i class="fa fa-phone"></i> Telephone : <br />
                     +62 321 865280
                     <br>
                     <br>
-                    <i class="fa fa-envelope"></i> Alamat Email:<br/>
+                    <i class="fa fa-envelope"></i> Alamat Email:<br />
                     madrasatuna_1953@yahoo.com
                 </div>
             </div>

@@ -17,6 +17,20 @@
     <link href="<?php echo base_url() ?>resources/public/css/line-icons/line-icons.css" rel="stylesheet">
     <script src="<?php echo base_url() ?>resources/public/js/jquery.min.js"></script>
     <script src="<?php echo base_url() ?>resources/public/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(":radio.rad").click(function () {
+                $("#form1, #form2").hide()
+                if ($(this).val() == "SD/MI") {
+                    $("#form1").show();
+                    $("#form").hide();
+                } else {
+                    $("#form2").show();
+                    $("#form").hide();
+                }
+            });
+        });
+    </script>
 </head>
 
 <body style="background-color: #f1f1f1">
