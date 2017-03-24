@@ -69,6 +69,51 @@ class Daftar extends CI_Controller {
         $this->form_validation->set_rules('no_un', 'Nomor Peserta Ujian Nasional', 'required');
 
 
+        //set
+        $this->form_validation->set_rules('nama_ayah', 'Nama Lengkap Ayah Kandung', 'required');
+        //set
+        $this->form_validation->set_rules('nama_ibu', 'Nama Lengkap Ibu Kandung', 'required');
+         //set
+        $this->form_validation->set_rules('no_ktp_ayah', 'Nomor KTP/NIK Ayah', 'required');
+        //set
+        $this->form_validation->set_rules('no_ktp_ibu', 'Nomor KTP/NIK Ibu', 'required');
+        //set
+        $this->form_validation->set_rules('pekerjaan_ayah', 'Pekerjaan Ayah', 'required');
+        //set
+        $this->form_validation->set_rules('pekerjaan_ibu', 'Pekerjaan Ibu', 'required');
+        //set
+        $this->form_validation->set_rules('pendidikan_ayah', 'Pekerjaan Ayah', 'required');
+        //set
+        $this->form_validation->set_rules('pendidikan_ibu', 'Pekerjaan Ibu', 'required');
+        //set
+        $this->form_validation->set_rules('jln_dsn', 'Alamat Jalan', 'required');
+        //set
+        $this->form_validation->set_rules('rt', 'RT', 'required');
+        //set
+        $this->form_validation->set_rules('rw', 'RW', 'required');
+        //set
+        $this->form_validation->set_rules('desa', 'Alamat Desa', 'required');
+        //set
+        $this->form_validation->set_rules('kecamatan', 'Kecamatan', 'required');
+        //set
+        $this->form_validation->set_rules('kabupaten', 'Kabupaten', 'required');
+        //set
+        $this->form_validation->set_rules('kode_pos', 'Kode POS', 'required');
+        //set
+        $this->form_validation->set_rules('provinsi', 'Provinsi', 'required');
+        //set
+        $this->form_validation->set_rules('penghasilan_ayah', 'Penghasilan Ayah', 'required');
+        //set
+        $this->form_validation->set_rules('penghasilan_ibu', 'Penghasilan Ibu', 'required');
+        //set
+        $this->form_validation->set_rules('keterangan_ayah', 'Keterangan Ayah', 'required');
+        //set
+        $this->form_validation->set_rules('keterangan_ibu', 'Keterangan Ibu', 'required');
+        //set
+        $this->form_validation->set_rules('no_hp_ayah', 'Nomor HP Ayah', 'required');
+        //set
+        $this->form_validation->set_rules('no_hp_ibu', 'Nomor HP Ibu', 'required');
+
 
         $this->form_validation->set_rules('g-recaptcha-response', '<b>Captcha</b>', 'callback_getResponseCaptcha');
         //set message form validation
