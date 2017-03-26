@@ -216,7 +216,7 @@ class Daftar extends CI_Controller {
         }else{
             $this->load->view('home/part/header', $data);
             $this->load->view('home/layout/daftar/form');
-            $this->load->view('home/part/footer');
+          $this->load->view('home/part/footer');
         }
 
     }

@@ -51,6 +51,20 @@
                     <div class="card-content">
                         <h4>A. KETERANGAN CALON PESERTA DIDIK</h4>
                         <hr>
+                        <script type="text/javascript">
+function yesnoCheck() {
+    if (document.getElementById('yesSD').checked) {
+        document.getElementById('smp').style.display = 'none';
+        document.getElementById('form').style.display = 'none';
+        document.getElementById('sd').style.display = 'block';
+
+    }else if(document.getElementById('yesSMP').checked){
+      document.getElementById('sd').style.display = 'none';
+      document.getElementById('form').style.display = 'none';
+      document.getElementById('smp').style.display = 'block';
+    }
+}
+</script>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -58,36 +72,35 @@
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
 
-                                    <input type="radio" name="asal_sekolah" id="rad1" value="SD/MI" class="rad"/> SD/MI
-                                    <input type="radio" name="asal_sekolah" id="rad2" value="SMP/MTs" class="rad"/>
-                                    SMP/MTs
+                                    SD <input type="radio" onclick="javascript:yesnoCheck();" name="asal_sekolah" id="yesSD">
+                                    SMP <input type="radio" onclick="javascript:yesnoCheck();" name="asal_sekolah" id="yesSMP">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-9">
                                     <label for="user_id"> PENDAFTARAN KELAS
                                         <span class="required" style="color: red">*</span></label>
-                                    <div id="form">
-                                        <select class="form-control" name="">
-                                            <option value="">-- Pilih --</option>
+                                      <div id="form">
+                                        <select class="form-control">
+                                            <option>-- Pilih --</option>
                                         </select>
                                     </div>
-                                    <div id="form1" style="display:none">
+                                    <div id="sd" style="display:none">
                                         <select class="form-control" name="pendaftaran_kelas">
-                                            <option value="">-- Pilih --</option>
+                                            <option>-- Pilih --</option>
                                             <option value="1A">Kelas 1A</option>
                                             <option value="1B">Kelas 1B</option>
                                             <option value="2A">Kelas 2A</option>
                                             <option value="2B">Kelas 2B</option>
                                         </select>
-                                    </div>
-                                    <div id="form2" style="display:none">
-                                        <select class="form-control" name="pendaftaran_kelas">
-                                            <option value="">-- Pilih --</option>
-                                            <option value="2">Kelas 2</option>
-                                            <option value="3">Kelas 3</option>
-                                            <option value="4">Kelas 4</option>
-                                        </select>
-                                    </div>
+                                      </div>
+                                      <div id="smp" style="display:none">
+                                          <select class="form-control" name="pendaftaran_kelas">
+                                              <option>-- Pilih --</option>
+                                              <option value="2">Kelas 2</option>
+                                              <option value="3">Kelas 3</option>
+                                              <option value="4">Kelas 4</option>
+                                          </select>
+                                      </div>
                                     <?php echo form_error('pendaftaran_kelas'); ?>
                                 </div>
                             </div>
