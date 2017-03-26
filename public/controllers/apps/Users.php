@@ -87,6 +87,7 @@ class Users extends CI_Controller
                     'paging' => $this->pagination->create_links()
                 );
                 if ($data['data_users'] != NULL) {
+
                     $data['users'] = $data['data_users'];
                 } else {
                     $data['users'] = '';

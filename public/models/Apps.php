@@ -174,6 +174,52 @@ class Apps extends CI_Model{
         return $this->db->query($query);
     }
 
+    /* fungsi ppdb */
+    function count_ppdb()
+    {
+        return $this->db->get('tbl_siswa');
+    }
+
+    function index_ppdb($halaman,$batas)
+    {
+        $query = "SELECT * FROM tbl_siswa  limit $halaman, $batas";
+        return $this->db->query($query);
+    }
+
+    function total_search_ppdb($keyword)
+    {
+        $query = $this->db->like('kode_pendaftaran',$keyword)->or_like('nama_lengkap', $keyword)->get('tbl_siswa');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
+    public function search_index_ppdb($keyword,$limit,$offset)
+    {
+        $query = $this->db->select('*')
+            ->from('tbl_siswa')
+            ->limit($limit,$offset)
+            ->like('kode_pendaftaran',$keyword)
+            ->or_like('nama_lengkap',$keyword)
+            ->limit($limit,$offset)
+            ->get();
+
+        if($query->num_rows() > 0)
+        {
+            return $query;
+        }
+        else
+        {
+            return NULL;
+        }
+    }
+
     //fungsi date ago
     function time_elapsed_string($datetime, $full = false) {
         $today = time();
