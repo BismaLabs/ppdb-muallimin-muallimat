@@ -45,25 +45,59 @@
                                 <th class="text-center" style="color: #000;"><i class="fa fa-cogs"></i> OPTIONS</th>
                               </tr>
                             </thead>
-                            <tbody>
+                              <?php
+                              if($ppdb != NULL):
+                              foreach($ppdb->result() as $hasil):
+
+                              if($hasil->status == "0"){
+
+                                  $status = '<span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #ff8412;"><i class="fa fa-circle-o-notch fa-spin"></i> Pending</span>';
+
+                                  $update_status = '<a class="badge badge-primary" style="font-family: Roboto;font-weight: 400;background-color: #1969bc;" data-toggle="tooltip" data-placement="top" title="Yakin menerima ?" href="'.base_url().'apps/ppdb/confirm/'.$this->encryption->encode($hasil->kode_pendaftaran).'/'.$this->encryption->encode('1').'"><i class="fa fa-check-circle"></i> Update</a>';
+
+                              }elseif($hasil->status == "1"){
+
+                                  $status = '<span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;"><i class="fa fa-check-circle"></i> Ditermia</span>';
+
+                                  $update_status = '<a class="badge badge-primary" style="font-family: Roboto;font-weight: 400;background-color: #1969bc;" data-toggle="tooltip" data-placement="top" title="Batal menerima ?" href="'.base_url().'apps/ppdb/confirm/'.$this->encryption->encode($hasil->kode_pendaftaran).'/'.$this->encryption->encode('0').'"><i class="fa fa-ban"></i> Update</a>';
+                              }
+
+                              ?>
+
                               <tr>
-                                <td>1</td>
-                                <td>Ishak</td>
-                                <td>1A</td>
-                                <td>Laki-Laki</td>
+                                <td><?php echo $hasil->kode_pendaftaran ?></td>
+                                <td><?php echo $hasil->nama_lengkap ?></td>
+                                <td><?php echo $hasil->pendaftaran_kelas ?></td>
+                                <td><?php echo $hasil->jenis_kelamin ?></td>
                                 <td style="text-align: center">
-                                    <span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Invalid"><i class="fa fa-ban"></i> Invalid</span>
+                                    <?php echo $status ?>
                                 </td>
                                   <td style="text-align: center">
-                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Cetak Formulir" href="#"><i class="fa fa-print"></i> Formulir</a>
-                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Cetak Kartu Ujian" href="#"><i class="fa fa-print"></i> Kartu Ujian</a>
+                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #841d05;" data-toggle="tooltip" data-placement="top" title="Cetak Formulir" href="#"><i class="fa fa-print"></i> Formulir</a>
+                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #841d05;" data-toggle="tooltip" data-placement="top" title="Cetak Kartu Ujian" href="#"><i class="fa fa-print"></i> Kartu Ujian</a>
                                   </td>
                                   <td>
                                   <div class="btn-group pull-right" role="group" >
-                                      <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #003684;" data-toggle="tooltip" data-placement="top" title="Update" href="#"><i class="fa fa-check-circle-o"></i> Update</a>
+                                      <?php echo $update_status ?>
                                   </div>
                                  </td>
                               </tr>
+                              <?php
+                              endforeach;
+                              ?>
+                            </tbody>
+                          </table>
+                            <?php echo $paging ?>
+                            <?php else : ?>
+                                </tbody>
+                                </table>
+                                <div class="alert alert-danger">
+                                    <span><b> Warning! </b> Data tidak ada didatabase </span>
+                                </div>
+                                <div class="reload" style="text-align: center;margin-bottom: 7px">
+                                    <a  href="<?php echo base_url('apps/ppdb?source=reload&utf8=✓') ?>" class="btn btn-danger btn-reset btn-fill" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Reloading..."><i class="fa fa-repeat"></i> Reload Page</a>
+                                </div>
+                            <?php endif; ?>
                             </tbody>
                         </table>
                         </div>
