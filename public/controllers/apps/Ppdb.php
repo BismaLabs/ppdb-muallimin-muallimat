@@ -29,7 +29,7 @@ class Ppdb extends CI_Controller
             $halaman = $halaman == '' ? 0 : $halaman;
             //create data array
             $data = array(
-                'title' => 'Data Pebdaftar',
+                'title' => 'Data Pendaftar',
                 'ppdb' => TRUE,
                 'data_ppdb' => $this->apps->index_ppdb($halaman, $config['per_page']),
                 'paging' => $this->pagination->create_links()
