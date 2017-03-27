@@ -13,15 +13,18 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         //load model
-        $this->load->model('users');
+        $this->load->model(array('users','web'));
     }
 
     public function index()
     {
         if ($this->users->users_id()) {
             $data = array(
-                'title' => 'Dashboard ',
-                'dashboard' => TRUE,
+                'title'                 => 'Dashboard ',
+                'dashboard'             => TRUE,
+                'pengumuman'            => $this->web->get_pages(1),
+                'syarat_pendaftaran'    => $this->web->get_pages(2),
+                'alur_pendaftaran'      => $this->web->get_pages(3)
             );
 
             $this->load->view('users/part/header', $data);
