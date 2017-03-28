@@ -231,8 +231,7 @@ class Daftar extends CI_Controller {
         }
         else
         {
-            $this->form_validation->set_message('getResponseCaptcha', ' <div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">
-                                                                          <i class="fa fa-exclamation-circle"></i> %s harus dipilih.
+            $this->form_validation->set_message('getResponseCaptcha', ' <div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">                                                                          <i class="fa fa-exclamation-circle"></i> %s harus dipilih.
                                                                       </div>' );
             return false;
         }

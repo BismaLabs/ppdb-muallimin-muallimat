@@ -58,25 +58,24 @@
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
 
-                                    SD <input type="radio" onclick="javascript:yesnoCheck();" name="asal_sekolah" value="SD/MI" id="yesSD">
-                                    SMP <input type="radio" value="SMP/MTsN" onclick="javascript:yesnoCheck();" name="asal_sekolah" id="yesSMP">
+                                    SD <input type="radio" onclick="javascript:pilihkelas();" name="asal_sekolah" value="SD/MI" id="yesSD">
+                                    SMP <input type="radio" value="SMP/MTsN" onclick="javascript:pilihkelas();" name="asal_sekolah" id="yesSMP">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-9">
-                                    <label for="user_id"> PENDAFTARAN KELAS
+                                    <label> PENDAFTARAN KELAS
                                         <span class="required" style="color: red">*</span></label>
                                      <div id="form">
                                         <select class="form-control">
-                                            <option>-- Pilih --</option>
+                                            <<option>--Pilih--</option>
                                         </select>
                                     </div>
                                     <div id="sd" style="display:none">
-                                        <select class="form-control" name="pendaftaran_kelas">
-                                            <option>-- Pilih --</option>
-                                            <option value="1-A">Kelas 1A</option>
-                                            <option value="1-B">Kelas 1B</option>
-                                            <option value="2-A">Kelas 2A</option>
-                                            <option value="2-B">Kelas 2B</option>
+                                        <select class="form-control" name="pendaftaran_kelas">                                     <option>-- Pilih --</option>
+                                            <option value="1A">Kelas 1A</option>
+                                            <option value="1B">Kelas 1B</option>
+                                            <option value="2A">Kelas 2A</option>
+                                            <option value="2B">Kelas 2B</option>
                                         </select>
                                       </div>
                                       <div id="smp" style="display:none">
@@ -258,8 +257,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="saudara_kandung"> Jumlah Saudara Kandung <span class="required"
-                                                                                       style="color: red">*</span></label>
+                            <label for="saudara_kandung"> Jumlah Saudara Kandung <span class="required"                                                                                       style="color: red">*</span></label>
                             <input type="text" class="form-control" id="saudara_kandung" name="jumlah_saudara_kandung"
                                    value="<?php echo set_value('jumlah_saudara_kandung') ?>"
                                    placeholder="Saudara Kandung" style="border-radius: 0px">
@@ -269,8 +267,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Jumlah Adik <span class="required"
-                                                                 style="color: red">*</span></label>
+                                        <label>Jumlah Adik <span class="required"                                                                 style="color: red">*</span></label>
                                         <input type="text" name="jumlah_adik"
                                                value="<?php echo set_value('jumlah_adik') ?>" placeholder="Jumlah"
                                                class="form-control"
@@ -295,8 +292,7 @@
                                    style="border-radius: 0px">
                         </div>
                         <div class="form-group">
-                            <label>Nomor Kartu Keluarga <i>(KK) <span class="required"
-                                                                      style="color: red">*</span></i></label>
+                            <label>Nomor Kartu Keluarga <i>(KK) <span class="required"                                                                      style="color: red">*</span></i></label>
                             <input type="text" placeholder="Nomor Kartu Keluarga" class="form-control" name="kk"
                                    value="<?php echo set_value('kk') ?>"
                                    style="border-radius: 0px">
@@ -356,8 +352,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Nomor Peserta Ujian Nasional <span class="required"
-                                                                          style="color: red">*</span></label>
+                                <label>Nomor Peserta Ujian Nasional <span class="required"                                                                          style="color: red">*</span></label>
                                 <input type="text" placeholder="No UN" name="no_un"
                                        value="<?php echo set_value('no_un') ?>" class="form-control"
                                        style="border-radius: 0px">
