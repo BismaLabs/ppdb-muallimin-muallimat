@@ -2520,7 +2520,7 @@ a:focus {
   border-color: transparent;
 }
 .nav-tabs-custom > .nav-tabs > li.active {
-  border-top-color: #3c8dbc;
+  border-top-color: #00a65a;
 }
 .nav-tabs-custom > .nav-tabs > li.active > a,
 .nav-tabs-custom > .nav-tabs > li.active:hover > a {
@@ -2577,16 +2577,16 @@ a:focus {
   color: #999;
 }
 .nav-tabs-custom.tab-primary > .nav-tabs > li.active {
-  border-top-color: #3c8dbc;
+  border-top-color: #00a65a;
 }
 .nav-tabs-custom.tab-info > .nav-tabs > li.active {
-  border-top-color: #00c0ef;
+  border-top-color: #00a65a;
 }
 .nav-tabs-custom.tab-danger > .nav-tabs > li.active {
-  border-top-color: #dd4b39;
+  border-top-color: #00a65a;
 }
 .nav-tabs-custom.tab-warning > .nav-tabs > li.active {
-  border-top-color: #f39c12;
+  border-top-color: #00a65a;
 }
 .nav-tabs-custom.tab-success > .nav-tabs > li.active {
   border-top-color: #00a65a;
