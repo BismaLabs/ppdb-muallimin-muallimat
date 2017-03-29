@@ -19,26 +19,6 @@
     <script src="<?php echo base_url() ?>resources/public/js/bootstrap.min.js">
         
     </script>
-    
-    <script type="text/javascript">
-        
-
-            function pilihkelas() {
-                if (document.getElementById('yesSD').checked) {
-                document.getElementById('form').style.display = 'none';
-                document.getElementById('smp').style.display = 'none';
-                document.getElementById('sd').style.display = 'block';
-                }else if (document.getElementById('yesSMP').checked){
-                document.getElementById('sd').style.display = 'none';
-                document.getElementById('form').style.display = 'none';
-                document.getElementById('smp').style.display = 'block';
-                }else{
-                document.getElementById('sd').style.display = 'none';
-                document.getElementById('smp').style.display = 'none';
-                document.getElementById('form').style.display = 'block';
-                }
-            }   
-</script>
 </head>
 
 <body style="background-color: #f1f1f1">

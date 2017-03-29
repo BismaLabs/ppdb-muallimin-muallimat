@@ -20,6 +20,11 @@ class Users extends CI_Model
         return $this->session->userdata('users_id');
     }
 
+    function edit_users()
+    {
+        return $this->db->get_where('tbl_siswa');
+    }
+
     //fungsi check username
     function check_one($table, $where)
     {

@@ -63,30 +63,26 @@
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-9">
+ 
                                     <label> PENDAFTARAN KELAS
-                                        <span class="required" style="color: red">*</span></label>
+                                     <span class="required" style="color: red">*</span></label>
                                      <div id="form">
                                         <select class="form-control">
                                             <<option>--Pilih--</option>
                                         </select>
                                     </div>
-                                    <div id="sd" style="display:none">
-                                        <select class="form-control" name="pendaftaran_kelas">                                     <option>-- Pilih --</option>
-                                            <option value="1A">Kelas 1A</option>
-                                            <option value="1B">Kelas 1B</option>
-                                            <option value="2A">Kelas 2A</option>
-                                            <option value="2B">Kelas 2B</option>
+                                    <div style="display:none" id="smp">
+                                          <select id="mySelectID" name="pendaftaran_kelas" class="form-control">
                                         </select>
                                       </div>
-                                      <div id="smp" style="display:none">
-                                          <select class="form-control" name="pendaftaran_kelas">
-                                              <option>-- Pilih --</option>
-                                              <option value="2">Kelas 2</option>
-                                              <option value="3">Kelas 3</option>
-                                              <option value="4">Kelas 4</option>
-                                          </select>
+                                    <div  style="display:none"  id="sd" >
+                                        <select class="form-control" name="pendaftaran_kelas">   
+                                            <option value="1A">Kelas 1A</option>
+                                            <option value="1B">Kelas 1B</option>
+                                        </select>
+                                        
                                       </div>
-                                    <?php echo form_error('pendaftaran_kelas'); ?>
+                                     <?php echo form_error('pendaftaran_kelas'); ?>
                                 </div>
                             </div>
                         </div>
