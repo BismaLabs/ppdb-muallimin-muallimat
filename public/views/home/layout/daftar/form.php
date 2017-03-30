@@ -58,7 +58,7 @@
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SD <input type="radio" onclick="pilih_kelas();" name="asal_sekolah" value="SD/MI" id="yes_sd">
+                                    SD/MI <input type="radio" onclick="pilih_kelas();" name="asal_sekolah" value="SD/MI" id="yes_sd">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
@@ -92,7 +92,7 @@
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SMP <input type="radio" value="SMP/MTsN" onclick="pilih_kelas();" name="asal_sekolah" id="yes_smp">
+                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_kelas();" name="asal_sekolah" id="yes_smp">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
