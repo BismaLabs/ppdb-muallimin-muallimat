@@ -46,7 +46,7 @@
                                     <th class="text-center" style="color: #000;"><i class="fa fa-user-circle"></i> NAMA
                                         LENGKAP
                                     </th>
-                                    <th class="text-center" style="color: #000;"><i class="fa fa-building-o"></i> KELAS
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-graduation-cap"></i> PENDAFTARAN KELAS
                                     </th>
                                     <th class="text-center" style="color: #000;"><i class="fa fa-mars"></i> JENIS
                                         KELAMIN
