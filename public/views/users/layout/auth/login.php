@@ -40,7 +40,7 @@
         <hr>
         <div class="social-auth-links text-center">
             <p> Lupa Kode Pendaftaran ? </p>
-            <a href="<?php echo base_url() ?>users/login/forgot?source=login&utf8=✓" class="btn bg-orange btn-flat" style="text-align: center;width: 100%"><i class="fa fa-envelope"></i> Kirim kode pendaftaran</a>
+            <a href="#" class="btn bg-orange btn-flat" style="text-align: center;width: 100%"><i class="fa fa-envelope"></i> Kirim kode pendaftaran</a>
         </div>
     </div>
     <div class="text-center" style="margin-top: 10px;font-size: 15px;padding: 6px 6px">

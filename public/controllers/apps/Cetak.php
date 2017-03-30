@@ -33,14 +33,25 @@ class Cetak extends CI_Controller
     public function data_valid()
     {
         if ($this->apps->apps_id()) {
+
             $data = array(
-                'title' => 'Cetak',
-                'cetak' => TRUE,
+
+                        'semua_data' => $this->apps->get_export_validasi()
             );
-            $this->load->view('apps/part/header', $data);
-            $this->load->view('apps/part/sidebar');
-            $this->load->view('apps/layout/cetak/data_valid');
-            $this->load->view('apps/part/footer');
+            //load the view and saved it into $html variable
+            $html=$this->load->view('apps/layout/cetak/data_valid', $data, true);
+
+            //this the the PDF filename that user will get to download
+            $pdfFilePath = "semua_data_pendaftaran_tervalidasi.pdf";
+
+            //load mPDF library
+            $this->load->library('pdf');
+
+            //generate the PDF from the given html
+            $this->pdf->pdf->WriteHTML($html);
+
+            //download it.
+            $this->pdf->pdf->Output($pdfFilePath, "D");
         } else {
             show_404();
             return FALSE;
@@ -51,13 +62,23 @@ class Cetak extends CI_Controller
     {
         if ($this->apps->apps_id()) {
             $data = array(
-                'title' => 'Cetak',
-                'cetak' => TRUE,
+
+                'semua_data' => $this->apps->get_export_all()
             );
-            $this->load->view('apps/part/header', $data);
-            $this->load->view('apps/part/sidebar');
-            $this->load->view('apps/layout/cetak/data_invalid');
-            $this->load->view('apps/part/footer');
+            //load the view and saved it into $html variable
+            $html=$this->load->view('apps/layout/cetak/data_invalid', $data, true);
+
+            //this the the PDF filename that user will get to download
+            $pdfFilePath = "semua_data_pendaftaran.pdf";
+
+            //load mPDF library
+            $this->load->library('pdf');
+
+            //generate the PDF from the given html
+            $this->pdf->pdf->WriteHTML($html);
+
+            //download it.
+            $this->pdf->pdf->Output($pdfFilePath, "D");
         } else {
             show_404();
             return FALSE;

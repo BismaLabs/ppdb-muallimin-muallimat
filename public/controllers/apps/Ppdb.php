@@ -127,9 +127,73 @@ class Ppdb extends CI_Controller
             //redirect halaman
             redirect('apps/ppdb?source=confirm&utf8=✓');
         } else {
-
+            show_404();
+            return FALSE;
         }
     }
 
+
+    public function cetak_formulir($kode_pendaftaran)
+    {
+        if($this->apps->apps_id())
+        {
+            //kode pendaftaran
+            $kode_pendaftaran = $this->encryption->decode($kode_pendaftaran);
+
+            $data = array(
+                        'kode_pendaftaran' => $kode_pendaftaran,
+            );
+            //load the view and saved it into $html variable
+            $html=$this->load->view('apps/layout/ppdb/cetak_formulir', $data, true);
+
+            //this the the PDF filename that user will get to download
+            $pdfFilePath = "output_pdf_name.pdf";
+
+            //load mPDF library
+            $this->load->library('pdf');
+
+            //generate the PDF from the given html
+            $this->pdf->pdf->WriteHTML($html);
+
+            //download it.
+            $this->pdf->pdf->Output($pdfFilePath, "D");
+        }else{
+            show_404();
+            return FALSE;
+        }
+    }
+
+    public function cetak_kartu_ujian($kode_pendaftaran)
+    {
+        if($this->apps->apps_id())
+        {
+            //kode pendaftaran
+            $kode_pendaftaran = $this->encryption->decode($kode_pendaftaran);
+
+            $data = [];
+            //load the view and saved it into $html variable
+            $html=$this->load->view('apps/layout/ppdb/cetak_formulir', $data, true);
+
+            //this the the PDF filename that user will get to download
+            $pdfFilePath = "output_pdf_name.pdf";
+
+            //load mPDF library
+            $this->load->library('pdf');
+
+            //generate the PDF from the given html
+            $this->pdf->kartu_ujian->WriteHTML($html);
+
+            //download it.
+            $this->pdf->kartu_ujian->Output($pdfFilePath, "D");
+        }else{
+            show_404();
+            return FALSE;
+        }
+    }
+
+    public function template_formulir()
+    {
+        $this->load->view("apps/layout/ppdb/template_formulir");
+    }
 
 }

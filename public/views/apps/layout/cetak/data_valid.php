@@ -1,76 +1,51 @@
-
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?php echo $title ?>
-            <small>PPDB Applications</small>
-        </h1>
-    </section>
-
-    <!-- Main content -->
-    <div class="content">
-        <div class="row">
-            <div class="col-md-12">
-                <?php echo $this->session->flashdata('notif') ?>
-                <div class="box box-solid">
-                    <div class="box-header with-border">
-                        <h3 class="box-title"><i class="fa fa-users"></i> Data Siswa</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <form method="GET" action="<?php echo base_url('apps/ppdb/search');?>" style="margin-top: 10px">
-                            <div class = "input-group">
-                                <input type = "text" name = "q" class = "form-control input-md" placeholder="Masukkan Kode Pendaftaran atau Nama  dan Enter" autocomplete="off" id="articles">
-                                <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-                                <span class = "input-group-btn">
-                              <button class = "btn btn-default btn-md" type = "submit">
-                                 <i class="fa fa-search"></i> Search
-                              </button>
-                           </span>
-                            </div>
-                        </form>
-                        <!-- Table Data -->
-                        <div class="table-responsive">
-                          <table class="table table-bordered table-striped table-hover" style="margin-top:20px;font-family: Roboto;font-weight: 300;">
-                            <thead>
-                              <tr>
-                                <th>No. Pendaftaran</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Asal Sekolah</th>
-                                <th>Kelas</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Keterangan</th>
-                                <th>
-                                  <div class="btn-group pull-right" role="group" >
-                                  <a class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="#"><i class="fa fa-pencil"></i> Cetak Data Siswa</a>
-                                </div>
-                              </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td>Ishak</td>
-                                <td>Jombang</td>
-                                <td>MI-BU</td>
-                                <td>1A</td>
-                                <td>Laki-Laki</td>
-                                <td>
-                                    <span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Valid"> Valid</span>
-                              </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cetak Semua Pendaftar Tervalidasi</title>
+    <link href="<?php echo base_url() ?>resources/public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<table class="table table-bordered table-striped table-hover"
+       style="margin-top:20px;font-family: Roboto;font-weight: 300;">
+    <thead>
+    <tr>
+        <th class="text-center" style="color: #000;"><i class="fa fa-list-ul"></i> NO.
+            PENDAFTARAN
+        </th>
+        <th class="text-center" style="color: #000;"><i class="fa fa-user-circle"></i> NAMA
+            LENGKAP
+        </th>
+        <th class="text-center" style="color: #000;"><i class="fa fa-building-o"></i> PENDAFTARAN KELAS
+        </th>
+        <th class="text-center" style="color: #000;"><i class="fa fa-mars"></i> JENIS
+            KELAMIN
+        </th>
+    </tr>
+    </thead>
+    <?php
+        if ($semua_data != NULL):
+        foreach ($semua_data->result() as $hasil):
+    ?>
+        <tr>
+            <td><?php echo $hasil->kode_pendaftaran ?></td>
+            <td><?php echo $hasil->nama_lengkap ?></td>
+            <td><?php echo $hasil->pendaftaran_kelas ?></td>
+            <td><?php echo $hasil->jenis_kelamin ?></td>
+        </tr>
+        <?php
+    endforeach;
+    ?>
+    <?php else : ?>
+    <?php endif; ?>
+    </tbody>
+</table>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="<?php echo base_url() ?>resources/public/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="<?php echo base_url() ?>resources/public/js/bootstrap.min.js"></script>
+</body>
+</html>
