@@ -16,9 +16,31 @@
     <link href="<?php echo base_url() ?>resources/public/css/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/css/line-icons/line-icons.css" rel="stylesheet">
     <script src="<?php echo base_url() ?>resources/public/js/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>resources/public/js/bootstrap.min.js">
-        
+    <script src="<?php echo base_url() ?>resources/public/js/bootstrap.min.js">       
     </script>
+    <script type="text/javascript">
+    function pilih_kelas() {
+     if (document.getElementById('yes_sd').checked) {
+         document.getElementById('form_sd').style.display='block';
+         document.getElementById('form_smp').style.display='none';
+         document.getElementById("yes_smp").checked = false;
+    var att = document.createAttribute("name");
+    att.value = "pendaftaran_kelas";
+    anchor.setAttributeNode(att);
+
+    // document.getElementById("yes_smp").removeAttribute("name");
+        } else if (document.getElementById('yes_smp').checked){
+
+             document.getElementById('form_smp').style.display='block';
+             document.getElementById('form_sd').style.display='none';
+             document.getElementById("yes_sd").checked = false;
+            //  var anchor1 = document.getElementById("yes_smp");
+            // var att1 = document.createAttribute("name");
+            // att1.value = "pendaftaran_kelas";
+            // anchor.setAttributeNode(att1);     
+ }
+}
+ </script>
 </head>
 
 <body style="background-color: #f1f1f1">

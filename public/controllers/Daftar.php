@@ -12,7 +12,7 @@ class Daftar extends CI_Controller {
     {
         parent::__construct();
         //load model
-        $this->load->model('apps');
+        $this->load->model(array('apps','users'));
         //load library
         $this->load->library(array('form_validation', 'recaptcha'));
 
@@ -22,7 +22,9 @@ class Daftar extends CI_Controller {
     {
         $data = array(
             'daftar'         => TRUE,
-            'recaptcha_html' => $this->recaptcha->render()
+            'recaptcha_html' => $this->recaptcha->render(),
+            'kelas_sd'   =>$this->users->kelas_sd(),
+            'kelas_smp'   =>$this->users->kelas_smp()
         );
 
         //set form validation
@@ -30,7 +32,7 @@ class Daftar extends CI_Controller {
         //set asal sekolah
         $this->form_validation->set_rules('asal_sekolah', 'Asal Sekolah', 'required');
         //set pendaftaran kelas
-        $this->form_validation->set_rules('pendaftaran_kelas', 'Pendaftaran Kelas', 'required');
+        //$this->form_validation->set_rules('pendaftaran_kelas', 'Pendaftaran Kelas', 'required');
         //set anama lengkap
         $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required');
         //set jenis kelamin

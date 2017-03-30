@@ -19,10 +19,22 @@ class Users extends CI_Model
     {
         return $this->session->userdata('users_id');
     }
-
+    //fungsi tampilkan siswa
     function edit_users()
     {
         return $this->db->get_where('tbl_siswa');
+    }
+    //fungsi pilih kelas berdasarkan status
+    function kelas_sd()
+    {
+        $this->db->where('status','1');
+        return $this->db->get('tbl_kelas');
+    }
+    //fungsi pilih kelas berdasarkan status
+    function kelas_smp()
+    {
+        $this->db->where('status','2');
+        return $this->db->get('tbl_kelas');
     }
 
     //fungsi check username

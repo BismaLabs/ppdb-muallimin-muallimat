@@ -53,35 +53,70 @@
                         <hr>
                         <div class="form-group">
                             <div class="row">
+                            <!-- Pilih kelas sd -->
                                 <div class="col-md-3">
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-
-                                    SD <input type="radio" onclick="javascript:pilihkelas();" name="asal_sekolah" value="SD/MI" id="yesSD">
-                                    SMP <input type="radio" value="SMP/MTsN" onclick="javascript:pilihkelas();" name="asal_sekolah" id="yesSMP">
+                                    SD <input type="radio" onclick="pilih_kelas();" name="asal_sekolah" value="SD/MI" id="yes_sd">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-3">
  
                                     <label> PENDAFTARAN KELAS
                                      <span class="required" style="color: red">*</span></label>
-                                     <div id="form">
-                                        <select class="form-control">
-                                            <<option>--Pilih--</option>
-                                        </select>
+                                     <div id="form_sd" style="display: none">
+                                        <select class="form-control" id="select_sd">
+                                    <?php
+                                    foreach($kelas_sd->result_array() as $row)
+                                    {
+                                        if($row['id_kelas']== $id_kelas)
+                                        {
+                                            ?>
+                                            <option value="<?php echo $row['id_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <option value="<?php echo $row['id_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </select>
                                     </div>
-                                    <div style="display:none" id="smp">
-                                          <select id="mySelectID" name="pendaftaran_kelas" class="form-control">
-                                        </select>
-                                      </div>
-                                    <div  style="display:none"  id="sd" >
-                                        <select class="form-control" name="pendaftaran_kelas">   
-                                            <option value="1A">Kelas 1A</option>
-                                            <option value="1B">Kelas 1B</option>
-                                        </select>
-                                        
-                                      </div>
+                                     <?php echo form_error('pendaftaran_kelas'); ?>
+                                </div>
+
+                                <!-- Pilih Kelas smp -->
+                                <div class="col-md-3">
+                                    <label for="asal_sekolah"> Asal Sekolah
+                                        <span class="required" style="color: red">*</span></label>
+                                    <br/>
+                                    SMP <input type="radio" value="SMP/MTsN" onclick="pilih_kelas();" name="asal_sekolah" id="yes_smp">
+                                    <?php echo form_error('asal_sekolah'); ?>
+                                </div>
+                                <div class="col-md-3">
+                                    <label> PENDAFTARAN KELAS
+                                     <span class="required" style="color: red">*</span></label>
+                                    <div id="form_smp" style="display: none">
+                                      <select class="form-control" name="pendaftaran_kelas" id="select_smp">
+                                    <?php
+                                    foreach($kelas_smp->result_array() as $row)
+                                    {
+                                        if($row['nama_kelas']== $status)
+                                        {
+                                            ?>
+                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                                    </div>
                                      <?php echo form_error('pendaftaran_kelas'); ?>
                                 </div>
                             </div>
