@@ -24,13 +24,14 @@ class Users extends CI_Model
     {   
       $data = array('kode_pendaftaran' => $this->session->userdata('kode_pendaftaran'), 
           );
-       // $kode_pendaftaran  =  array('kode_pendaftaran'=> $kode_pendaftaran);
-       //  return $this->db->get_where('tbl_siswa',$kode_pendaftaran);
-        // $this->db->where('kode_pendaftaran','N1MJBK');
-        // $query = $this->db->get('tbl_siswa');
-        // $this->session->userdata('kode_pendaftaran')
         return $this->db->get_where('tbl_siswa',$data);
         
+    }
+
+    function edit_siswa($kode_pendaftaran)
+    {
+         $query = $this->db->query("SELECT * FROM tbl_siswa WHERE kode_pendaftaran = '$kode_pendaftaran'");
+        return $query;
     }
     //fungsi pilih kelas berdasarkan status
     function kelas_sd()

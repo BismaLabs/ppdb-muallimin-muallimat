@@ -46,7 +46,7 @@ class Login extends CI_Controller {
                         $session_data = array(
                             'users_id'         => $users->kode_pendaftaran,
                             'nama_lengkap'     => $users->nama_lengkap,
-                            'kode_pendaftaran'     => $users->kode_pendaftaran,
+                            'kode_pendaftaran' => $users->kode_pendaftaran,
                             'jenis_kelamin'    => $users->jenis_kelamin
                         );
                         //set session userdata
