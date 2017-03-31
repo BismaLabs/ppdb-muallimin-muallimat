@@ -66,13 +66,13 @@
 
                                         $status = '<span class="badge badge-danger" style="font-family: Roboto;font-weight: 400;background-color: #ff8412;"><i class="fa fa-circle-o-notch fa-spin"></i> Pending</span>';
 
-                                        $update_status = '<a class="badge badge-primary" style="font-family: Roboto;font-weight: 400;background-color: #1969bc;" data-toggle="tooltip" data-placement="top" title="Ingin Memvalidasi ?" href="' . base_url() . 'apps/ppdb/confirm/' . $this->encryption->encode($hasil->kode_pendaftaran) . '/' . $this->encryption->encode('1') . '"><i class="fa fa-check-circle"></i> Update</a>';
+                                        $update_status = '<a class="badge badge-primary" style="font-family: Roboto;font-weight: 400;background-color: #1969bc;" data-toggle="tooltip" data-placement="top"  href="' . base_url() . 'apps/ppdb/confirm/' . $this->encryption->encode($hasil->kode_pendaftaran) . '/' . $this->encryption->encode('1') . '"><i class="fa fa-check-circle"></i> Update</a>';
 
                                     } elseif ($hasil->status == "1") {
 
                                         $status = '<span class="badge badge-success" style="font-family: Roboto;font-weight: 400;background-color: #358420;"><i class="fa fa-check-circle"></i> Validated</span>';
 
-                                        $update_status = '<a class="badge badge-primary" style="font-family: Roboto;font-weight: 400;background-color: #1969bc;" data-toggle="tooltip" data-placement="top" title="Batal Validasi ?" href="' . base_url() . 'apps/ppdb/confirm/' . $this->encryption->encode($hasil->kode_pendaftaran) . '/' . $this->encryption->encode('0') . '"><i class="fa fa-ban"></i> Update</a>';
+                                        $update_status = '<a class="badge badge-primary" style="font-family: Roboto;font-weight: 400;background-color: #1969bc;" data-toggle="tooltip" data-placement="top"  href="' . base_url() . 'apps/ppdb/confirm/' . $this->encryption->encode($hasil->kode_pendaftaran) . '/' . $this->encryption->encode('0') . '"><i class="fa fa-ban"></i> Update</a>';
                                     }
 
                                     ?>
