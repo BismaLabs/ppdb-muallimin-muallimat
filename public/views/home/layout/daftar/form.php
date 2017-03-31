@@ -70,14 +70,14 @@
                                     <?php
                                     foreach($kelas_sd->result_array() as $row)
                                     {
-                                        if($row['id_kelas']== $id_kelas)
+                                        if(isset($row['id_kelas']) != $row['id_kelas'])
                                         {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         } else {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         }
                                     }
@@ -103,7 +103,7 @@
                                     <?php
                                     foreach($kelas_smp->result_array() as $row)
                                     {
-                                        if($row['nama_kelas']== $status)
+                                        if(isset($row['nama_kelas']) != $row['status'])
                                         {
                                             ?>
                                             <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>

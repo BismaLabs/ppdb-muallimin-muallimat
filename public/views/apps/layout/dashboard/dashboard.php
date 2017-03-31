@@ -63,12 +63,12 @@
                     <div class="inner">
                         <h3><?php //print $year_visit ?></h3>
 
-                        <p style="text-align: center;font-size: 20px"><i class="fa fa-print"></i> CETAK</p>
+                        <p style="text-align: center;font-size: 20px"><i class="fa fa-cogs"></i> SYSTEMS</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="<?php echo base_url() ?>apps/cetak/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="<?php echo base_url() ?>apps/systems/" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
