@@ -58,7 +58,7 @@
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SD/MI <input type="radio" onclick="pilih_kelas();" name="asal_sekolah" value="SD/MI" id="yes_sd">
+                                    SD/MI <input type="radio" onclick="pilih_sd();" name="asal_sekolah" value="SD/MI" id="yes_sd">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
@@ -73,11 +73,11 @@
                                         if($row['id_kelas']== $id_kelas)
                                         {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         } else {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         }
                                     }
@@ -92,18 +92,18 @@
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_kelas();" name="asal_sekolah" id="yes_smp">
+                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_smp();" name="asal_sekolah" id="yes_smp">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
                                     <label> PENDAFTARAN KELAS
                                      <span class="required" style="color: red">*</span></label>
                                     <div id="form_smp" style="display: none">
-                                      <select class="form-control" name="pendaftaran_kelas" id="select_smp">
+                                      <select class="form-control" id="select_smp">
                                     <?php
                                     foreach($kelas_smp->result_array() as $row)
                                     {
-                                        if($row['nama_kelas']== $status)
+                                        if($row['nama_kelas']== $nama_kelas)
                                         {
                                             ?>
                                             <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
