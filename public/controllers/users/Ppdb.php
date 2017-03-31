@@ -18,14 +18,17 @@ class Ppdb extends CI_Controller
 
 	public function index()
 	{
-		if ($this->users->edit_users()) {
+
+		if ($this->users->users_id()) {
+			
 			$data = array('title' => 'Data Pendaftar',
 			'ppdb' 			=> True,
 			'type'    		=> 'edit',
-			'kode_pendaftaran' => $this->users->edit_users(),
+			'siswa' => $this->users->edit_users(),
 			'kelas_sd'   =>$this->users->kelas_sd(),
             'kelas_smp'   =>$this->users->kelas_smp()
 			);
+
             //load view with data
             $this->load->view('users/part/header', $data);
             $this->load->view('users/part/sidebar');
