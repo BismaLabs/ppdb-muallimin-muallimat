@@ -30,7 +30,6 @@
 
     // document.getElementById("yes_smp").removeAttribute("name");
         } else if (document.getElementById('yes_smp').checked){
-
              document.getElementById('form_smp').style.display='block';
              document.getElementById('form_sd').style.display='none';
              document.getElementById("yes_sd").checked = false;
