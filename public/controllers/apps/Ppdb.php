@@ -141,7 +141,8 @@ class Ppdb extends CI_Controller
             $kode_pendaftaran = $this->encryption->decode($kode_pendaftaran);
 
             $data = array(
-                        'kode_pendaftaran' => $kode_pendaftaran,
+                        'kode_pendaftaran'      => $kode_pendaftaran,
+                        'detail_pendaftaran'    => $this->apps->detail_cetak_formulir($kode_pendaftaran)->row_array()
             );
             //load the view and saved it into $html variable
             $html=$this->load->view('apps/layout/ppdb/cetak_formulir', $data, true);

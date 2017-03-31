@@ -220,6 +220,12 @@ class Apps extends CI_Model{
         }
     }
 
+    function detail_cetak_formulir($kode_pendaftaran)
+    {
+        $query = $this->db->query("SELECT * FROM tbl_siswa WHERE kode_pendaftaran = '$kode_pendaftaran'");
+        return $query;
+    }
+
     //fungsi date ago
     function time_elapsed_string($datetime, $full = false) {
         $today = time();

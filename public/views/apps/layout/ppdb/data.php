@@ -86,12 +86,13 @@
                                             <?php echo $status ?>
                                         </td>
                                         <td style="text-align: center">
-                                            <a class="badge badge-success"
+                                            <a class="badge badge-success" target="_blank"
                                                style="font-family: Roboto;font-weight: 400;background-color: #841d05;"
                                                data-toggle="tooltip" data-placement="top" title="Cetak Formulir"
                                                href="<?php echo base_url() ?>apps/ppdb/cetak_formulir/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>/"><i
                                                         class="fa fa-print"></i> Formulir</a>
-                                            <a class="badge badge-success"
+
+                                            <a class="badge badge-success" target="_blank"
                                                style="font-family: Roboto;font-weight: 400;background-color: #841d05;"
                                                data-toggle="tooltip" data-placement="top" title="Cetak Kartu Ujian"
                                                href="<?php echo base_url() ?>apps/ppdb/cetak_kartu_ujian/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>/"><i

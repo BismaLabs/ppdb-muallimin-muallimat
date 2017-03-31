@@ -50,11 +50,11 @@
 <table style="width: 100%">
     <tr>
         <td style="width: 4%">1.</td>
-        <td>
+        <td style="width: 37%">
             Asal Sekolah
         </td>
         <td>
-            : SD/MI
+            : <?php echo $detail_pendaftaran['asal_sekolah'] ?>
         </td>
     </tr>
     <tr>
@@ -63,7 +63,7 @@
             Pendaftaran Kelas
         </td>
         <td>
-            : 1B
+            : <?php echo $detail_pendaftaran['pendaftaran_kelas'] ?>
         </td>
     </tr>
     <tr>
@@ -72,7 +72,7 @@
             Nama Lengkap <i>(sesuai ijazah)</i>
         </td>
         <td>
-           : Fika Ridaul Maulayya
+           : <?php echo $detail_pendaftaran['nama_lengkap'] ?>
         </td>
     </tr>
     <tr>
@@ -81,7 +81,7 @@
             Jenis Kelamin
         </td>
         <td>
-           : Laki - laki
+           : <?php echo $detail_pendaftaran['jenis_kelamin'] ?>
         </td>
     </tr>
     <tr>
@@ -90,7 +90,7 @@
             NISN (Nomor Induk Siswa Nasional)
         </td>
         <td>
-            : 990888769734
+            : <?php echo $detail_pendaftaran['nisn'] ?>
         </td>
     </tr>
     <tr>
@@ -99,16 +99,16 @@
             NIK (Nomor Induk Kependudukan)
         </td>
         <td>
-            : 660888767447
+            : <?php echo $detail_pendaftaran['nik'] ?>
         </td>
     </tr>
     <tr>
         <td style="width: 4%">7.</td>
         <td>
-            Tempat, Tanggal, Bulan, Tahun. Lahir
+            Tempat, Tanggal, Bulan, Tahun Lahir
         </td>
         <td>
-            : 660888767447
+            : <?php echo $detail_pendaftaran['tempat_lahir'] ?>, <?php echo $detail_pendaftaran['tanggal_lahir'] ?>, <?php echo $detail_pendaftaran['bulan_lahir'] ?>, <?php echo $detail_pendaftaran['tahun_lahir'] ?>
         </td>
     </tr>
     <tr>
@@ -117,16 +117,16 @@
             Anak Ke
         </td>
         <td>
-            : 660888767447
+            : <?php echo $detail_pendaftaran['anak_ke'] ?> dari ( <?php echo $detail_pendaftaran['jumlah_anak_ke'] ?> ) saudara
         </td>
     </tr>
     <tr>
-        <td style="width: 3%">9.</td>
+        <td style="width: 4%">9.</td>
         <td>
             Jumlah Saudara kandung
         </td>
         <td>
-            : 660888767447
+            : <?php echo $detail_pendaftaran['jumlah_saudara_kandung'] ?> Orang. Jumlah Adik = <?php echo $detail_pendaftaran['jumlah_adik'] ?> Orang, Jumlah kakak = <?php echo $detail_pendaftaran['jumlah_kakak'] ?> Orang
         </td>
     </tr>
     <tr>
@@ -135,7 +135,7 @@
             Asrama <i>(bagi yang tinggal dipondok)</i>
         </td>
         <td>
-            : 660888767447
+            : <?php echo $detail_pendaftaran['asrama'] ?>
         </td>
     </tr>
     <tr>
@@ -144,7 +144,7 @@
             Nomor Kartu Keluarga <i>(KK)</i>
         </td>
         <td>
-            : 660888767447
+            : <?php echo $detail_pendaftaran['kk'] ?>
         </td>
     </tr>
     <tr>
@@ -153,7 +153,230 @@
             Nomor KIP/PKH * <i>(jika ada)</i>
         </td>
         <td>
-            : 660888767447
+            : <?php echo $detail_pendaftaran['kip_pkh'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">13.</td>
+        <td>
+            Nomor Telp. / Hp. yang bisa dihubungi
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['no_telp'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">14.</td>
+        <td>
+            Madrasah Asal <i>(disertai kota asal)</i>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['nama_madrasah'] ?> - <?php echo $detail_pendaftaran['kota_madrasah'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">15.</td>
+        <td>
+            NPSN <i>(nomor pokok statistik nasional)</i>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['npsn'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">16.</td>
+        <td>
+            Nomor <u>Seri IJAZAH</u> & <u>SKHUN/SHUN</u>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['no_seri_ijazah'] ?> & <?php echo $detail_pendaftaran['no_seri_skhun'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">17.</td>
+        <td>
+            Nomor Peserta Ujian Nasional</u>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['no_un'] ?>
+        </td>
+    </tr>
+</table>
+<br>
+<table style="width: 100%">
+    <tr>
+        <td><b>B. KETERANGAN BAKAT DAN MINAT CALON PESERTA DIDIK<b> </td>
+    </tr>
+</table>
+<br>
+<table style="width: 100%">
+    <tr>
+        <td style="width: 4%">1.</td>
+        <td style="width: 37%">
+            Hobi
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['hobi'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">2.</td>
+        <td style="width: 37%">
+            Bidang Studi yang Paling digemari
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['bidang_studi'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">3.</td>
+        <td style="width: 37%">
+            Bakat yang dimiliki
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['bakat_dimiliki'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">4.</td>
+        <td style="width: 37%">
+            Olah raga yang Paling digemari
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['olahraga_digemari'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">5.</td>
+        <td style="width: 37%">
+            Cita - cita
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['cita_cita'] ?>
+        </td>
+    </tr>
+</table>
+<br>
+<table style="width: 100%">
+    <tr>
+        <td><b>C. KETERANGAN ORANG TUA KANDUNG<b> </td>
+    </tr>
+</table>
+<br>
+<table style="width: 100%">
+    <tr>
+        <td style="width: 4%">1.</td>
+        <td style="width: 10%">Nama lengkap</td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            a. Ayah <i>(sesuai ijazah siswa)</i>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['nama_ayah'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            b. Ibu</i>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['nama_ibu'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">2.</td>
+        <td style="width: 10%">Nomor KTP / NIK</td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            a. Ayah
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['no_ktp_ayah'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            b. Ibu</i>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['no_ktp_ibu'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">3.</td>
+        <td style="width: 10%"><u>Pekerjaan</u> & <u>Pendidikan</u></td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            a. Ayah
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['pekerjaan_ayah'] ?> & <?php echo $detail_pendaftaran['pendidikan_ayah'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            b. Ibu</i>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['pekerjaan_ibu'] ?> & <?php echo $detail_pendaftaran['pendidikan_ibu'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">4.</td>
+        <td style="width: 37%">Alamat Tempat Tinggal <i>(sesuai KK)</i> </td>
+        <td>: Jln./Dsn - <?php echo $detail_pendaftaran['jln_desa'] ?>, RT. - <?php echo $detail_pendaftaran['rt'] ?>, RW. -<?php echo $detail_pendaftaran['rw'] ?>, Ds. - <?php echo $detail_pendaftaran['desa'] ?>, Kec. - <?php echo $detail_pendaftaran['kecamatan'] ?>, kab. - <?php echo $detail_pendaftaran['kabupaten'] ?>, K.POS - <?php echo $detail_pendaftaran['kode_pos'] ?>, Provinsi - <?php echo $detail_pendaftaran['provinsi'] ?> </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">5.</td>
+        <td style="width: 10%">Penghasilan rata-rata Perbulan</td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            a. Ayah
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['penghasilan_rata_ayah'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            b. Ibu</i>
+        </td>
+        <td>
+            : <?php echo $detail_pendaftaran['penghasilan_rata_ibu'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%">6.</td>
+        <td style="width: 10%">Keterangan dan <u>No. HP</u></td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            a. Ayah
+        </td>
+        <td>
+            : (<?php echo $detail_pendaftaran['keterangan_ayah'] ?>)*. HP: <?php echo $detail_pendaftaran['no_tlp_ayah'] ?>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 4%;padding-left: 3%"></td>
+        <td style="width: 37%;padding-left: 0%">
+            b. Ibu</i>
+        </td>
+        <td>
+            : (<?php echo $detail_pendaftaran['keterangan_ibu'] ?>)*. HP: <?php echo $detail_pendaftaran['no_tlp_ibu'] ?>
         </td>
     </tr>
 </table>
