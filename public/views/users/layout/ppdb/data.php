@@ -14,7 +14,9 @@
         <div class="row">
             <div class="col-md-12">
                 <?php echo $this->session->flashdata('notif') ?>
-                    
+                    <?php
+                  foreach($kode_pendaftaran->result() as $userdata):
+                  ?>
                     <!-- Poin A -->
                     <div class="box box-solid">
                          <div class="box-header with-border">
@@ -23,49 +25,17 @@
                             <div class="box-body">
                                 <div class="card">
                                 <div class="card-content">
-                                 <?php
-                                    foreach($kode_pendftaran->result() as $userdata):
-                                    ?>
-                                    <h4>A. KETERANGAN CALON PESERTA DIDIK</h4>
-                                    <hr>
                                     <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <label for="asal_sekolah"> Asal Sekolah
-                                            <span class="required" style="color: red">*</span></label>
-                                        <br/>
-
-                                        SD <input type="radio" onclick="javascript:yesnoCheck();" name="asal_sekolah" value="SD/MI" id="yesSD">
-                                        SMP <input type="radio" value="SMP/MTsN" onclick="javascript:yesnoCheck();" name="asal_sekolah" id="yesSMP">
-                                        <?php echo form_error('asal_sekolah'); ?>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <label for="user_id"> PENDAFTARAN KELAS
-                                            <span class="required" style="color: red">*</span></label>
-                                         <div id="form">
-                                            <select class="form-control">
-                                                <option>-- Pilih --</option>
-                                            </select>
-                                        </div>
-                                        <div id="sd" style="display:none">
-                                            <select class="form-control" name="pendaftaran_kelas">
-                                                <option>-- Pilih --</option>
-                                                <option value="1-A">Kelas 1A</option>
-                                                <option value="1-B">Kelas 1B</option>
-                                                <option value="2-A">Kelas 2A</option>
-                                                <option value="2-B">Kelas 2B</option>
-                                            </select>
-                                          </div>
-                                          <div id="smp" style="display:none">
-                                              <select class="form-control" name="pendaftaran_kelas">
-                                                  <option>-- Pilih --</option>
-                                                  <option value="2">Kelas 2</option>
-                                                  <option value="3">Kelas 3</option>
-                                                  <option value="4">Kelas 4</option>
-                                              </select>
-                                          </div>
-                                        <?php echo form_error('pendaftaran_kelas'); ?>
-                                    </div>
+                                    <label for="asal_sekolah"> Asal Sekolah
+                                        <span class="required" style="color: red">*</span></label>
+                                    <br/>
+                                </div>
+                                <div class="col-md-3">
+                                    <label> TERDAFTARAN DI KELAS
+                                     <span class="required" style="color: red">*</span></label>
+                                </div>
                                 </div>
                                     </div>  
                                     <div class="form-group">
@@ -350,8 +320,6 @@
                         <div class="box-body">
                         <div class="card">
                         <div class="card-content">
-                        <h4 style="margin-top: 30px">B. KETERANGAN BAKAT DAN MINAT CALON PESERTA DIDIK</h4>
-                        <hr>
                         <div class="form-group">
                             <label> Hobi</label>
                             <input type="text" class="form-control" value="<?php echo $userdata->hobi ?>" name="hobi" placeholder="Masukkan Hobi Anda"

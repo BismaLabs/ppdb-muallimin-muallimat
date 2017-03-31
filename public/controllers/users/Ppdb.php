@@ -22,8 +22,9 @@ class Ppdb extends CI_Controller
 			$data = array('title' => 'Data Pendaftar',
 			'ppdb' 			=> True,
 			'type'    		=> 'edit',
-			'kode_pendftaran' => $this->users->edit_users(),
-			'pilh_kelas'    => $this->users->pilih_kelas()
+			'kode_pendaftaran' => $this->users->edit_users(),
+			'kelas_sd'   =>$this->users->kelas_sd(),
+            'kelas_smp'   =>$this->users->kelas_smp()
 			);
             //load view with data
             $this->load->view('users/part/header', $data);
