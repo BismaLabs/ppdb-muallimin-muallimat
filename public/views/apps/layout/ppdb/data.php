@@ -90,13 +90,13 @@
                                                style="font-family: Roboto;font-weight: 400;background-color: #841d05;"
                                                data-toggle="tooltip" data-placement="top" title="Cetak Formulir"
                                                href="<?php echo base_url() ?>apps/ppdb/cetak_formulir/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>/"><i
-                                                        class="fa fa-print"></i> Formulir</a>
+                                                        class="fa fa-file-text"></i> Formulir</a>
 
                                             <a class="badge badge-success" target="_blank"
                                                style="font-family: Roboto;font-weight: 400;background-color: #841d05;"
                                                data-toggle="tooltip" data-placement="top" title="Cetak Kartu Ujian"
                                                href="<?php echo base_url() ?>apps/ppdb/cetak_kartu_ujian/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>/"><i
-                                                        class="fa fa-print"></i> Kartu Ujian</a>
+                                                        class="fa fa-address-card"></i> Kartu Ujian</a>
                                         </td>
                                         <td>
                                             <div class="btn-group pull-right" role="group">
