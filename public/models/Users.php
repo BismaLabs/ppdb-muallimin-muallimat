@@ -21,8 +21,17 @@ class Users extends CI_Model
     }
     //fungsi tampilkan siswa
     function edit_users()
+    {   
+      $data = array('kode_pendaftaran' => $this->session->userdata('kode_pendaftaran'), 
+          );
+        return $this->db->get_where('tbl_siswa',$data);
+        
+    }
+
+    function edit_siswa($kode_pendaftaran)
     {
-        return $this->db->get_where('tbl_siswa');
+         $query = $this->db->query("SELECT * FROM tbl_siswa WHERE kode_pendaftaran = '$kode_pendaftaran'");
+        return $query;
     }
     //fungsi pilih kelas berdasarkan status
     function kelas_sd()

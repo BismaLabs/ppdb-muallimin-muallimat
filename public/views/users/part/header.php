@@ -10,6 +10,31 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/toastr.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>resources/backend/dist/css/skins/_all-skins.min.css">
+
+<script type="text/javascript">
+    function pilih_kelas() {
+     if (document.getElementById('yes_sd').checked) {
+         document.getElementById('form_sd').style.display='block';
+         document.getElementById('form_smp').style.display='none';
+         document.getElementById("yes_smp").checked = false;
+    var att = document.createAttribute("name");
+    att.value = "pendaftaran_kelas";
+    anchor.setAttributeNode(att);
+
+    // document.getElementById("yes_smp").removeAttribute("name");
+        } else if (document.getElementById('yes_smp').checked){
+
+             document.getElementById('form_smp').style.display='block';
+             document.getElementById('form_sd').style.display='none';
+             document.getElementById("yes_sd").checked = false;
+            //  var anchor1 = document.getElementById("yes_smp");
+            // var att1 = document.createAttribute("name");
+            // att1.value = "pendaftaran_kelas";
+            // anchor.setAttributeNode(att1);     
+ }
+}
+ </script>
+
 </head>
 <body class="hold-transition skin-green fixed sidebar-mini">
 <!-- Site wrapper -->

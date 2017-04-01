@@ -13,15 +13,15 @@
                 </a>
             </div>
             <div class="col-md-3">
-                 <a href="<?php echo base_url() ?>panduan/"   style="text-decoration: none;color:#23527c;">
-                      <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
-                           <i class="icon-book-open fa-3x"></i>
-                            <div class="card-content" style="text-align:        center;padding: 5px">
-                              PANDUAN
-                          </div>
+                <a href="<?php echo base_url() ?>panduan/"   style="text-decoration: none;color:#23527c;">
+                    <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
+                        <i class="icon-book-open fa-3x"></i>
+                        <div class="card-content" style="text-align:        center;padding: 5px">
+                            PANDUAN
+                        </div>
                     </div>
-                   </a>
-                 </div>
+                </a>
+            </div>
             <div class="col-md-3">
                 <a href="<?php echo base_url() ?>daftar/" style="text-decoration: none;color:#23527c;">
                     <div class="card card-menu" style="background-color: #fff;text-align: center;padding-top: 6px">
@@ -44,8 +44,8 @@
             </div>
             <div class="col-md-12">
                 <?php
-                    $attributes = array('id' => 'frm_login');
-                    echo form_open_multipart('daftar?source=send&feedback&utf8=✓', $attributes)
+                $attributes = array('id' => 'frm_login');
+                echo form_open_multipart('daftar?source=send&feedback&utf8=✓', $attributes)
                 ?>
                 <div class="card">
                     <div class="card-content">
@@ -53,38 +53,38 @@
                         <hr>
                         <div class="form-group">
                             <div class="row">
-                            <!-- Pilih kelas sd -->
+                                <!-- Pilih kelas sd -->
                                 <div class="col-md-3">
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SD/MI <input type="radio" onclick="pilih_kelas();" name="asal_sekolah" value="SD/MI" id="yes_sd">
+                                    SD/MI <input type="radio" onclick="pilih_sd();" name="asal_sekolah" value="SD/MI" id="yes_sd">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
- 
+
                                     <label> PENDAFTARAN KELAS
-                                     <span class="required" style="color: red">*</span></label>
-                                     <div id="form_sd" style="display: none">
+                                        <span class="required" style="color: red">*</span></label>
+                                    <div id="form_sd" style="display: none">
                                         <select class="form-control" id="select_sd">
-                                    <?php
-                                    foreach($kelas_sd->result_array() as $row)
-                                    {
-                                        if(isset($row['id_kelas']) != $row['id_kelas'])
-                                        {
-                                            ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
-                                        } else {
+                                            foreach($kelas_sd->result_array() as $row)
+                                            {
+                                                if($row['id_kelas']== $id_kelas)
+                                                {
+                                                    ?>
+                                                    <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                                    <?php
+                                                } else {
+                                                    ?>
+                                                    <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                                    <?php
+                                                }
+                                            }
                                             ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
+                                        </select>
                                     </div>
-                                     <?php echo form_error('pendaftaran_kelas'); ?>
+                                    <?php echo form_error('pendaftaran_kelas'); ?>
                                 </div>
 
                                 <!-- Pilih Kelas smp -->
@@ -92,32 +92,32 @@
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_kelas();" name="asal_sekolah" id="yes_smp">
+                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_smp();" name="asal_sekolah" id="yes_smp">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
                                     <label> PENDAFTARAN KELAS
-                                     <span class="required" style="color: red">*</span></label>
+                                        <span class="required" style="color: red">*</span></label>
                                     <div id="form_smp" style="display: none">
-                                      <select class="form-control" name="pendaftaran_kelas" id="select_smp">
-                                    <?php
-                                    foreach($kelas_smp->result_array() as $row)
-                                    {
-                                        if(isset($row['nama_kelas']) != $row['status'])
-                                        {
-                                            ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                        <select class="form-control" id="select_smp">
                                             <?php
-                                        } else {
+                                            foreach($kelas_smp->result_array() as $row)
+                                            {
+                                                if($row['nama_kelas']== $nama_kelas)
+                                                {
+                                                    ?>
+                                                    <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                                    <?php
+                                                } else {
+                                                    ?>
+                                                    <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                                    <?php
+                                                }
+                                            }
                                             ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
+                                        </select>
                                     </div>
-                                     <?php echo form_error('pendaftaran_kelas'); ?>
+                                    <?php echo form_error('pendaftaran_kelas'); ?>
                                 </div>
                             </div>
                         </div>
@@ -857,11 +857,11 @@
                     $attributes = array('id' => 'frm_login');
                     echo form_open_multipart('users/login?source=sending&utf8=✓', $attributes)
                     ?>
-                        <div class="form-group">
-                            <label for="user_id"><i class="icon-user"></i> Kode Pendaftaran</label>
-                            <input type="text" class="form-control" id="user_id" name="kode_pendaftaran" placeholder="Masukkan Kode Pendaftaran Anda" style="border-radius: 0px">
-                        </div>
-                        <button type="submit" class="btn btn-success" style="border-radius: 0px;padding: 5px 15px;font-family: Roboto;font-weight: normal;text-shadow: 0 -1px 0 rgba(0,0,0,0.15);background-color: #6cc644;background-image: -webkit-linear-gradient(#7bcc58, #60b838);background-image: linear-gradient(#7bcc58, #60b838);border-color: #55a532;">Masuk <i class="icon-login"></i> </button>
+                    <div class="form-group">
+                        <label for="user_id"><i class="icon-user"></i> Kode Pendaftaran</label>
+                        <input type="text" class="form-control" id="user_id" name="kode_pendaftaran" placeholder="Masukkan Kode Pendaftaran Anda" style="border-radius: 0px">
+                    </div>
+                    <button type="submit" class="btn btn-success" style="border-radius: 0px;padding: 5px 15px;font-family: Roboto;font-weight: normal;text-shadow: 0 -1px 0 rgba(0,0,0,0.15);background-color: #6cc644;background-image: -webkit-linear-gradient(#7bcc58, #60b838);background-image: linear-gradient(#7bcc58, #60b838);border-color: #55a532;">Masuk <i class="icon-login"></i> </button>
                     <?php echo form_close() ?>
                 </div>
             </div>
