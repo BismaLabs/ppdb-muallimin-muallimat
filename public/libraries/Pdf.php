@@ -17,7 +17,7 @@ class Pdf {
 
     public function __construct()
     {
-        $this->pdf = new mPDF('', 'L');
+        $this->pdf = new mPDF('', 'Legal');
     }
 
     public function kartu_ujian($param = '"en-GB-x","A4","","",10,10,10,10,6,3"')
