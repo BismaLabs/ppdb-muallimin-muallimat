@@ -48,7 +48,7 @@
                                     <?php
                                     foreach($kelas_sd->result_array() as $row)
                                     {
-                                        if($row['id_kelas']== $id_kelas)
+                                        if($row['id_kelas']== $row['status'])
                                         {
                                             ?>
                                             <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
@@ -81,7 +81,7 @@
                                     <?php
                                     foreach($kelas_smp->result_array() as $row)
                                     {
-                                        if($row['nama_kelas']== $status)
+                                        if($row['nama_kelas']== $row['status'])
                                         {
                                             ?>
                                             <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
@@ -490,9 +490,9 @@
                                             <div class="form-group">
                                                 <label>Provinsi</label>
                                                 <select class="form-control" name="provinsi">
-                                                    <option value=""><?php echo  $edit_user['Provinsi'] ?> </option>
+                                                    <option value="<?php echo  $edit_user['provinsi'] ?>"><?php echo  $edit_user['provinsi'] ?> </option>
                                                 </select>
-                                                <?php echo form_error('alamat_provinsi'); ?>
+                                                <?php echo form_error('provinsi'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -689,7 +689,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." class="btn btn-sending btn-success btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Simpan <i class="fa fa-pencil-square-o"></i> </button>
+                            <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." class="btn btn-sending btn-success btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;"><i class="fa fa-save"></i> Simpan  </button>
                             <button type="reset" class="btn btn-warning btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Reset <i class="fa fa-repeat"></i></button>
                             
                                </div>
