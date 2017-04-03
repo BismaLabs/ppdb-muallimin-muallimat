@@ -36,11 +36,10 @@
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SD/MI <input type="radio" onclick="pilih_kelas();" name="asal_sekolah" value="SD/MI" id="yes_sd">
+                                    SD/MI <input type="radio" onclick="pilih_sd();" name="asal_sekolah" value="SD/MI" id="yes_sd">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
- 
                                     <label> PENDAFTARAN KELAS
                                      <span class="required" style="color: red">*</span></label>
                                      <div id="form_sd" style="display: none">
@@ -48,7 +47,7 @@
                                     <?php
                                     foreach($kelas_sd->result_array() as $row)
                                     {
-                                        if($row['id_kelas']== $row['status'])
+                                        if($row['id_kelas']== $row['id-_kelas'])
                                         {
                                             ?>
                                             <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
@@ -70,7 +69,7 @@
                                     <label for="asal_sekolah"> Asal Sekolah
                                         <span class="required" style="color: red">*</span></label>
                                     <br/>
-                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_kelas();" name="asal_sekolah" id="yes_smp">
+                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_smp();" name="asal_sekolah" id="yes_smp">
                                     <?php echo form_error('asal_sekolah'); ?>
                                 </div>
                                 <div class="col-md-3">
@@ -139,7 +138,38 @@
                                     
                                         <label for="tanggal">Tanggal <span class="required"style="color: red">*</span></label>
                                         <select class="form-control"  name="tanggal_lahir" id="tanggal">
-                                            <option><?php echo $edit_user['tanggal_lahir'] ?></option>
+                                              <option value='1'>1</option>
+                                        <option value='2'>2</option>
+                                        <option value='3'>3</option>
+                                        <option value='4'>4</option>
+                                        <option value='5'>5</option>
+                                        <option value='6'>6</option>
+                                        <option value='7'>7</option>
+                                        <option value='8'>8</option>
+                                        <option value='9'>9</option>
+                                        <option value='10'>10</option>
+                                        <option value='11'>11</option>
+                                        <option value='12'>12</option>
+                                        <option value='13'>13</option>
+                                        <option value='14'>14</option>
+                                        <option value='15'>15</option>
+                                        <option value='16'>16</option>
+                                        <option value='17'>17</option>
+                                        <option value='18'>18</option>
+                                        <option value='19'>19</option>
+                                        <option value='20'>20</option>
+                                        <option value='21'>21</option>
+                                        <option value='22'>22</option>
+                                        <option value='23'>23</option>
+                                        <option value='24'>24</option>
+                                        <option value='25'>25</option>
+                                        <option value='26'>26</option>
+                                        <option value='27'>27</option>
+                                        <option value='28'>28</option>
+                                        <option value='29'>29</option>
+                                        <option value='30'>30</option>
+                                        <option value='31'>31</option>
+                                        <option><?php echo $edit_user['tanggal_lahir'] ?></option>
                                         </select>
                                         <?php echo form_error('tanggal_lahir'); ?>
                                      </div>
@@ -148,7 +178,19 @@
                                         <label for="bulan">Bulan <span class="required"
                                                                        style="color: red">*</span></label>
                                         <select style="" class="form-control" name="bulan_lahir">
-                                            <option value=""><?php echo  $edit_user['bulan_lahir'] ?></option>
+                                             <option value="Januari">Januari</option>
+                                        <option value="Februari">Februari</option>
+                                        <option value="Maret">Maret</option>
+                                        <option value="April">April</option>
+                                        <option value="Mei">Mei</option>
+                                        <option value="Juni">Juni</option>
+                                        <option value="Juli">Juli</option>
+                                        <option value="Agustus">Agustus</option>
+                                        <option value="September">September</option>
+                                        <option value="Oktober">Oktober</option>
+                                        <option value="November">November</option>
+                                        <option value="Desember">Desember</option>
+                                         <option value=""><?php echo  $edit_user['bulan_lahir'] ?></option>
                                         </select>
                                         <?php echo form_error('bulan_lahir'); ?>
                                     </div>
@@ -158,7 +200,35 @@
                                         <label for="tahun">Tahun <span class="required"
                                                                        style="color: red">*</span></label>
                                         <select class="form-control" name="tahun_lahir" id="tahun">
-                                            <option value=""><?php echo  $edit_user['tahun_lahir'] ?></option>
+                                            <option value='1990'>1990</option>
+                                        <option value='1991'>1991</option>
+                                        <option value='1992'>1992</option>
+                                        <option value='1993'>1993</option>
+                                        <option value='1994'>1994</option>
+                                        <option value='1995'>1995</option>
+                                        <option value='1996'>1996</option>
+                                        <option value='1997'>1997</option>
+                                        <option value='1998'>1998</option>
+                                        <option value='1999'>1999</option>
+                                        <option value='2000'>2000</option>
+                                        <option value='2001'>2001</option>
+                                        <option value='2002'>2002</option>
+                                        <option value='2003'>2003</option>
+                                        <option value='2004'>2004</option>
+                                        <option value='2005'>2005</option>
+                                        <option value='2006'>2006</option>
+                                        <option value='2007'>2007</option>
+                                        <option value='2008'>2008</option>
+                                        <option value='2009'>2009</option>
+                                        <option value='2010'>2010</option>
+                                        <option value='2011'>2011</option>
+                                        <option value='2012'>2012</option>
+                                        <option value='2013'>2013</option>
+                                        <option value='2014'>2014</option>
+                                        <option value='2015'>2015</option>
+                                        <option value='2016'>2016</option>
+                                        <option value='2017'>2017</option>
+                                          <option value=""><?php echo  $edit_user['tahun_lahir'] ?></option>
                                         </select>
                                         <?php echo form_error('tahun_lahir'); ?>
                                     </div>
@@ -279,7 +349,7 @@
                                             <label>Nomor Seri Ijazah</label>
                                             <input type="text" placeholder="No Seri Ijazah" name="no_ijazah"
                                                    class="form-control" style="border-radius: 0px" value="
-                                                   <?php echo  $edit_user['no_seri_ijazah'] ?>" >
+                                                   <?php echo  $edit_user['no_seri_ijazah']; ?>" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -491,6 +561,40 @@
                                                 <label>Provinsi</label>
                                                 <select class="form-control" name="provinsi">
                                                     <option value="<?php echo  $edit_user['provinsi'] ?>"><?php echo  $edit_user['provinsi'] ?> </option>
+                                                    <option value="Aceh"> Aceh</option>
+                                            <option value="Bali"> Bali</option>
+                                            <option value="Banten"> Banten</option>
+                                            <option value="Bengkulu"> Bengkulu</option>
+                                            <option value="Gorontalo"> Gorontalo</option>
+                                            <option value="Jakarta"> Jakarta</option>
+                                            <option value="Jambi"> Jambi</option>
+                                            <option value="Jawa Barat"> Jawa Barat</option>
+                                            <option value="Jawa Tengah"> Jawa Tengah</option>
+                                            <option value="Jawa Timur"> Jawa Timur</option>
+                                            <option value="Kalimantan Barat"> Kalimantan Barat</option>
+                                            <option value="Kalimat Selatan"> Kalimantan Selatan</option>
+                                            <option value="Kalimantan Tengah"> Kalimantan Tengah</option>
+                                            <option value="Kalimantan Timur"> Kalimantan Timur</option>
+                                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                            <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                                            <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                            <option value="Lampung">Lampung</option>
+                                            <option value="Maluku">Maluku</option>
+                                            <option value="Maluku Utara">Maluku Utara</option>
+                                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                            <option value="Papua">Papua</option>
+                                            <option value="Papua Barat">Papua Barat</option>
+                                            <option value="Riau">Riau</option>
+                                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                            <option value="Sulaesi Utara">Sulawesi Utara</option>
+                                            <option value="Sumatera Barat">Sumatera Barat</option>
+                                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                            <option value="Sumatera Utara">Sumatera Utara</option>
+                                            <option value="Yogyakarta">Yogyakarta</option>
                                                 </select>
                                                 <?php echo form_error('provinsi'); ?>
                                             </div>
@@ -507,11 +611,17 @@
                                         </div>
                                         <div class="col-md-6">
                                             <select class="form-control" name="penghasilan_ayah">
-                                                <option><?php echo  $edit_user['penghasilan_rata_ayah'] ?></option>
+                                                <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                        <option><?php echo  $edit_user['penghasilan_rata_ayah'] ?></option>
                                             </select>
                                             <br>
                                             <select class="form-control"  name="penghasilan_ibu">
-                                                <option value=""><?php echo  $edit_user['penghasilan_rata_ibu']?></option>
+                                                <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                         <option value=""><?php echo  $edit_user['penghasilan_rata_ibu']?></option>
                                             </select>
                                         </div>
                                     </div>
@@ -528,7 +638,9 @@
                                             <div class="col-md-3">
                                                 <label>Keterangan</label>
                                                 <select class="form-control"  name="keterangan_ayah">
-                                                    <option><?php echo  $edit_user['keterangan_ayah']?></option>
+                                                    <option value="Masih Hidup">Masih Hidup</option>
+                                            <option value="Meninggal Dunia">Meninggal Dunia</option>
+                                              <option><?php echo  $edit_user['keterangan_ayah']?></option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -543,6 +655,8 @@
                                             <div class="col-md-3">
                                                 <label>Keterangan</label>
                                                 <select class="form-control" name="keterangan_ibu">
+                                                    <option value="Masih Hidup">Masih Hidup</option>
+                                                    <option value="Meninggal Dunia">Meninggal Dunia</option>
                                                     <option value=""><?php echo  $edit_user['keterangan_ibu'] ?></option>
                                                 </select>
                                             </div>
@@ -671,6 +785,40 @@
                                             <label>Provinsi</label>
                                             <select class="form-control" name="provinsi_wali">
                                                 <option><?php echo  $edit_user['provinsi_wali'] ?></option>
+                                                <option value="Aceh"> Aceh</option>
+                                            <option value="Bali"> Bali</option>
+                                            <option value="Banten"> Banten</option>
+                                            <option value="Bengkulu"> Bengkulu</option>
+                                            <option value="Gorontalo"> Gorontalo</option>
+                                            <option value="Jakarta"> Jakarta</option>
+                                            <option value="Jambi"> Jambi</option>
+                                            <option value="Jawa Barat"> Jawa Barat</option>
+                                            <option value="Jawa Tengah"> Jawa Tengah</option>
+                                            <option value="Jawa Timur"> Jawa Timur</option>
+                                            <option value="Kalimantan Barat"> Kalimantan Barat</option>
+                                            <option value="Kalimat Selatan"> Kalimantan Selatan</option>
+                                            <option value="Kalimantan Tengah"> Kalimantan Tengah</option>
+                                            <option value="Kalimantan Timur"> Kalimantan Timur</option>
+                                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                            <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                                            <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                            <option value="Lampung">Lampung</option>
+                                            <option value="Maluku">Maluku</option>
+                                            <option value="Maluku Utara">Maluku Utara</option>
+                                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                            <option value="Papua">Papua</option>
+                                            <option value="Papua Barat">Papua Barat</option>
+                                            <option value="Riau">Riau</option>
+                                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                            <option value="Sulaesi Utara">Sulawesi Utara</option>
+                                            <option value="Sumatera Barat">Sumatera Barat</option>
+                                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                            <option value="Sumatera Utara">Sumatera Utara</option>
+                                            <option value="Yogyakarta">Yogyakarta</option>
                                             </select>
                                         </div>
                                     </div>
@@ -683,7 +831,10 @@
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-control" name="penghasilan_wali">
-                                            <option><?php echo  $edit_user['penghasilan_rata_wali']?></option>
+                                            <option value="Kurang Dari Rp.1 Juta">Kurang Dari Rp.1 Juta</option>
+                                        <option value="Antara Rp.1-2 Juta">Antara Rp.1-2 Juta</option>
+                                        <option value="Lebih Dari Rp.2 Juta">Lebih Dari Rp.2 Juta</option>
+                                         <option><?php echo  $edit_user['penghasilan_rata_wali']?></option>
                                         </select>
                                     </div>
                                 </div>
