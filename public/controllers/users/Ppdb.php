@@ -50,7 +50,6 @@ class Ppdb extends CI_Controller
 			$data = array('title' => 'Data Pendaftar',
 				'ppdb' 			=> True,
 				'type'    		=> 'edit',
-				'recaptcha_html' => $this->recaptcha->render(),
               	'edit_user'     => $this->users->edit_siswa($id)->row_array(),
               	'kelas_sd'   =>$this->users->kelas_sd(),
             	'kelas_smp'   =>$this->users->kelas_smp()
@@ -70,6 +69,7 @@ class Ppdb extends CI_Controller
 	{
 		if ($this->users->users_id()) {
 			$type           = $this->input->post("type");
+			$id['kode_pendaftaran']  = $this->input->post("kode_pendaftaran");
             //check var type
             if ($type = "edit") {
             	$update = array(
@@ -144,7 +144,7 @@ class Ppdb extends CI_Controller
                 'penghasilan_rata_wali'     => $this->input->post("penghasilan_wali"),
                 'status'                    => "0",
                  );
- 						$this->db->update("tbl_siswa", $update);
+ 						$this->db->update("tbl_siswa", $update,$id);
                         //deklarasi session flashdata
                         $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
 			                                                    <i class="fa fa-check"></i> Data Berhasil Diupdate.

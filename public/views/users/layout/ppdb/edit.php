@@ -24,7 +24,7 @@
                             <h3 class="box-title"><i class="fa fa-list-ul"></i>  A. KETERANGAN CALON PESERTA DIDIK</h3>
                           </div>
                                                       <input type="hidden" name="type" value="<?php echo $type ?>">
-                                                      <input type="" name="kode_pendaftaran" value="<?php echo $edit_user['kode_pendaftaran']?>">
+                                                      <input type="hidden" name="kode_pendaftaran" value="<?php echo $edit_user['kode_pendaftaran']?>">
                            <div class="card">
                               <div class="card-content">
                                     <div class="box-body">
@@ -688,10 +688,6 @@
                                     </div>
                                 </div>
                             </div>
-                             <div class="form-group">
-                            <?php echo $recaptcha_html;?>
-                            <?php echo form_error('g-recaptcha-response'); ?>
-                        </div>
 
                             <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." class="btn btn-sending btn-success btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Simpan <i class="fa fa-pencil-square-o"></i> </button>
                             <button type="reset" class="btn btn-warning btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Reset <i class="fa fa-repeat"></i></button>
