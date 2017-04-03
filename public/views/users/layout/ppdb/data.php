@@ -17,8 +17,41 @@
                 foreach ($siswa->result() as $hasil):
                     ?>
 
+                     <div class="box box-success">
+                        <div class="box-body">
+                            <div class="card">
+                                <div class="card-content">
+                                 <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label for="asal_sekolah"> Asal Sekolah
+                                                                <span class="required"
+                                                                      style="color: red">*</span></label>
+                                                            <br/>
+                                                            <button class="btn bg-olive btn-flat" > <?php echo $hasil->asal_sekolah ?></button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label> TERDAFTARAN DI KELAS
+                                                                <span class="required"
+                                                                      style="color: red">*</span></label>
+                                                            <br/>
+                                                            <button class="btn bg-olive btn-flat"><?php echo $hasil->pendaftaran_kelas ?></button>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label></label>
+                                                            <br/>
+                                                            <a href="<?php echo base_url() ?>users/ppdb/edit_kelas/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>" class="btn bg-orange btn-flat"><i
+                                                class="fa fa-edit"></i> Ubah Data kelas</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
                     <!-- Poin A -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i> A. KETERANGAN CALON PESERTA DIDIK</h3>
                         </div>
@@ -28,30 +61,6 @@
                                     <div class="box-body">
                                         <div class="card">
                                             <div class="card-content">
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <label for="asal_sekolah"> Asal Sekolah
-                                                                <span class="required"
-                                                                      style="color: red">*</span></label>
-                                                            <br/>
-                                                            <label class="alert alert-success"
-                                                                   style="border-radius: 0px">
-                                                                <?php echo $hasil->asal_sekolah ?>
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <label> TERDAFTARAN DI KELAS
-                                                                <span class="required"
-                                                                      style="color: red">*</span></label>
-                                                            <br/>
-                                                            <label class="alert alert-success"
-                                                                   style="border-radius: 0px">
-                                                                <?php echo $hasil->pendaftaran_kelas ?>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="form-group">
                                                     <label for="nama_lengkap"> NAMA LENGKAP <i>(Sesuai Ijazah) <span
                                                                     class="required"</span></i></label>
@@ -311,7 +320,7 @@
                     </div>
 
                     <!-- Poin B -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i> B. BAKAT DAN MINAT CALON PESERTA DIDIK
                             </h3>
@@ -358,7 +367,7 @@
 
 
                     <!-- Poin C -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i> C. KETERANGAN ORANG TUA KANDUNG</h3>
                         </div>
@@ -608,7 +617,7 @@
 
                     </div>
                     <!-- Poin D -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i> D. KETERANGAN WALI</h3>
                         </div>
@@ -759,16 +768,13 @@
 
                                     <a class="btn btn-success"
                                        style="border-radius:0px; border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow; font-family: Roboto;font-weight: 400;background-color: #00a65a;"
-                                       data-toggle="tooltip" data-placement="top" title="Ubah Data"
+                                       data-toggle="tooltip" data-placement="top" title="Ubah Data Diri"
                                        href="<?php echo base_url() ?>users/ppdb/edit/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>"><i
-                                                class="fa fa-edit"></i> Ubah Data</a>
-
+                                                class="fa fa-edit"></i> Ubah Data Diri</a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
 
                     <?php
                 endforeach;
@@ -779,4 +785,3 @@
     </div>
 </div>
 <!-- /.content-wrapper -->
-</NAME>

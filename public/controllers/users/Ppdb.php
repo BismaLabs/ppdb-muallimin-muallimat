@@ -65,6 +65,28 @@ class Ppdb extends CI_Controller
 		}
 	}
 
+    public function edit_kelas($kode_pendaftaran)
+    {
+        if ($this->users->users_id()) {
+            $id['kode_pendaftaran']  = $this->encryption->decode($this->session->userdata("kode_pendaftaran"));
+            $data = array('title' => 'Data Pendaftar',
+                'ppdb'          => True,
+                'type'          => 'edit kelas',
+                'edit_user'     => $this->users->edit_siswa($id)->row_array(),
+                'kelas_sd'   =>$this->users->kelas_sd(),
+                'kelas_smp'   =>$this->users->kelas_smp()
+              );
+              //load view with data
+            $this->load->view('users/part/header', $data);
+            $this->load->view('users/part/sidebar');
+            $this->load->view('users/layout/ppdb/edit_kelas');
+            $this->load->view('users/part/footer');
+            }else{
+            show_404();
+            return FALSE;
+        }
+    }
+
 	public function save()
 	{
 		if ($this->users->users_id()) {
@@ -73,8 +95,6 @@ class Ppdb extends CI_Controller
             //check var type
             if ($type = "edit") {
             	$update = array(
-                 'asal_sekolah'              => $this->input->post("asal_sekolah"),
-                'pendaftaran_kelas'         => $this->input->post("pendaftaran_kelas"),
                 'nama_lengkap'              => $this->input->post("nama"),
                 'jenis_kelamin'             => $this->input->post("jenis_kelamin"),
                 'nisn'                      => $this->input->post("nisn"),
@@ -149,6 +169,18 @@ class Ppdb extends CI_Controller
                         $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
 			                                                    <i class="fa fa-check"></i> Data Berhasil Diupdate.
 			                                                </div>');
+                        //redirect halaman
+                        redirect('users/ppdb/?source=add&utf8=✓');
+            }if ($type = "edit kelas") {
+                $update_kelas = array(
+                'asal_sekolah'              => $this->input->post("asal_sekolah"),
+                'pendaftaran_kelas'         => $this->input->post("pendaftaran_kelas"));
+
+                $this->db->update("tbl_siswa", $update,$id);
+                        //deklarasi session flashdata
+                        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
+                                                                <i class="fa fa-check"></i> Data Berhasil Diupdate.
+                                                            </div>');
                         //redirect halaman
                         redirect('users/ppdb/?source=add&utf8=✓');
             }

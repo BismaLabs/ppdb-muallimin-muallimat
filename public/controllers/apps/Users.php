@@ -463,16 +463,16 @@ class Users extends CI_Controller
                     }
                 }
 
-            }else{
+                }else{
                 $this->session->set_flashdata('notif', '<div class="alert alert-danger alert-dismissible" style="font-family:Roboto">
 			                                                    <i class="fa fa-exclamation-circle"></i> Variable Type not value
 			                                                </div>');
                 redirect('apps/users?source=edit&utf8=✓');
             }
-        }else{
+             }else{
             show_404();
             return FALSE;
-        }
+            }
     }
 
     public function delete()

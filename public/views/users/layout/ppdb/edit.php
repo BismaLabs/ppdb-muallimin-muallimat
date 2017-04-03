@@ -19,7 +19,7 @@
                         echo form_open_multipart('users/ppdb/save?source=header&utf8=✓', $attributes)
                         ?>
                     <!-- Poin A -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                          <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i>  A. KETERANGAN CALON PESERTA DIDIK</h3>
                           </div>
@@ -31,71 +31,7 @@
                                 <div class="card">
                                 <div class="card-content">
                             <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                    <label for="asal_sekolah"> Asal Sekolah
-                                        <span class="required" style="color: red">*</span></label>
-                                    <br/>
-                                    SD/MI <input type="radio" onclick="pilih_sd();" name="asal_sekolah" value="SD/MI" id="yes_sd">
-                                    <?php echo form_error('asal_sekolah'); ?>
-                                </div>
-                                <div class="col-md-3">
-                                    <label> PENDAFTARAN KELAS
-                                     <span class="required" style="color: red">*</span></label>
-                                     <div id="form_sd" style="display: none">
-                                        <select class="form-control" id="select_sd">
-                                    <?php
-                                    foreach($kelas_sd->result_array() as $row)
-                                    {
-                                        if($row['id_kelas']== $row['id-_kelas'])
-                                        {
-                                            ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
-                                            <?php
-                                        } else {
-                                            ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                                    </div>
-                                     <?php echo form_error('pendaftaran_kelas'); ?>
-                                </div>
-
-                                <!-- Pilih Kelas smp -->
-                                <div class="col-md-3">
-                                    <label for="asal_sekolah"> Asal Sekolah
-                                        <span class="required" style="color: red">*</span></label>
-                                    <br/>
-                                    SMP/MTsN <input type="radio" value="SMP/MTsN" onclick="pilih_smp();" name="asal_sekolah" id="yes_smp">
-                                    <?php echo form_error('asal_sekolah'); ?>
-                                </div>
-                                <div class="col-md-3">
-                                    <label> PENDAFTARAN KELAS
-                                     <span class="required" style="color: red">*</span></label>
-                                    <div id="form_smp" style="display: none">
-                                      <select class="form-control" name="pendaftaran_kelas" id="select_smp">
-                                    <?php
-                                    foreach($kelas_smp->result_array() as $row)
-                                    {
-                                        if($row['nama_kelas']== $row['status'])
-                                        {
-                                            ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
-                                            <?php
-                                        } else {
-                                            ?>
-                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                                    </div>
-                                     <?php echo form_error('pendaftaran_kelas'); ?>
-                                </div>
+                                
                             </div>  
                            <div class="form-group">
                                 <label for="nama_lengkap"> NAMA LENGKAP <i>(Sesuai Ijazah) <span class="required"</span></i></label>
@@ -338,7 +274,7 @@
                                     <div class="form-group">
                                 <label>Nomor NPSN <span class="required" style="color: red">*</span></label>
                                 <input type="text" placeholder="No NPSN" class="form-control" name="npsn"
-                                       value="<?php $edit_user['npsn'] ?>"
+                                       value="<?php echo $edit_user['npsn'] ?>"
                                        style="border-radius: 0px">
                                 <?php echo form_error('npsn'); ?>
                                     </div>
@@ -373,11 +309,9 @@
                                </div>
                            </div>
                         </div>   
-                               
-                    </div>
-
+    
                      <!-- Poin B -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i>  B. BAKAT DAN MINAT CALON PESERTA DIDIK</h3>
                         </div>
@@ -417,7 +351,7 @@
 
 
                      <!-- Poin C -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i>  C. KETERANGAN ORANG TUA KANDUNG</h3>
                          </div>
@@ -677,7 +611,7 @@
 
                      </div>
                     <!-- Poin D -->
-                    <div class="box box-solid">
+                    <div class="box box-success">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i>  D. KETERANGAN WALI</h3>
                          </div>
