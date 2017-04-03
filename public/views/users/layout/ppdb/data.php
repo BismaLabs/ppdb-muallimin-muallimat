@@ -640,14 +640,13 @@
                                     </div>
                                 </div>
                             </div>
-<!-- 
+
                             <a class="btn btn-success" target="_blank" style="border-radius:0px; border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow; font-family: Roboto;font-weight: 400;background-color: #00a65a;"
                                                data-toggle="tooltip" data-placement="top" title="Ubah Data"
-                                               href="<?php //echo base_url() ?>users/ppdb/edit/<?php //echo $this->encryption->encode($hasil->kode_pendaftaran) ?>"><i
+                                               href="<?php echo base_url() ?>users/ppdb/edit/<?php echo $hasil->kode_pendaftaran ?>"><i
                                                         class="fa fa-save"></i> Ubah Data</a>
 
-                            <button type="reset" class="btn btn-warning btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;" data-toggle="tooltip" data-placement="top" title="Cetak Data">Cetak Data <i class="fa fa-print"></i></button> -->
-                            
+                            <button type="reset" class="btn btn-warning btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;" data-toggle="tooltip" data-placement="top" title="Cetak Data">Cetak Data <i class="fa fa-print"></i></button> 
                                </div>
                            </div>
                         </div>

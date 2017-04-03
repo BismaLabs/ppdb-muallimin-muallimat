@@ -14,17 +14,17 @@
         <div class="row">
             <div class="col-md-12">
                 <?php echo $this->session->flashdata('notif') ?>
-                <?php
+             <?php
                         $attributes = array('id' => 'frm_login');
-                        echo form_open_multipart('/users/ppdb/edit?source=header&utf8=✓', $attributes)?>
+                        echo form_open_multipart('users/ppdb/save?source=header&utf8=✓', $attributes)
+                        ?>
                     <!-- Poin A -->
                     <div class="box box-solid">
                          <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i>  A. KETERANGAN CALON PESERTA DIDIK</h3>
                           </div>
                                                       <input type="hidden" name="type" value="<?php echo $type ?>">
-                                                      
-                          <input type="" name="kode_pendaftaran" value="<?php echo $this->encryption->code($edit_user->kode_pendaftaran) ?>">
+                                                      <input type="" name="kode_pendaftaran" value="<?php echo $edit_user['kode_pendaftaran']?>">
                            <div class="card">
                               <div class="card-content">
                                     <div class="box-body">
