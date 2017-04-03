@@ -51,11 +51,11 @@
                                         if($row['id_kelas']== $id_kelas)
                                         {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         } else {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         }
                                     }
@@ -84,11 +84,11 @@
                                         if($row['nama_kelas']== $status)
                                         {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         } else {
                                             ?>
-                                            <option value="<?php echo $row['id_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
+                                            <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
                                             <?php
                                         }
                                     }
