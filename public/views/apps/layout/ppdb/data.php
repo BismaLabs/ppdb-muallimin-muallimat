@@ -79,7 +79,7 @@
 
                                     <tr>
                                         <td><?php echo $hasil->kode_pendaftaran ?></td>
-                                        <td><?php echo $hasil->nama_lengkap ?></td>
+                                        <td style="text-transform: uppercase"><?php echo $hasil->nama_lengkap ?></td>
                                         <td><?php echo $hasil->pendaftaran_kelas ?></td>
                                         <td><?php echo $hasil->jenis_kelamin ?></td>
                                         <td style="text-align: center">
