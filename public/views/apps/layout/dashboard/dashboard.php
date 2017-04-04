@@ -82,7 +82,7 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover" style="font-family: Roboto;font-weight: 300;">
+                            <table class="table table-bordered table-striped table-hover">
                                 <tbody>
                                 <thead>
                                 <tr>
@@ -241,7 +241,7 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover" style="font-family: Roboto;font-weight: 300;">
+                            <table class="table table-bordered table-striped table-hover">
                                 <tbody>
                                 <thead>
                                 <tr>

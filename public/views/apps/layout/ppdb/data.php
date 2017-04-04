@@ -37,7 +37,7 @@
                         <!-- Table Data -->
                         <div class="table-responsive">
                             <table class="table table-bordered table-striped table-hover"
-                                   style="margin-top:20px;font-family: Roboto;font-weight: 300;">
+                                   style="margin-top:20px;">
                                 <thead>
                                 <tr>
                                     <th class="text-center" style="color: #000;"><i class="fa fa-list-ul"></i> NO.

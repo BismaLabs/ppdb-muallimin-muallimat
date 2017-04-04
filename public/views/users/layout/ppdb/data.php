@@ -24,21 +24,21 @@
                                  <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-md-3">
-                                                            <label for="asal_sekolah"> Asal Sekolah
+                                                            <label for="asal_sekolah"><i class="fa fa-graduation-cap"></i> ASAL SEKOLAH
                                                                 <span class="required"
                                                                       style="color: red">*</span></label>
                                                             <br/>
                                                             <button class="btn bg-olive btn-flat" > <?php echo $hasil->asal_sekolah ?></button>
                                                         </div>
                                                         <div class="col-md-3">
-                                                            <label> TERDAFTARAN DI KELAS
+                                                            <label><i class="fa fa-building-o"></i> TERDAFTARAN DI KELAS
                                                                 <span class="required"
                                                                       style="color: red">*</span></label>
                                                             <br/>
                                                             <button class="btn bg-olive btn-flat"><?php echo $hasil->pendaftaran_kelas ?></button>
                                                         </div>
                                                         <div class="col-md-3">
-                                                            <label></label>
+                                                            <label><i class="fa fa-cogs"></i> OPTIONS</label>
                                                             <br/>
                                                             <a href="<?php echo base_url() ?>users/ppdb/edit_kelas/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>" class="btn bg-orange btn-flat"><i
                                                 class="fa fa-edit"></i> Ubah Data Kelas</a>

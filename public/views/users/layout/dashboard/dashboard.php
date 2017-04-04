@@ -41,7 +41,7 @@
 
                                             <h3 class="timeline-header"><a href="#">PENGUMUMAN</a></h3>
 
-                                            <div class="timeline-body">
+                                            <div class="timeline-body" style="font-size: 15px">
                                                 <?php echo $hasil->isi_page; ?>
                                             </div>
 
@@ -67,7 +67,7 @@
 
                                             <h3 class="timeline-header"><a href="#">ALUR PENDAFTARAN</a></h3>
 
-                                            <div class="timeline-body">
+                                            <div class="timeline-body" style="font-size: 15px">
                                                 <?php echo $hasil->isi_page; ?>
                                             </div>
 
@@ -92,7 +92,7 @@
 
                                             <h3 class="timeline-header"><a href="#">PERSYARATAN PENDAFTARAN</a></h3>
 
-                                            <div class="timeline-body">
+                                            <div class="timeline-body" style="font-size: 15px">
                                                 <?php echo $hasil->isi_page; ?>
                                             </div>
 

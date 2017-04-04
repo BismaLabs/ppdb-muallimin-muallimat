@@ -37,7 +37,7 @@
                             </div>
                         </form>
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover" style="margin-top:20px;font-family: Roboto;font-weight: 300;">
+                            <table class="table table-bordered table-striped table-hover" style="margin-top:20px;">
                                 <tbody>
                                 <thead>
                                 <tr>
