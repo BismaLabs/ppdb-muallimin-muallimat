@@ -32,14 +32,17 @@ class Cetak extends CI_Controller
             //this the the PDF filename that user will get to download
             $pdfFilePath = "formulir_pendaftaran.pdf";
 
+
             //load mPDF library
             $this->load->library('pdf');
 
+            $pdf = $this->pdf->cetak_formulir();
+
             //generate the PDF from the given html
-            $this->pdf->pdf->WriteHTML($html);
+            $pdf->WriteHTML($html);
 
             //download it.
-            $this->pdf->pdf->Output($pdfFilePath, "D");
+            $pdf->Output($pdfFilePath, "D");
         } else {
             show_404();
             return FALSE;

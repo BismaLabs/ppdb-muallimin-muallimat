@@ -1,4 +1,3 @@
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -20,45 +19,92 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="card-content">
-                            <div class="main-menu-panduan" style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
+                            <div class="main-menu-panduan"
+                                 style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
 
-                                <div class="nav-tabs-custom">
-                                    <ul class="nav nav-tabs">
-                                        <li class="active"><a href="#pengumuman" data-toggle="tab"><i class="fa fa-bell"></i> Pengumuman</a></li>
-                                        <li><a href="#syarat_pendaftaran" data-toggle="tab"><i class="fa fa-bullhorn"></i> Syarat Pendaftaran</a></li>
-                                        <li><a href="#alur_pendaftaran" data-toggle="tab"><i class="fa fa-list-ul"></i> Alur Pendaftaran</a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="pengumuman">
-                                            <?php foreach ($pengumuman->result() as $hasil) { ?>
-                                            <hr>
-                                            <?php echo $hasil->isi_page; ?>
-                                            <hr>
-                                            <span style="font-size: 13px;color: #9d9d9d;">Last Update : <?php echo $this->apps->time_elapsed_string($hasil->updated_at) ?> </span>
-                                            <?php } ?>
-                                        </div>
-                                        <!-- /.tab-pane -->
-                                        <div class="tab-pane" id="syarat_pendaftaran">
-                                            <?php foreach ($syarat_pendaftaran->result() as $hasil) { ?>
-                                                <hr>
+                                <ul class="timeline">
+                                    <?php foreach ($pengumuman->result() as $hasil) { ?>
+                                    <!-- timeline time label -->
+                                    <li class="time-label">
+                                        <span class="bg-red">
+                                            <?php echo $this->apps->tgl_indo_no_hari($hasil->updated_at) ?>
+                                        </span>
+                                    </li>
+                                    <!-- /.timeline-label -->
+
+                                    <!-- timeline item -->
+                                    <li>
+                                        <!-- timeline icon -->
+                                        <i class="fa fa-bell bg-blue"></i>
+                                        <div class="timeline-item">
+                                            <span class="time"><i class="fa fa-clock-o"></i> <?php echo $this->apps->jam_format($hasil->updated_at) ?></span>
+
+                                            <h3 class="timeline-header"><a href="#">PENGUMUMAN</a></h3>
+
+                                            <div class="timeline-body">
                                                 <?php echo $hasil->isi_page; ?>
-                                                <hr>
-                                                <span style="font-size: 13px;color: #9d9d9d;">Last Update : <?php echo $this->apps->time_elapsed_string($hasil->updated_at) ?> </span>
-                                            <?php } ?>
+                                            </div>
+
+                                            <div class="timeline-footer">
+
+                                            </div>
                                         </div>
-                                        <!-- /.tab-pane -->
-                                        <div class="tab-pane" id="alur_pendaftaran">
-                                            <?php foreach ($alur_pendaftaran->result() as $hasil) { ?>
-                                                <hr>
+                                    </li>
+                                    <?php } ?>
+
+                                    <?php foreach ($alur_pendaftaran->result() as $hasil) { ?>
+                                    <!-- END timeline item -->
+                                    <li class="time-label">
+                                        <span class="bg-green">
+                                            <?php echo $this->apps->tgl_indo_no_hari($hasil->updated_at) ?>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <!-- timeline icon -->
+                                        <i class="fa fa-list-ul bg-blue"></i>
+                                        <div class="timeline-item">
+                                            <span class="time"><i class="fa fa-clock-o"></i> <?php echo $this->apps->jam_format($hasil->updated_at) ?></span>
+
+                                            <h3 class="timeline-header"><a href="#">ALUR PENDAFTARAN</a></h3>
+
+                                            <div class="timeline-body">
                                                 <?php echo $hasil->isi_page; ?>
-                                                <hr>
-                                                <span style="font-size: 13px;color: #9d9d9d;">Last Update : <?php echo $this->apps->time_elapsed_string($hasil->updated_at) ?> </span>
-                                            <?php } ?>
+                                            </div>
+
+                                            <div class="timeline-footer">
+
+                                            </div>
                                         </div>
-                                        <!-- /.tab-pane -->
-                                    </div>
-                                    <!-- /.tab-content -->
-                                </div>
+                                    </li>
+                                    <?php } ?>
+
+                                    <?php foreach ($syarat_pendaftaran->result() as $hasil) { ?>
+                                    <li class="time-label">
+                                        <span class="bg-blue">
+                                            <?php echo $this->apps->tgl_indo_no_hari($hasil->updated_at) ?>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <!-- timeline icon -->
+                                        <i class="fa fa-bullhorn bg-blue"></i>
+                                        <div class="timeline-item">
+                                            <span class="time"><i class="fa fa-clock-o"></i> <?php echo $this->apps->jam_format($hasil->updated_at) ?></span>
+
+                                            <h3 class="timeline-header"><a href="#">PERSYARATAN PENDAFTARAN</a></h3>
+
+                                            <div class="timeline-body">
+                                                <?php echo $hasil->isi_page; ?>
+                                            </div>
+
+                                            <div class="timeline-footer">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <?php } ?>
+
+                                </ul>
+
 
                             </div>
                         </div>

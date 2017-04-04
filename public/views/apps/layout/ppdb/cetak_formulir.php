@@ -442,12 +442,11 @@
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 65%">
-            Jombang, .................2017
+        <td style="padding-left: 60%">
+            Jombang,...............................2017
         </td>
     </tr>
 </table>
-<br>
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
@@ -673,7 +672,7 @@
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 57%">
+        <td style="padding-left: 55%">
             .................., .................2017
         </td>
     </tr>
@@ -706,7 +705,7 @@
         <td>
             (H. Abdul Nashor Fattah)
         </td>
-        <td style="padding-left: 22%">
+        <td style="padding-left: 23%">
             (.................................)
         </td>
     </tr>
@@ -949,7 +948,7 @@
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 57%">
+        <td style="padding-left: 56%">
             .................., .................2017
         </td>
     </tr>
@@ -979,7 +978,7 @@
         <td>
             (.................................)
         </td>
-        <td style="padding-left: 28%">
+        <td style="padding-left: 29%">
             (.................................)
         </td>
     </tr>

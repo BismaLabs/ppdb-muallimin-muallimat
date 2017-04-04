@@ -443,12 +443,11 @@
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 65%">
-            Jombang, .................2017
+        <td style="padding-left: 60%">
+            Jombang,...............................2017
         </td>
     </tr>
 </table>
-<br>
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
