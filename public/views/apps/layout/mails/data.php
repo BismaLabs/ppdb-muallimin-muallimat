@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-12">
                 <?php echo $this->session->flashdata('notif') ?>
-                <div class="box box-solid">
+                <div class="box box-success">
                     <div class="box-header with-border">
                         <h3 class="box-title"><i class="fa fa-envelope"></i> Setting Mail Server</h3>
                     </div>
@@ -56,6 +56,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="panel-group accordion" id="accordion1">
+                                <div class="box box-success">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
@@ -127,6 +128,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                 </div>
+                                 <div class="box box-success">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
@@ -198,6 +201,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                 </div>
                             </div>
                         </div>
                     </div>

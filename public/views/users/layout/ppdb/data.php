@@ -41,7 +41,7 @@
                                                             <label></label>
                                                             <br/>
                                                             <a href="<?php echo base_url() ?>users/ppdb/edit_kelas/<?php echo $this->encryption->encode($hasil->kode_pendaftaran) ?>" class="btn bg-orange btn-flat"><i
-                                                class="fa fa-edit"></i> Ubah Data kelas</a>
+                                                class="fa fa-edit"></i> Ubah Data Kelas</a>
                                                         </div>
                                                     </div>
                                                 </div>
