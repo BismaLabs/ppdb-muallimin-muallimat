@@ -153,11 +153,13 @@ class Ppdb extends CI_Controller
             //load mPDF library
             $this->load->library('pdf');
 
+            $pdf = $this->pdf->cetak_formulir();
+
             //generate the PDF from the given html
-            $this->pdf->pdf->WriteHTML($html);
+            $pdf->WriteHTML($html);
 
             //download it.
-            $this->pdf->pdf->Output($pdfFilePath, "D");
+            $pdf->Output($pdfFilePath, "D");
         }else{
             show_404();
             return FALSE;
@@ -173,19 +175,21 @@ class Ppdb extends CI_Controller
 
             $data = [];
             //load the view and saved it into $html variable
-            $html=$this->load->view('apps/layout/ppdb/cetak_formulir', $data, true);
+            $html=$this->load->view('apps/layout/ppdb/cetak_kartu', $data, true);
 
             //this the the PDF filename that user will get to download
-            $pdfFilePath = "output_pdf_name.pdf";
+            $pdfFilePath = "kartu_peserta.pdf";
 
             //load mPDF library
             $this->load->library('pdf');
 
+            $pdf = $this->pdf->cetak_kartu();
+
             //generate the PDF from the given html
-            $this->pdf->kartu_ujian->WriteHTML($html);
+            $pdf->WriteHTML($html);
 
             //download it.
-            $this->pdf->kartu_ujian->Output($pdfFilePath, "D");
+            $pdf->Output($pdfFilePath, "D");
         }else{
             show_404();
             return FALSE;

@@ -7,22 +7,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @license  : https://maulayya.com/portofolio/ppdb-muallimin-muallimat/
  */
 
-include_once APPPATH.'/third_party/mpdf/mpdf.php';
-
 class Pdf {
 
-    public $param;
-    public $pdf;
-    public $kartu_ujian;
-
-    public function __construct()
+    function Pdf()
     {
-        $this->pdf = new mPDF('', 'Legal');
+        $CI = & get_instance();
+        log_message('Debug', 'mPDF class is loaded.');
     }
 
-    public function kartu_ujian($param = '"en-GB-x","A4","","",10,10,10,10,6,3"')
+    function cetak_formulir($param = NULL)
     {
-        $this->param =$param;
-        $this->kartu_ujian = new mPDF($this->param);
+        include_once APPPATH.'/third_party/mpdf/mpdf.php';
+
+        if ($params == NULL)
+        {
+            $param = '"en-GB-x","A4","","",10,10,10,10,6,3';
+        }
+
+        //return new mPDF($param);
+        return new mPDF('', 'Legal');
+    }
+
+    function cetak_kartu($param = NULL)
+    {
+        include_once APPPATH.'/third_party/mpdf/mpdf.php';
+
+        if ($params == NULL)
+        {
+            $param = '"en-GB-x","A4","","",10,10,10,10,6,3';
+        }
+
+        //return new mPDF($param);
+        return new mPDF('L', // L - landscape, P - portrait
+            '', '', '', '',
+            30, // margin_left
+            30, // margin right
+            30, // margin top
+            30, // margin bottom
+            18, // margin header
+            12);
     }
 }

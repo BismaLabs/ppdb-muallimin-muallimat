@@ -440,7 +440,6 @@
 </tr>
 </table>
 <br>
-<br>
 <table style="width: 100%;font-size: 85%">
     <tr>
         <td style="padding-left: 65%">
@@ -590,7 +589,7 @@
             Agama
         </td>
         <td>
-            :
+            : Islam
         </td>
     </tr>
     <tr>
