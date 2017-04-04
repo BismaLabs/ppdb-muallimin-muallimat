@@ -13,23 +13,11 @@
 
 <script type="text/javascript">
     function pilih_sd() {
-    //  if (document.getElementById('yes_sd').checked) {
-    //      document.getElementById('form_sd').style.display='block';
-    //      document.getElementById('form_smp').style.display='none';
-    //      document.getElementById("yes_smp").checked = false;
-    //     var att = document.createAttribute("name");
-    //     att.value = "pendaftaran_kelas";
-    //     anchor.setAttributeNode(att);
-    // }
+ 
     if (document.getElementById('yes_sd').checked) {
     document.getElementById('form_sd').style.display='block';
     document.getElementById('form_smp').style.display='none';
     document.getElementById('yes_smp').checked = false;
-
-    // var attr = document.createAttribute("class");
-    // attr.value = "democlass";
-    // var h = document.getElementsByTagName("H1")[0];
-    // h.setAttributeNode(attr); 
 
     var att_sd = document.createAttribute("name");
     att_sd.value = "pendaftaran_kelas";
@@ -44,12 +32,6 @@ function pilih_smp(){
     document.getElementById('form_smp').style.display='block';
     document.getElementById('form_sd').style.display='none';
     document.getElementById('yes_sd').checked = false;
-
-    // var attr = document.createAttribute("class");
-    // attr.value = "democlass";
-    // var h = document.getElementsByTagName("H1")[0];
-    // h.setAttributeNode(attr); 
-
     var attr = document.createAttribute("name");
     attr.value = "pendaftaran_kelas";
     var pilih = document.getElementById('select_smp');

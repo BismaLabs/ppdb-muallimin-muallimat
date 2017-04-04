@@ -14,8 +14,6 @@ class Ppdb extends CI_Controller
 		 parent::__construct();
         //load model
         $this->load->model('users');
-        //load library
-        $this->load->library(array('form_validation', 'recaptcha'));
 
 	}
 
@@ -26,7 +24,6 @@ class Ppdb extends CI_Controller
 			
 			$data = array('title' => 'Data Pendaftar',
 			'ppdb' 			=> True,
-			'type'    		=> 'edit',
 			'siswa' => $this->users->edit_users(),
 			'kelas_sd'   =>$this->users->kelas_sd(),
             'kelas_smp'   =>$this->users->kelas_smp()
@@ -49,7 +46,7 @@ class Ppdb extends CI_Controller
 			$id['kode_pendaftaran']  = $this->encryption->decode($this->session->userdata("kode_pendaftaran"));
 			$data = array('title' => 'Data Pendaftar',
 				'ppdb' 			=> True,
-				'type'    		=> 'edit',
+				'type'    		=> 'edit data',
               	'edit_user'     => $this->users->edit_siswa($id)->row_array(),
               	'kelas_sd'   =>$this->users->kelas_sd(),
             	'kelas_smp'   =>$this->users->kelas_smp()
@@ -93,8 +90,9 @@ class Ppdb extends CI_Controller
 			$type           = $this->input->post("type");
 			$id['kode_pendaftaran']  = $this->input->post("kode_pendaftaran");
             //check var type
-            if ($type = "edit") {
-            	$update = array(
+            if ($type == "edit data") {
+               //edit data diri siswa 
+                $update = array(
                 'nama_lengkap'              => $this->input->post("nama"),
                 'jenis_kelamin'             => $this->input->post("jenis_kelamin"),
                 'nisn'                      => $this->input->post("nisn"),
@@ -164,25 +162,26 @@ class Ppdb extends CI_Controller
                 'penghasilan_rata_wali'     => $this->input->post("penghasilan_wali"),
                 'status'                    => "0",
                  );
- 						$this->db->update("tbl_siswa", $update,$id);
-                        //deklarasi session flashdata
-                        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
-			                                                    <i class="fa fa-check"></i> Data Berhasil Diupdate.
-			                                                </div>');
-                        //redirect halaman
-                        redirect('users/ppdb/?source=add&utf8=✓');
-            }if ($type = "edit kelas") {
-                $update_kelas = array(
-                'asal_sekolah'              => $this->input->post("asal_sekolah"),
-                'pendaftaran_kelas'         => $this->input->post("pendaftaran_kelas"));
-
-                $this->db->update("tbl_siswa", $update,$id);
+                        $this->db->update("tbl_siswa", $update,$id);
                         //deklarasi session flashdata
                         $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
                                                                 <i class="fa fa-check"></i> Data Berhasil Diupdate.
                                                             </div>');
                         //redirect halaman
                         redirect('users/ppdb/?source=add&utf8=✓');
+
+                        //cek var type
+            }else if ($type == "edit kelas") {
+                $update_kelas = array(
+                'asal_sekolah'              => $this->input->post("asal_sekolah"),
+                'pendaftaran_kelas'         => $this->input->post("pendaftaran_kelas"));
+
+                            $this->db->update("tbl_siswa", $update_kelas,$id);
+                     //deklarasi session flashdata
+                            $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
+                                <i class="fa fa-check"></i> Data Berhasil Diupdate.</div>');
+                   //redirect halaman
+                         redirect('users/ppdb/?source=add&utf8=✓');
             }
 		}
 	}

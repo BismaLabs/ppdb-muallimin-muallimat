@@ -93,7 +93,7 @@
                                     <?php echo form_error('pendaftaran_kelas'); ?>
                                 </div>
                                 <div class="col-md-2">
-                                     <button class="btn bg-orange btn-flat"><i
+                                     <button type="submit" class="btn bg-orange btn-flat"><i
                                      class="fa fa-save"></i> Simpan</button>
                                  </div>
 
