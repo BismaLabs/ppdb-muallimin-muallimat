@@ -9,36 +9,268 @@
 
     <!-- Bootstrap -->
     <link href="<?php echo base_url() ?>resources/public/css/bootstrap.min.css" rel="stylesheet">
-</head>
+ </head>
 <body>
-
-<table style="width: 50%;padding-top: 5%;padding-bottom: 5%;padding-left: 20%;padding: 15%" border="1">
-    <tr>
-        <td style="padding-right: 5%;">
-            <br>
-            PERHATIAN
-            <br>
-            <br>
-
-            <div style="padding-top: 20%;text-align: center;padding-left: 20%">
-                1. Peserta Ujian harus sudah ada di lokasi 07.30 dengan seragam Hitam - Putih;
-                <br>
-                <br>
-                2. Kartu Peserta ini jangan sampai hilang atau rusak sampai Peserta Daftar;
-                <br>
-                <br>
-                3. Dilarang membawa buku-buku atau catatan apapun selama Ujian, kecuali alat tulis menulis;
-            </div>
-            <br>
-            <br>
-        </td>
-
-    </tr>
-</table>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="<?php echo base_url() ?>resources/public/js/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="<?php echo base_url() ?>resources/public/js/bootstrap.min.js"></script>
+                <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th  rowspan="4" style=" width:150px; padding-left: 15px; border: 1px solid black;">
+                             <br>
+                            PERHATIAN
+                            <br>
+                            <br>
+                            <div>
+                            1. Peserta Ujian harus sudah ada di lokasi 07.30 dengan seragam Hitam - Putih;
+                            <br>
+                            <br>
+                            2. Kartu Peserta ini jangan sampai hilang atau rusak sampai Peserta Daftar Ulang;
+                            <br>
+                            <br>
+                            3. Dilarang membawa buku-buku atau catatan apapun selama Ujian, kecuali alat tulis menulis;
+                            <br>
+                            <br>
+                            Hari Pertama: Ujian Tulis
+                            <br>
+                            Hari Kedua  : Ujian Lisan
+                             <br>
+                            <br>
+                             <br>
+                            <br>
+                            </div>
+                        </th>
+                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                         <div style="font-size: 14px">
+                             KARTU PESERTA UJIAN MASUK
+                         </div>
+                         <div style="font-size: 20px">MMA BAHRUL ULUM</div>
+                         <div style="font-weight: 11px">
+                             TAMBAKBERAS JOMBANG
+                         </div>
+                         <br>
+                         <img src="<?php echo base_url() ?>resources/public/images/logo.png"
+                                                       style="width:100px">
+                            <br>
+                         <br>
+                        TAHUN PELAJARAN
+                        <br>
+                        2017/2018
+                        </th>
+                    </tr>
+                </thead>
+                 </table>
+                <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:320px; height: 270px; padding-left: 15px; border: 1px solid black;">
+                            Nama        : M Yazidinni'am
+                            <br>
+                            Calon Kelas : 3
+                            <br>
+                            Tgl. Tes    : 4-5 Juli 2017
+                            <br>
+                            <br>
+                                 Jombang, 2 Juli 2017
+                            PANITIA
+                            <br>
+                            <br>
+                              <br>
+                            <br>
+                            AHSANUN NAIM, S.Pd.I
+                             <br>
+                            </th>
+                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                         <div style="font-size: 14px">
+                             NOMOR PESERTA
+                         </div>
+                         <div style="font-size: 20px">555</div>
+                         <!-- <div style="font-weight: 11px">
+                            FOTO 3X4
+                         </div> -->
+                         <br>
+                         <img src="<?php echo base_url() ?>resources/images/avatar/img_avatar.png"
+                                                       style="width:100px">
+                         <br>
+                         <br>
+                        TAHUN PELAJARAN
+                        <br>
+                        2017/2018
+                        </th>
+                    </tr>
+                </thead>
+                </table>
+                 <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th  rowspan="4" style=" width:150px; padding-left: 15px; border: 1px solid black;">
+                             <br>
+                            PERHATIAN
+                            <br>
+                            <br>
+                            <div>
+                            1. Peserta Ujian harus sudah ada di lokasi 07.30 dengan seragam Hitam - Putih;
+                            <br>
+                            <br>
+                            2. Kartu Peserta ini jangan sampai hilang atau rusak sampai Peserta Daftar Ulang;
+                            <br>
+                            <br>
+                            3. Dilarang membawa buku-buku atau catatan apapun selama Ujian, kecuali alat tulis menulis;
+                            <br>
+                            <br>
+                            Hari Pertama: Ujian Tulis
+                            <br>
+                            Hari Kedua  : Ujian Lisan
+                             <br>
+                            <br>
+                             <br>
+                            <br>
+                            </div>
+                        </th>
+                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                         <div style="font-size: 14px">
+                             KARTU PESERTA UJIAN MASUK
+                         </div>
+                         <div style="font-size: 20px">MMA BAHRUL ULUM</div>
+                         <div style="font-weight: 11px">
+                             TAMBAKBERAS JOMBANG
+                         </div>
+                         <br>
+                         <img src="<?php echo base_url() ?>resources/public/images/logo.png"
+                                                       style="width:100px">
+                            <br>
+                         <br>
+                        TAHUN PELAJARAN
+                        <br>
+                        2017/2018
+                        </th>
+                    </tr>
+                </thead>
+                 </table>
+                <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:320px; height: 270px; padding-left: 15px; border: 1px solid black;">
+                            Nama        : M Yazidinni'am
+                            <br>
+                            Calon Kelas : 3
+                            <br>
+                            Tgl. Tes    : 4-5 Juli 2017
+                            <br>
+                            <br>
+                                 Jombang, 2 Juli 2017
+                            PANITIA
+                            <br>
+                            <br>
+                              <br>
+                            <br>
+                            AHSANUN NAIM, S.Pd.I
+                             <br>
+                            </th>
+                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                         <div style="font-size: 14px">
+                             NOMOR PESERTA
+                         </div>
+                         <div style="font-size: 20px">555</div>
+                         <!-- <div style="font-weight: 11px">
+                            FOTO 3X4
+                         </div> -->
+                         <br>
+                         <img src="<?php echo base_url() ?>resources/images/avatar/img_avatar.png"
+                                                       style="width:100px">
+                         <br>
+                         <br>
+                        TAHUN PELAJARAN
+                        <br>
+                        2017/2018
+                        </th>
+                    </tr>
+                </thead>
+                </table>
+                 <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th  rowspan="4" style=" width:150px; padding-left: 15px; border: 1px solid black;">
+                             <br>
+                            PERHATIAN
+                            <br>
+                            <br>
+                            <div>
+                            1. Peserta Ujian harus sudah ada di lokasi 07.30 dengan seragam Hitam - Putih;
+                            <br>
+                            <br>
+                            2. Kartu Peserta ini jangan sampai hilang atau rusak sampai Peserta Daftar Ulang;
+                            <br>
+                            <br>
+                            3. Dilarang membawa buku-buku atau catatan apapun selama Ujian, kecuali alat tulis menulis;
+                            <br>
+                            <br>
+                            Hari Pertama: Ujian Tulis
+                            <br>
+                            Hari Kedua  : Ujian Lisan
+                             <br>
+                            <br>
+                             <br>
+                            <br>
+                            </div>
+                        </th>
+                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                         <div style="font-size: 14px">
+                             KARTU PESERTA UJIAN MASUK
+                         </div>
+                         <div style="font-size: 20px">MMA BAHRUL ULUM</div>
+                         <div style="font-weight: 11px">
+                             TAMBAKBERAS JOMBANG
+                         </div>
+                         <br>
+                         <img src="<?php echo base_url() ?>resources/public/images/logo.png"
+                                                       style="width:100px">
+                            <br>
+                         <br>
+                        TAHUN PELAJARAN
+                        <br>
+                        2017/2018
+                        </th>
+                    </tr>
+                </thead>
+                 </table>
+                <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width:320px; height: 270px; padding-left: 15px; border: 1px solid black;">
+                            Nama        : M Yazidinni'am
+                            <br>
+                            Calon Kelas : 3
+                            <br>
+                            Tgl. Tes    : 4-5 Juli 2017
+                            <br>
+                            <br>
+                                 Jombang, 2 Juli 2017
+                            PANITIA
+                            <br>
+                            <br>
+                              <br>
+                            <br>
+                            AHSANUN NAIM, S.Pd.I
+                             <br>
+                            </th>
+                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                         <div style="font-size: 14px">
+                             NOMOR PESERTA
+                         </div>
+                         <div style="font-size: 20px">555</div>
+                         <!-- <div style="font-weight: 11px">
+                            FOTO 3X4
+                         </div> -->
+                         <br>
+                         <img src="<?php echo base_url() ?>resources/images/avatar/img_avatar.png"
+                                                       style="width:100px">
+                         <br>
+                         <br>
+                        TAHUN PELAJARAN
+                        <br>
+                        2017/2018
+                        </th>
+                    </tr>
+                </thead>
+                </table>
 </body>
 </html>

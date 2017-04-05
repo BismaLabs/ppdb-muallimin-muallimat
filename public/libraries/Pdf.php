@@ -34,17 +34,17 @@ class Pdf {
 
         if ($params == NULL)
         {
-            $param = '"en-GB-x","A4","","",10,10,10,10,6,3';
+            $param = '"en-GB-x","A4","","",2,2,2,2,2,2';
         }
 
         //return new mPDF($param);
         return new mPDF('L', // L - landscape, P - portrait
-            '', '', '', '',
-            30, // margin_left
-            30, // margin right
-            30, // margin top
-            30, // margin bottom
-            18, // margin header
-            12);
+            '', '', '', 
+            2, // margin_left
+            2, // margin right
+            2, // margin top
+            2, // margin bottom
+            2, // margin header
+            2);
     }
 }
