@@ -67,7 +67,8 @@
                                 </tbody>
                                 </table>
                                 <div class="alert alert-danger">
-                                    <span><b> Warning! </b> Data tidak ada didatabase </span>
+                                    <h4><i class="fa fa-info-circle"></i> Warning!</h4>
+                                    Maaf!....data tidak ada didatabase sistem
                                 </div>
                                 <div class="reload" style="text-align: center;margin-bottom: 7px">
                                     <a  href="<?php echo base_url('apps/pages?source=reload&utf8=✓') ?>" class="btn btn-danger btn-reset btn-fill" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Reloading..."><i class="fa fa-repeat"></i> Reload Page</a>

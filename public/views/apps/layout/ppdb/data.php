@@ -81,7 +81,7 @@
                                         <td><?php echo $hasil->kode_pendaftaran ?></td>
                                         <td style="text-transform: uppercase"><?php echo $hasil->nama_lengkap ?></td>
                                         <td><?php echo $hasil->pendaftaran_kelas ?></td>
-                                        <td><?php echo $hasil->jenis_kelamin ?></td>
+                                        <td style="text-transform: uppercase"><?php echo $hasil->jenis_kelamin ?></td>
                                         <td style="text-align: center">
                                             <?php echo $status ?>
                                         </td>
@@ -114,7 +114,8 @@
                                 </tbody>
                                 </table>
                                 <div class="alert alert-danger">
-                                    <span><b> Warning! </b> Data tidak ada didatabase </span>
+                                    <h4><i class="fa fa-info-circle"></i> Warning!</h4>
+                                    Maaf!....data tidak ada didatabase sistem
                                 </div>
                                 <div class="reload" style="text-align: center;margin-bottom: 7px">
                                     <a href="<?php echo base_url('apps/ppdb?source=reload&utf8=✓') ?>"

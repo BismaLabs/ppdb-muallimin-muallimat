@@ -21,7 +21,7 @@ class Panduan extends CI_Controller {
             'panduan'          => TRUE,
         );
         $this->load->view('home/part/header', $data);
-        $this->load->view('home/layout/Panduan/menu');
+        $this->load->view('home/layout/panduan/menu');
         $this->load->view('home/part/footer');
     }
 
@@ -31,7 +31,7 @@ class Panduan extends CI_Controller {
             'pages'    => $this->web->get_pages(2)
         );
         $this->load->view('home/part/header', $data);
-        $this->load->view('home/layout/Panduan/page');
+        $this->load->view('home/layout/panduan/page');
         $this->load->view('home/part/footer');
     }
 
@@ -41,7 +41,7 @@ class Panduan extends CI_Controller {
             'pages'    => $this->web->get_pages(3)
         );
         $this->load->view('home/part/header', $data);
-        $this->load->view('home/layout/Panduan/page');
+        $this->load->view('home/layout/panduan/page');
         $this->load->view('home/part/footer');
     }
 
