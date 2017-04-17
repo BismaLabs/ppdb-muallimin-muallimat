@@ -25,7 +25,13 @@ class Pdf {
         }
 
         //return new mPDF($param);
-        return new mPDF('', 'Legal');
+        return new mPDF('', 'Legal', '', '',
+            15, // margin_left
+            15, // margin right
+            2, // margin top
+            2, // margin bottom
+            2, // margin header
+            2);
     }
 
     function cetak_kartu($param = NULL)

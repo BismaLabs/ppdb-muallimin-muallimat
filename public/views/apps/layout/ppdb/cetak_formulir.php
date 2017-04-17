@@ -383,7 +383,7 @@
 <br>
 <table style="width: 100%">
     <tr>
-        <td><b>D. KETERANGAN WALI <i>(diisi jika point C tidak diisi)</i><b> </td>
+        <td><b>D. KETERANGAN WALI<b> </td>
     </tr>
 </table>
 <br>
@@ -442,7 +442,7 @@
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 60%">
+        <td style="padding-left: 65%">
             Jombang,...............................2017
         </td>
     </tr>
@@ -458,7 +458,7 @@
         <td>
             Orang Tua / Wali Murid,
         </td>
-        <td style="padding-left: 37%">
+        <td style="padding-left: 43%">
             Calon Peserta Didik,
         </td>
     </tr>
@@ -470,15 +470,15 @@
         <td style="padding-left: 1%">
             ..................................
         </td>
-        <td style="padding-left: 42%">
-            ..................................
+        <td style="padding-left: 47%">
+            <?php echo $detail_pendaftaran['nama_lengkap'] ?>
         </td>
     </tr>
     <tr>
         <td style="padding-left: 3%;font-size: 80%">
             Nama & Tandatangan
         </td>
-        <td style="padding-left: 46%;font-size: 80%">
+        <td style="padding-left: 51%;font-size: 80%">
             Tandatangan
         </td>
     </tr>
@@ -672,8 +672,8 @@
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 55%">
-            .................., .................2017
+        <td style="padding-left: 65%">
+            Jombang,...............................2017
         </td>
     </tr>
 </table>
@@ -684,7 +684,7 @@
         <td>
             Mengetahui
         </td>
-        <td style="padding-left: 37%">
+        <td style="padding-left: 49%">
             Yang Membuat Pernyataan
         </td>
     </tr>
@@ -692,7 +692,7 @@
         <td>
             Kepala Madrasah
         </td>
-        <td style="padding-left: 37%">
+        <td style="padding-left: 49%">
             Orang Tua / Wali
         </td>
     </tr>
@@ -705,13 +705,18 @@
         <td>
             (H. Abdul Nashir Fattah)
         </td>
-        <td style="padding-left: 23%">
-            (.................................)
+        <td style="padding-left: 26%;padding-right: 10%">
+            (..................................................)
         </td>
     </tr>
     <tr>
     </tr>
 </table>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -948,8 +953,8 @@
 <br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 56%">
-            .................., .................2017
+        <td style="padding-left: 65%">
+            Jombang,...............................2017
         </td>
     </tr>
 </table>
@@ -960,13 +965,13 @@
         <td>
             Mengetahui
         </td>
+        <td style="padding-left: 49%">
+            Yang Membuat Pernyataan
+        </td>
     </tr>
     <tr>
         <td>
-            Orang Tua / Wali
-        </td>
-        <td style="padding-left: 34%">
-            Yang Membuat Pernyataan
+            Orang Tua/Wali
         </td>
     </tr>
 </table>
@@ -976,10 +981,10 @@
 <table style="width: 100%;font-size: 85%">
     <tr>
         <td>
-            (.................................)
+            (..................................................)
         </td>
-        <td style="padding-left: 29%">
-            (.................................)
+        <td style="padding-left: 38%;padding-right: 7%">
+            (..................................................)
         </td>
     </tr>
     <tr>
