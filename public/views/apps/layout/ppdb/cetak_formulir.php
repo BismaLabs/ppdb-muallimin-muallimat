@@ -638,7 +638,7 @@
 <table style="width: 100%;font-size: 85%">
     <tr>
         <td style="width: 100%">
-            Bahwa saya selaku orang tua / wali dari peserta didik yang bernama .............................. Sekolah di Madrasah Mu'allimin Mu'allimat 6 Tahun Tambakberas Jombang Menyatakan dengan sesungguhnya :
+            Bahwa saya selaku orang tua / wali dari peserta didik yang bernama <?php echo '<u>'.$detail_pendaftaran['nama_lengkap'].'</u>' ?> Sekolah di Madrasah Mu'allimin Mu'allimat 6 Tahun Tambakberas Jombang Menyatakan dengan sesungguhnya :
         </td>
     </tr>
 </table>
