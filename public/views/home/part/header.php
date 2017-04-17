@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="<?php echo base_url() ?>resources/public/images/logo.png">
 
     <title>PPDB - Madrasah Mu'allimin Mu'allimat Bahrul Ulum, Tambak Beras, Jombang</title>
     <link href="<?php echo base_url() ?>resources/public/css/bootstrap.min.css" rel="stylesheet">

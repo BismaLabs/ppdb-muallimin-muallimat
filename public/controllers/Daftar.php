@@ -160,13 +160,19 @@ class Daftar extends CI_Controller {
                                                         <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
                                                      </div>');
 
-        //captcha //
+        //captcha//
         $userCaptcha    = set_value('captcha');
         $word           = $this->session->userdata('captchaWord');
         $captcha        = $this->input->post('captcha');
 
         if($this->form_validation->run() == TRUE && $captcha == $word)
         {
+
+            //get kode test peserta
+
+
+
+            //get random kode pendaftaran
             $this->load->helper('string');
             $random = strtoupper(random_string('alnum', 6));
 
