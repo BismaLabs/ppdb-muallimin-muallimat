@@ -383,7 +383,7 @@
 <br>
 <table style="width: 100%">
     <tr>
-        <td><b>D. KETERANGAN WALI <i>(diisi jika point C tidak diisi)</i><b> </td>
+        <td><b>D. KETERANGAN WALI<b> </td>
     </tr>
 </table>
 <br>
@@ -440,10 +440,9 @@
     </tr>
 </table>
 <br>
-<br>
 <table style="width: 100%;font-size: 85%">
     <tr>
-        <td style="padding-left: 60%">
+        <td style="padding-left: 65%">
             Jombang,...............................2017
         </td>
     </tr>
@@ -459,7 +458,7 @@
         <td>
             Orang Tua / Wali Murid,
         </td>
-        <td style="padding-left: 37%">
+        <td style="padding-left: 43%">
             Calon Peserta Didik,
         </td>
     </tr>
@@ -471,15 +470,15 @@
         <td style="padding-left: 1%">
             ..................................
         </td>
-        <td style="padding-left: 42%">
-            ..................................
+        <td style="padding-left: 47%">
+            <?php echo $detail_pendaftaran['nama_lengkap'] ?>
         </td>
     </tr>
     <tr>
         <td style="padding-left: 3%;font-size: 80%">
             Nama & Tandatangan
         </td>
-        <td style="padding-left: 46%;font-size: 80%">
+        <td style="padding-left: 51%;font-size: 80%">
             Tandatangan
         </td>
     </tr>
