@@ -62,7 +62,6 @@ class Daftar extends CI_Controller {
             'daftar'         => TRUE,
             'kelas_sd'   =>$this->users->kelas_sd(),
             'kelas_smp'   =>$this->users->kelas_smp(),
-            'img'         => $this->create_cpatcha()
         );
 
         //set form validation
@@ -155,13 +154,18 @@ class Daftar extends CI_Controller {
         $this->form_validation->set_rules('no_hp_ibu', 'Nomor HP Ibu', 'required');
 
 
-        $this->form_validation->set_rules('captcha', '<b>Captcha</b>', 'trim|callback_check_captcha|required');
+        $this->form_validation->set_rules('captcha', '<b>Captcha</b>', 'required');
         //set message form validation
         $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">
                                                         <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
                                                      </div>');
 
-        if($this->form_validation->run() == TRUE)
+        //captcha //
+        $userCaptcha    = set_value('captcha');
+        $word           = $this->session->userdata('captchaWord');
+        $captcha        = $this->input->post('captcha');
+
+        if($this->form_validation->run() == TRUE && $captcha == $word)
         {
             $this->load->helper('string');
             $random = strtoupper(random_string('alnum', 6));
@@ -248,10 +252,33 @@ class Daftar extends CI_Controller {
             );
 
             $this->load->view('home/layout/daftar/success',$data);
+
         }else{
+
+            $config = array(
+                'img_path'	 => './resources/images/captcha/',
+                'img_url'	 => base_url().'resources/images/captcha/',
+                'img_width'	 => '162',
+                'img_height' => 40,
+                'border' => 0,
+                'expiration' => 7200
+            );
+
+            $cap    = create_captcha($config);
+            $image  = $cap['image'];
+
+            $this->session->set_userdata('captchaWord', $cap['word']);
+
+            $data = array(
+                    'img'        => $image,
+                    'daftar'     => TRUE,
+                    'kelas_sd'   =>$this->users->kelas_sd(),
+                    'kelas_smp'  =>$this->users->kelas_smp(),
+            );
+
             $this->load->view('home/part/header', $data);
             $this->load->view('home/layout/daftar/form');
-          $this->load->view('home/part/footer');
+            $this->load->view('home/part/footer');
         }
 
     }
