@@ -38,7 +38,7 @@
             <li class="header">MAIN NAVIGATION</li>
             <li <?php if(isset($dashboard)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>users/dashboard/"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li <?php if(isset($ppdb)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>users/ppdb/"><i class="fa fa-user-circle-o"></i> <span>Data Pendaftaran</span></a></li>
-            <li <?php if(isset($cetak)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>users/cetak/"><i class="fa fa-print"></i> <span>Cetak Formulir</span></a></li>
+            <li <?php if(isset($cetak)) { echo 'class="active"'; } ?>><a target="_blank" href="<?php echo base_url() ?>users/cetak/"><i class="fa fa-print"></i> <span>Cetak Formulir</span></a></li>
             <li class="header">MAIN SYSTEM</li>
             <li <?php if(isset($logout)) { echo 'class="active"'; } ?>><a href="<?php echo base_url() ?>users/dashboard/logout/"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
         </ul>

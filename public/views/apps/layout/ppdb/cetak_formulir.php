@@ -11,7 +11,7 @@
     <link href="<?php echo base_url() ?>resources/public/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<table style="width: 100%">
+<table style="width: 100%;">
     <tr>
         <td style="width: 15%;text-align: center"><img src="<?php echo base_url() ?>resources/public/images/logo.png"
                                                        style="width:80px"></td>
@@ -21,13 +21,17 @@
                     <span class="" style="font-size: 10px">Tambakberas Tengah Gang PPBU No. 28 Tambakrejo Jombang Jawa Timur<span><br>
                      <span class="" style="font-size: 10px">Telp. (0321) 865280 ── (0856 3369 444<span>
         </td>
-        <td style="25%;text-align: center"> </td>
+        <td style="width:20%;text-align: center;border: 1px solid black">
+            <p>No. Peserta</p>
+            <br>
+            <?php echo $detail_pendaftaran['kode_pendaftaran']; ?>
+        </td>
     </tr>
 </table>
-
-<table style="width: 100%">
+<br>
+<table style="width: 100%;">
     <tr>
-        <td style="border: 1px solid black;padding-bottom: 2px"></td>
+        <td style="border: 1px solid black;padding-bottom: 1px;"></td>
     </tr>
     <tr>
         <td style="border: 1px solid black"></td>
@@ -528,6 +532,7 @@
         </td>
     </tr>
 </table>
+<br>
 <table style="width: 100%">
     <tr>
         <td style="border: 1px solid black;padding-bottom: 2px"></td>
@@ -751,6 +756,7 @@
         </td>
     </tr>
 </table>
+<br>
 <table style="width: 100%">
     <tr>
         <td style="border: 1px solid black;padding-bottom: 2px"></td>
