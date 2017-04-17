@@ -240,7 +240,7 @@
     <tr>
         <td style="width: 4%">4.</td>
         <td style="width: 37%">
-            Olah raga yang Paling digemari
+            Olahraga yang Paling digemari
         </td>
         <td>
             : <?php echo $detail_pendaftaran['olahraga_digemari'] ?>
