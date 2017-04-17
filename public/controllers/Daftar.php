@@ -14,17 +14,55 @@ class Daftar extends CI_Controller {
         //load model
         $this->load->model(array('apps','users'));
         //load library
-        $this->load->library(array('form_validation', 'recaptcha'));
+        $this->load->library(array('form_validation'));
 
+    }
+
+    function create_cpatcha()
+    {
+        $config = array(
+            'img_path'	 => './resources/images/captcha/',
+            'img_url'	 => base_url().'resources/images/captcha/',
+            'img_width'	 => '162',
+            'img_height' => 40,
+            'border' => 0,
+            'expiration' => 7200
+        );
+
+        $cap    = create_captcha($config);
+        $image  = $cap['image'];
+
+        $this->session->set_userdata('captchaword', $cap['word']);
+
+        return $image;
+    }
+
+    function check_captcha()
+    {
+        if(strtolower($this->input->post('captcha')) == strtolower($this->session->userdata('captchaword')))
+        {
+
+            return true;
+
+        }else{
+
+            $this->form_validation->set_message('check_captcha', '<div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">
+                                                        <i class="fa fa-exclamation-circle"></i> Kode captcha salah!
+                                                     </div>');
+
+            return false;
+
+        }
     }
 
     public function index()
     {
+
         $data = array(
             'daftar'         => TRUE,
-            'recaptcha_html' => $this->recaptcha->render(),
             'kelas_sd'   =>$this->users->kelas_sd(),
-            'kelas_smp'   =>$this->users->kelas_smp()
+            'kelas_smp'   =>$this->users->kelas_smp(),
+            'img'         => $this->create_cpatcha()
         );
 
         //set form validation
@@ -117,16 +155,11 @@ class Daftar extends CI_Controller {
         $this->form_validation->set_rules('no_hp_ibu', 'Nomor HP Ibu', 'required');
 
 
-        $this->form_validation->set_rules('g-recaptcha-response', '<b>Captcha</b>', 'callback_getResponseCaptcha');
+        $this->form_validation->set_rules('captcha', '<b>Captcha</b>', 'trim|callback_check_captcha|required');
         //set message form validation
         $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">
                                                         <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
                                                      </div>');
-
-        $this->form_validation->set_message('callback_getResponseCaptcha',
-            '<div class="alert alert-danger" style="font-family:Roboto">
-                                                          i class="fa fa-exclamation-circle"></i> {field} {g-recaptcha-response} harus diisi.
-                                                      div>');
 
         if($this->form_validation->run() == TRUE)
         {
@@ -221,34 +254,5 @@ class Daftar extends CI_Controller {
           $this->load->view('home/part/footer');
         }
 
-    }
-
-    public function getResponseCaptcha($str)
-    {
-        $this->load->library('recaptcha');
-        $response = $this->recaptcha->verifyResponse($str);
-        if ($response['success'])
-        {
-            return true;
-        }
-        else
-        {
-            $this->form_validation->set_message('getResponseCaptcha', ' <div class="alert alert-danger" style="font-family:Roboto;margin-top: 5px">                                                                          <i class="fa fa-exclamation-circle"></i> %s harus dipilih.
-                                                                      </div>' );
-            return false;
-        }
-    }
-
-    function test_random()
-    {
-        $this->load->helper('string');
-        $random = strtoupper(random_string('alnum', 6));
-
-        $data = array (
-
-            'kode_pendaftaran' => $random,
-        );
-        //load view with data
-        $this->load->view('home/layout/daftar/success', $data);
     }
 }

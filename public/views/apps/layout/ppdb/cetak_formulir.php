@@ -549,7 +549,7 @@
     <tr>
         <td style="width: 4%">1.</td>
         <td style="width: 37%">
-            Nama ORang Tua / Wali
+            Nama Orang Tua / Wali
         </td>
         <td>
             : <?php echo $detail_pendaftaran['nama_ayah'] ?>
@@ -570,7 +570,7 @@
             Alamat Orang Tua / Wali
         </td>
         <td>
-            :
+            : Jln./Dsn - <?php echo $detail_pendaftaran['jln_desa'] ?>, RT. - <?php echo $detail_pendaftaran['rt'] ?>, RW. -<?php echo $detail_pendaftaran['rw'] ?>, Ds. - <?php echo $detail_pendaftaran['desa'] ?>, Kec. - <?php echo $detail_pendaftaran['kecamatan'] ?>, kab. - <?php echo $detail_pendaftaran['kabupaten'] ?>, K.POS - <?php echo $detail_pendaftaran['kode_pos'] ?>, Provinsi - <?php echo $detail_pendaftaran['provinsi'] ?>
         </td>
     </tr>
     <tr>
@@ -615,13 +615,13 @@
             Diterima di Kelas
         </td>
         <td>
-            :
+            : <?php echo $detail_pendaftaran['pendaftaran_kelas'] ?>
         </td>
     </tr>
     <tr>
         <td style="width: 4%">9.</td>
         <td>
-            HUbungan Keluarga Dengan Wali
+            Hubungan Keluarga Dengan Wali
         </td>
         <td>
             :
@@ -703,7 +703,7 @@
 <table style="width: 100%;font-size: 85%">
     <tr>
         <td>
-            (H. Abdul Nashor Fattah)
+            (H. Abdul Nashir Fattah)
         </td>
         <td style="padding-left: 23%">
             (.................................)
@@ -806,7 +806,7 @@
             Agama
         </td>
         <td>
-            :
+            : Islam
         </td>
     </tr>
     <tr>
@@ -824,7 +824,7 @@
             Diterima di Kelas
         </td>
         <td>
-            :
+            : <?php echo $detail_pendaftaran['pendaftaran_kelas'] ?>
         </td>
     </tr>
     <tr>
@@ -833,7 +833,7 @@
             Nama Orang Tua / Wali
         </td>
         <td>
-            :
+            : <?php echo $detail_pendaftaran['nama_ayah'] ?>
         </td>
     </tr>
     <tr>
@@ -842,7 +842,7 @@
             Pekerjaan Orang Tua
         </td>
         <td>
-            :
+            : <?php echo $detail_pendaftaran['pekerjaan_ayah'] ?>
         </td>
     </tr>
     <tr>
@@ -851,7 +851,7 @@
             Agama Orang Tua
         </td>
         <td>
-            :
+            : Islam
         </td>
     </tr>
     <tr>
@@ -860,7 +860,7 @@
             Nama Wali
         </td>
         <td>
-            :
+            : <?php echo $detail_pendaftaran['nama_wali'] ?>
         </td>
     </tr>
     <tr>
@@ -869,7 +869,7 @@
             Pekerjaan Wali
         </td>
         <td>
-            :
+            : <?php echo $detail_pendaftaran['pekerjaan_wali'] ?>
         </td>
     </tr>
     <tr>
@@ -887,7 +887,7 @@
             Alamat Orang Tua / Wali
         </td>
         <td>
-            :
+            : Jln./Dsn - <?php echo $detail_pendaftaran['jln_desa'] ?>, RT. - <?php echo $detail_pendaftaran['rt'] ?>, RW. -<?php echo $detail_pendaftaran['rw'] ?>, Ds. - <?php echo $detail_pendaftaran['desa'] ?>, Kec. - <?php echo $detail_pendaftaran['kecamatan'] ?>, kab. - <?php echo $detail_pendaftaran['kabupaten'] ?>, K.POS - <?php echo $detail_pendaftaran['kode_pos'] ?>, Provinsi - <?php echo $detail_pendaftaran['provinsi'] ?>
         </td>
     </tr>
     <tr>
@@ -896,7 +896,7 @@
             Telp / HP
         </td>
         <td>
-            :
+            : <?php echo $detail_pendaftaran['no_tlp_ayah'] ?>
         </td>
     </tr>
 </table>

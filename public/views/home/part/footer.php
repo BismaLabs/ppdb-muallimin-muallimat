@@ -8,7 +8,7 @@
                 <div class="col-md-6">
                     <div class="footer-menu" style="text-align: right;">
                         <div class="menu-footer-menu-container">
-                               Build with <i class="fa fa-heart"></i>  at Jombang. and a lot of <i class="fa fa-coffee"></i>
+                            <b data-toggle="tooltip" data-placement="left" title="www.bismalabs.co.id">Bisma</b> Labs - PPDB Applications, <b>Version</b> 0.0.1
                         </div>
                     </div>
                 </div>
@@ -16,5 +16,8 @@
         </div>
     </div>
 </footer>
+<script>
+    $('[data-toggle="tooltip"]').tooltip();
+</script>
 </body>
 </html>

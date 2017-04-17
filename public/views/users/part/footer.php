@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b data-toggle="tooltip" data-placement="left" title="www.bismalabs.co.id">Bisma</b> Labs - Web Applications, <b>Version</b> 0.0.1
+        <b data-toggle="tooltip" data-placement="left" title="www.bismalabs.co.id">Bisma</b> Labs - PPDB Applications, <b>Version</b> 0.0.1
     </div>
     <?php echo systems('admin_footer') ?>
 </footer>

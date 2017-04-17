@@ -121,28 +121,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="text-center">2A</td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa") ?></td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa") ?></td>
+                                    <td class="text-center">2</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa") ?></td>
                                     <td>
                                         <b>
                                         <?php
-                                        $angka1 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
-                                        $angka2 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                        echo $angka1 + $angka2;
-                                        ?>
-                                        </b>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">2B</td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa") ?></td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa") ?></td>
-                                    <td>
-                                        <b>
-                                        <?php
-                                        $angka1 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
-                                        $angka2 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                        $angka1 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
+                                        $angka2 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
                                         echo $angka1 + $angka2;
                                         ?>
                                         </b>
@@ -183,12 +169,11 @@
                                         <?php
                                                 $angka1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
                                                 $angka2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
-                                                $angka3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
-                                                $angka4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
-                                                $angka5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
-                                                $angka6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
+                                                $angka3 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
+                                                $angka4 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
+                                                $angka5 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa");
 
-                                                echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5 + $angka6;
+                                                echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5;
                                         ?>
                                         </b>
                                     </td>
@@ -197,12 +182,11 @@
                                         <?php
                                                 $angka1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
                                                 $angka2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $angka3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $angka4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $angka5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $angka6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                                $angka3 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                                $angka4 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                                $angka5 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
 
-                                                echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5 + $angka6;
+                                                echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5;
                                         ?>
                                         </b>
                                     </td>
@@ -211,12 +195,11 @@
                                         <?php
                                                 $jumlah1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa") + $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
                                                 $jumlah2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $jumlah3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $jumlah4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $jumlah5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                                $jumlah6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                                $jumlah3 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                                $jumlah4 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                                $jumlah5 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
 
-                                                echo $jumlah1 + $jumlah2 + $jumlah3 + $jumlah4 + $jumlah5 + $jumlah6;
+                                                echo $jumlah1 + $jumlah2 + $jumlah3 + $jumlah4 + $jumlah5;
                                         ?>
                                         </b>
                                     </td>
@@ -280,28 +263,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="text-center">2A</td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td class="text-center">2</td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
+                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
                                     <td>
                                         <b>
                                             <?php
-                                            $angka1 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka2 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
-                                            echo $angka1 + $angka2;
-                                            ?>
-                                        </b>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">2B</td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
-                                    <td><?php echo $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa") ?></td>
-                                    <td>
-                                        <b>
-                                            <?php
-                                            $angka1 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka2 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka1 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka2 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
                                             echo $angka1 + $angka2;
                                             ?>
                                         </b>
@@ -342,12 +311,11 @@
                                             <?php
                                             $angka1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
                                             $angka2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka3 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka4 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka5 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa");
 
-                                            echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5 + $angka6;
+                                            echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5;
                                             ?>
                                         </b>
                                     </td>
@@ -356,12 +324,11 @@
                                             <?php
                                             $angka1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
                                             $angka2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
-                                            $angka6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka3 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka4 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
+                                            $angka5 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->where("status", "1")->count_all_results("tbl_siswa");
 
-                                            echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5 + $angka6;
+                                            echo $angka1 + $angka2 + $angka3 + $angka4 + $angka5;
                                             ?>
                                         </b>
                                     </td>
@@ -370,12 +337,11 @@
                                             <?php
                                             $jumlah1 = $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa") + $this->db->where("pendaftaran_kelas", '1A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
                                             $jumlah2 = $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '1B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                            $jumlah3 = $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2A')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                            $jumlah4 = $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2B')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                            $jumlah5 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
-                                            $jumlah6 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah3 = $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '2')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah4 = $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '3')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
+                                            $jumlah5 = $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Laki-laki')->where("status", "1")->count_all_results("tbl_siswa")+ $this->db->where("pendaftaran_kelas", '4')->where("jenis_kelamin", 'Perempuan')->count_all_results("tbl_siswa");
 
-                                            echo $jumlah1 + $jumlah2 + $jumlah3 + $jumlah4 + $jumlah5 + $jumlah6;
+                                            echo $jumlah1 + $jumlah2 + $jumlah3 + $jumlah4 + $jumlah5;
                                             ?>
                                         </b>
                                     </td>

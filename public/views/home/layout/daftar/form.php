@@ -839,8 +839,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <?php echo $recaptcha_html;?>
-                            <?php echo form_error('g-recaptcha-response'); ?>
+                            <?php echo $img;?>
+                            <input type="text" class="form-control" name="captcha"
+                                   placeholder="Masukkan Kode Keamanan diatas"
+                                   style="border-radius: 0px;margin-top: 5px">
+                            <?php echo form_error('captcha'); ?>
                         </div>
                         <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." class="btn btn-sending btn-success btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Daftar <i class="fa fa-send"></i> </button>
                         <button type="reset" class="btn btn-warning btn-md" style="border-radius: 0px;-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.2);box-shadow: 0 2px 2px rgba(0,0,0,0.2);transition-duration: .2s;transition-timing-function: cubic-bezier(.4,0,.2,1);transition-property: max-height,box-shadow;">Reset <i class="fa fa-repeat"></i></button>
