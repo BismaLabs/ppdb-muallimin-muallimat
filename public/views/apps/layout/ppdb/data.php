@@ -46,10 +46,9 @@
                                     <th class="text-center" style="color: #000;"><i class="fa fa-user-circle"></i> NAMA
                                         LENGKAP
                                     </th>
-                                    <th class="text-center" style="color: #000;"><i class="fa fa-graduation-cap"></i> PENDAFTARAN KELAS
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-graduation-cap"></i> KELAS TERDAFTAR
                                     </th>
-                                    <th class="text-center" style="color: #000;"><i class="fa fa-mars"></i> JENIS
-                                        KELAMIN
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-key"></i> NO. TEST
                                     </th>
                                     <th class="text-center" style="color: #000;"><i class="fa fa-info-circle"></i>
                                         STATUS
@@ -68,20 +67,25 @@
 
                                         $update_status = '<a class="badge badge-primary" style="background-color: #1969bc;" data-toggle="tooltip" data-placement="top"  href="' . base_url() . 'apps/ppdb/confirm/' . $this->encryption->encode($hasil->kode_pendaftaran) . '/' . $this->encryption->encode('1') . '"><i class="fa fa-check-circle"></i> Update</a>';
 
-                                    } elseif ($hasil->status == "1") {
+                                        $no_test = 'NULL';
+
+                                } elseif ($hasil->status == "1") {
 
                                         $status = '<span class="badge badge-success" style="background-color: #358420;"><i class="fa fa-check-circle"></i> Validated</span>';
 
                                         $update_status = '<a class="badge badge-primary" style="background-color: #1969bc;" data-toggle="tooltip" data-placement="top"  href="' . base_url() . 'apps/ppdb/confirm/' . $this->encryption->encode($hasil->kode_pendaftaran) . '/' . $this->encryption->encode('0') . '"><i class="fa fa-ban"></i> Update</a>';
-                                    }
 
-                                    ?>
+                                        $no_test = $hasil->no_test;
+                                }
+
+
+                                ?>
 
                                     <tr>
                                         <td><?php echo $hasil->kode_pendaftaran ?></td>
                                         <td style="text-transform: uppercase"><?php echo $hasil->nama_lengkap ?></td>
                                         <td><?php echo $hasil->pendaftaran_kelas ?></td>
-                                        <td style="text-transform: uppercase"><?php echo $hasil->jenis_kelamin ?></td>
+                                        <td style="text-transform: uppercase"><?php echo $no_test ?></td>
                                         <td style="text-align: center">
                                             <?php echo $status ?>
                                         </td>

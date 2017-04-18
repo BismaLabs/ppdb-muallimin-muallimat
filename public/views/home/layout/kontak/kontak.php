@@ -71,7 +71,7 @@
                                 <br>
                                 <br>
                                 <i class="fa fa-envelope"></i> Alamat Email:<br />
-                                madrasatuna_1953@yahoo.com
+                                madrasatuna_1953@gmail.com
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                     <br>
                     <br>
                     <i class="fa fa-envelope"></i> Alamat Email:<br />
-                    madrasatuna_1953@yahoo.com
+                    madrasatuna_1953@gmail.com
                 </div>
             </div>
         </div>
