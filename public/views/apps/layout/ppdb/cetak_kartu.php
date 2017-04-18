@@ -88,7 +88,7 @@
                          <div style="font-size: 14px">
                              NOMOR PESERTA
                          </div>
-                         <div style="font-size: 20px"><?php echo $detail_pendaftaran['no_peserta'] ?></div>
+                         <div style="font-size: 20px"><?php echo $detail_pendaftaran['no_test'] ?></div>
                          <!-- <div style="font-weight: 11px">
                             FOTO 3X4
                          </div> -->
