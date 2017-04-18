@@ -60,7 +60,7 @@ class Export extends CI_Controller{
                 }
             }
             $openTo = 'browser';
-            $filename = $this->table_name.'.xlsx';
+            $filename = 'PPDB_SEMUA_PENDAFTAR-'.date('Y-m-d').'.xlsx';
             $type = 'XLSX';
 
             $this->excel->write($header, $body, $type, $openTo, $filename);
@@ -95,7 +95,7 @@ class Export extends CI_Controller{
                 }
             }
             $openTo = 'browser';
-            $filename = $this->table_name.'.xlsx';
+            $filename = 'PPDB_PENDAFTAR_TERVALIDASI-'.date('Y-m-d').'.xlsx';
             $type = 'XLSX';
 
             $this->excel->write($header, $body, $type, $openTo, $filename);

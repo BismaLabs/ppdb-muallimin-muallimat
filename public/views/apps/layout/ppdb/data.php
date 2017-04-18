@@ -67,7 +67,7 @@
 
                                         $update_status = '<a class="badge badge-primary" style="background-color: #1969bc;" data-toggle="tooltip" data-placement="top"  href="' . base_url() . 'apps/ppdb/confirm/' . $this->encryption->encode($hasil->kode_pendaftaran) . '/' . $this->encryption->encode('1') . '"><i class="fa fa-check-circle"></i> Update</a>';
 
-                                        $no_test = 'NULL';
+                                        $no_test = '';
 
                                 } elseif ($hasil->status == "1") {
 
@@ -84,7 +84,7 @@
                                     <tr>
                                         <td><?php echo $hasil->kode_pendaftaran ?></td>
                                         <td style="text-transform: uppercase"><?php echo $hasil->nama_lengkap ?></td>
-                                        <td><?php echo $hasil->pendaftaran_kelas ?></td>
+                                        <td class="text-center"><?php echo $hasil->pendaftaran_kelas ?></td>
                                         <td style="text-transform: uppercase"><?php echo $no_test ?></td>
                                         <td style="text-align: center">
                                             <?php echo $status ?>
