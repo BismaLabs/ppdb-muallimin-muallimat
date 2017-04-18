@@ -20,7 +20,7 @@
                     <div class="box-body">
                         <div class="card-content">
                             <div class="main-menu-panduan"
-                                 style="font-family: Roboto;font-weight: 300;font-size: 18px;text-decoration: none">
+                                 style="font-size: 18px;text-decoration: none">
 
                                 <ul class="timeline">
                                     <?php foreach ($pengumuman->result() as $hasil) { ?>
