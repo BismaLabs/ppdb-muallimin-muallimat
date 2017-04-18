@@ -14,7 +14,7 @@
                 <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th  rowspan="4" style=" width:150px; padding-left: 15px; border: 1px solid black;">
+                        <th  rowspan="8" style=" width:150px; padding-left: 15px; border: 1px solid black;">
                              <br>
                             PERHATIAN
                             <br>
@@ -32,13 +32,12 @@
                             Hari Pertama: Ujian Tulis
                             <br>
                             Hari Kedua: Ujian Lisan
-                             <br>
                             <br>
-                             <br>
+                            <br>
                             <br>
                             </div>
                         </th>
-                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                        <th style="width:200px; height: 240px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
                          <div style="font-size: 14px">
                              KARTU PESERTA UJIAN MASUK
                          </div>
@@ -49,7 +48,7 @@
                          <br>
                          <img src="<?php echo base_url() ?>resources/public/images/logo.png"
                                                        style="width:100px">
-                            <br>
+                         <br>
                          <br>
                         TAHUN PELAJARAN
                         <br>
@@ -61,7 +60,9 @@
                 <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th style="width:320px; height: 270px; padding-left: 15px; border: 1px solid black;">
+                        <th rowspan="8"  style="width:367px; height:150px ; padding-left: 15px; border: 1px solid black;">
+                            <br>
+                            <br>
                             Nama         <?php echo ':' .$detail_pendaftaran['nama_lengkap'] ?>
                             <br>
                             Calon Kelas  <?php echo ':' .$detail_pendaftaran['pendaftaran_kelas'] ?>
@@ -74,7 +75,8 @@
                             <br>
                             <br>
                             Jombang, 2 Juli 2017
-                            PANITIA
+                            <br>
+                            Panitia
                             <br>
                             <br>
                             <br>
@@ -83,15 +85,17 @@
                             <br>
                             AHSANUN NAIM, S.Pd.I
                              <br>
+                             <br>
+                            <br>
+                            <br>
                             </th>
-                        <th style="width:200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                        <th style="width:200px; height: 240px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
                          <div style="font-size: 14px">
                              NOMOR PESERTA
                          </div>
-                         <div style="font-size: 20px"><?php echo $detail_pendaftaran['no_peserta'] ?></div>
-                         <!-- <div style="font-weight: 11px">
-                            FOTO 3X4
-                         </div> -->
+                         <div style="font-size: 20px;text-align: center;border: 1px solid black">
+                         <?php echo $detail_pendaftaran['no_test'] ?>
+                         </div>
                          <br>
                          <img src="<?php echo base_url() ?>resources/images/avatar/img_avatar.png"
                                                        style="width:100px">
