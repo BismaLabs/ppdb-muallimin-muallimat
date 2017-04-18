@@ -46,7 +46,7 @@
                                     <th class="text-center" style="color: #000;"><i class="fa fa-user-circle"></i> NAMA
                                         LENGKAP
                                     </th>
-                                    <th class="text-center" style="color: #000;"><i class="fa fa-graduation-cap"></i> PENDAFTARAN KELAS
+                                    <th class="text-center" style="color: #000;"><i class="fa fa-graduation-cap"></i> KELAS TERDAFTAR
                                     </th>
                                     <th class="text-center" style="color: #000;"><i class="fa fa-key"></i> NO. TEST
                                     </th>
