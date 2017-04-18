@@ -60,16 +60,14 @@
                 <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th rowspan="8"  style="width:367px; height:150px ; padding-left: 15px; border: 1px solid black;">
+                        <th rowspan="8"  style="font-size: 16px;width:280px; height:150px ; padding-left: 15px; border: 1px solid black;">
                             <br>
                             <br>
-                            Nama         <?php echo ':' .$detail_pendaftaran['nama_lengkap'] ?>
+                            Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ': ' . $detail_pendaftaran['nama_lengkap'] ?>
                             <br>
-                            Calon Kelas  <?php echo ':' .$detail_pendaftaran['pendaftaran_kelas'] ?>
+                            Calon Kelas&nbsp;<?php echo ': ' .$detail_pendaftaran['pendaftaran_kelas'] ?>
                             <br>
-                            Tgl. Tes                 : 4-5 Juli 2017
-                            <br>
-                            <br>
+                            Tgl. Tes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 4-5 Juli 2017
                             <br>
                             <br>
                             <br>
@@ -84,12 +82,12 @@
                             <br>
                             <br>
                             AHSANUN NAIM, S.Pd.I
-                             <br>
-                             <br>
+                            <br>
+                            <br>
                             <br>
                             <br>
                             </th>
-                        <th style="width:200px; height: 240px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
+                        <th style="width:200px; height: 200px; padding-right: 5px; padding-left: 5px; text-align:center;  border: 1px solid black;">
                          <div style="font-size: 14px">
                              NOMOR PESERTA
                          </div>
@@ -99,6 +97,8 @@
                          <br>
                          <img src="<?php echo base_url() ?>resources/images/avatar/img_avatar.png"
                                                        style="width:100px">
+                         <br>
+                         <br>
                          <br>
                          <br>
                         TAHUN PELAJARAN
