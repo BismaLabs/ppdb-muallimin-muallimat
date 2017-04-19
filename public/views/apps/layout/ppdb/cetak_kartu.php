@@ -91,8 +91,14 @@
                          <div style="font-size: 14px">
                              NOMOR PESERTA
                          </div>
+                         <br>
                          <div style="font-size: 20px;text-align: center;border: 1px solid black">
-                         <?php echo $detail_pendaftaran['no_test'] ?>
+                         <?php 
+                         if ($detail_pendaftaran['status'] != "0") {
+                            echo $detail_pendaftaran['no_test'];
+                         }elseif($detail_pendaftaran['status'] == "0"){
+                            echo "";
+                         } ?>
                          </div>
                          <br>
                          <img src="<?php echo base_url() ?>resources/images/avatar/img_avatar.png"
