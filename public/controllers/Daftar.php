@@ -107,7 +107,6 @@ class Daftar extends CI_Controller {
         //set
         $this->form_validation->set_rules('no_un', 'Nomor Peserta Ujian Nasional', 'required');
 
-
         //set
         $this->form_validation->set_rules('nama_ayah', 'Nama Lengkap Ayah Kandung', 'required');
         //set
@@ -169,8 +168,7 @@ class Daftar extends CI_Controller {
         {
 
             //get kode test peserta
-
-
+            $generate_no_test = $this->getnotes($this->input->post("pendaftaran_kelas"));
 
             //get random kode pendaftaran
             $this->load->helper('string');
@@ -180,6 +178,7 @@ class Daftar extends CI_Controller {
 
                 'kode_pendaftaran'          => $random,
                 'asal_sekolah'              => $this->input->post("asal_sekolah"),
+                'no_test'                   => $generate_no_test,
                 'pendaftaran_kelas'         => $this->input->post("pendaftaran_kelas"),
                 'nama_lengkap'              => $this->input->post("nama"),
                 'jenis_kelamin'             => $this->input->post("jenis_kelamin"),
@@ -287,5 +286,26 @@ class Daftar extends CI_Controller {
             $this->load->view('home/part/footer');
         }
 
+    }
+
+    public function getnotes($kelas='') {
+        if (empty(trim($kelas))) {
+            return '';
+            exit();
+        }
+        $ketemu=false;
+        $urut=1;
+        while ($ketemu==false) {
+            $no_test = $kelas.'-'.sprintf("%03d", $urut);
+            $sql="SELECT no_test FROM tbl_siswa where no_test='$no_test'";
+            $jml  = $this->db->query($sql)->num_rows();
+            if ($jml==0) { //Jika nomor tes belum dipakai
+                $ketemu=true;
+                return $no_test;
+            }
+            else { //Jika nomor tes sudah dipakai
+                $urut++;
+            }
+        }
     }
 }
