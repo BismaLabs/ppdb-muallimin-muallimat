@@ -161,8 +161,8 @@ class Daftar extends CI_Controller {
 
         //captcha//
         $userCaptcha    = set_value('captcha');
-        $word           = $this->session->userdata('captchaWord');
-        $captcha        = $this->input->post('captcha');
+        $word           = strtolower($this->session->userdata('captchaWord'));
+        $captcha        = strtolower($this->input->post('captcha'));
 
         if($this->form_validation->run() == TRUE && $captcha == $word)
         {
@@ -260,12 +260,23 @@ class Daftar extends CI_Controller {
 
         }else{
 
+            /*
             $config = array(
                 'img_path'	 => './resources/images/captcha/',
                 'img_url'	 => base_url().'resources/images/captcha/',
                 'img_width'	 => '162',
                 'img_height' => 40,
                 'border' => 0,
+                'expiration' => 7200
+            );
+
+            */
+
+            $config = array(
+                'img_path' => './resources/images/captcha/',
+                'img_url' => base_url().'resources/images/captcha/',
+                'img_width' => '162',
+                'img_height' => 40,
                 'expiration' => 7200
             );
 
