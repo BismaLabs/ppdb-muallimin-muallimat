@@ -9,8 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="<?php echo base_url() ?>resources/public/images/logo.png">
-
-    <title>PPDB - Madrasah Mu'allimin Mu'allimat Bahrul Ulum, Tambak Beras, Jombang</title>
+    <meta name="keywords" content="<?php echo systems('keywords') ?>">
+    <meta name="description" content="<?php echo systems('descriptions')  ?>">
+    <meta property="og:url" content="<?php print base_url() ?><?php print $this->uri->uri_string() ?>/">
+    <meta property="og:site_name" content="<?php echo systems('site_title') ?>">
+    <meta property="og:title" content="<?php echo systems('site_title') ?>">
+    <meta property="og:description" content="<?php echo systems('descriptions')  ?>">
+    <meta property="og:image" content="<?php echo base_url() ?>resources/public/images/logo.png">
+    <title><?php echo systems('site_title') ?></title>
     <link href="<?php echo base_url() ?>resources/public/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/css/custom.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>resources/public/css/font-awesome/css/font-awesome.css" rel="stylesheet">

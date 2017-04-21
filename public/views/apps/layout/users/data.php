@@ -56,7 +56,7 @@
                                     if($hasil->id_user == $this->session->userdata("apps_id"))
                                     {
                                         $restrict = '<a class="badge badge-success" style="background-color: #358420;" data-toggle="tooltip" data-placement="top" title="Edit" href="'.base_url().'apps/users/edit/'.$this->encryption->encode($hasil->id_user).'"><i class="fa fa-pencil"></i> Edit</a>
-                                                     <a class="badge badge-danger" style="background-color: #842020;" data-toggle="tooltip" data-placement="top" title="Delete ?" href="'.base_url().'apps/users/delete/'.$this->encryption->encode($hasil->id_user).'"><i class="fa fa-trash"></i> Delete</a>';
+                                                     <span class="badge badge-danger" style="background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Delete ?"><i class="fa fa-trash"></i> Delete</span>';
                                     }else{
                                         $restrict = '<span class="badge badge-success" style="background-color: #358420;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i> Edit</span>
                                                      <span class="badge badge-danger" style="background-color: #842020;cursor: not-allowed;filter: alpha(opacity=65);-webkit-box-shadow: none;box-shadow: none;opacity: .65;" data-toggle="tooltip" data-placement="top" title="Delete ?"><i class="fa fa-trash"></i> Delete</span>';
