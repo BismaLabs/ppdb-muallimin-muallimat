@@ -12,7 +12,7 @@ class Daftar extends CI_Controller {
     {
         parent::__construct();
         //load model
-        $this->load->model(array('apps','users'));
+        $this->load->model(array('apps','users','web'));
         //load library
         $this->load->library(array('form_validation'));
 
@@ -55,13 +55,15 @@ class Daftar extends CI_Controller {
         }
     }
 
+
     public function index()
     {
 
         $data = array(
-            'daftar'         => TRUE,
+            'daftar'    => TRUE,
             'kelas_sd'   =>$this->users->kelas_sd(),
             'kelas_smp'   =>$this->users->kelas_smp(),
+            'data_asrama'   =>$this->users->asrama()
         );
 
         //set form validation
@@ -87,15 +89,15 @@ class Daftar extends CI_Controller {
         //set tahun lahir
         $this->form_validation->set_rules('tahun_lahir', 'Tahun Lahir', 'required');
         //set anak ke
-        $this->form_validation->set_rules('anak_ke', 'Anak Ke', 'required');
+        //$this->form_validation->set_rules('anak_ke', 'Anak Ke', 'required');
         //set jumlah anak ke
-        $this->form_validation->set_rules('jumlah_anak_ke', 'Jumlah Anak Ke', 'required');
+        //$this->form_validation->set_rules('jumlah_anak_ke', 'Jumlah Anak Ke', 'required');
         //set
-        $this->form_validation->set_rules('jumlah_saudara_kandung', 'Jumlah Saudara Kandung', 'required');
+        //$this->form_validation->set_rules('jumlah_saudara_kandung', 'Jumlah Saudara Kandung', 'required');
         //set
-        $this->form_validation->set_rules('jumlah_adik', 'Jumlah Adik', 'required');
+        //$this->form_validation->set_rules('jumlah_adik', 'Jumlah Adik', 'required');
         //set
-        $this->form_validation->set_rules('jumlah_kakak', 'Jumlah Kakak', 'required');
+        //$this->form_validation->set_rules('jumlah_kakak', 'Jumlah Kakak', 'required');
         //set
         $this->form_validation->set_rules('kk', 'Nomor Kartu Keluarga', 'required');
         //set
@@ -103,9 +105,9 @@ class Daftar extends CI_Controller {
         //set
         $this->form_validation->set_rules('kota_madrasah', 'Kota Madrasah Asal', 'required');
         //set
-        $this->form_validation->set_rules('npsn', 'Nomor Pokok Statistik nasional', 'required');
+        //$this->form_validation->set_rules('npsn', 'Nomor Pokok Statistik nasional', 'required');
         //set
-        $this->form_validation->set_rules('no_un', 'Nomor Peserta Ujian Nasional', 'required');
+        //$this->form_validation->set_rules('no_un', 'Nomor Peserta Ujian Nasional', 'required');
 
         //set
         $this->form_validation->set_rules('nama_ayah', 'Nama Lengkap Ayah Kandung', 'required');
@@ -116,13 +118,13 @@ class Daftar extends CI_Controller {
         //set
         $this->form_validation->set_rules('no_ktp_ibu', 'Nomor KTP/NIK Ibu', 'required');
         //set
-        $this->form_validation->set_rules('pekerjaan_ayah', 'Pekerjaan Ayah', 'required');
+        //$this->form_validation->set_rules('pekerjaan_ayah', 'Pekerjaan Ayah', 'required');
         //set
-        $this->form_validation->set_rules('pekerjaan_ibu', 'Pekerjaan Ibu', 'required');
+        //$this->form_validation->set_rules('pekerjaan_ibu', 'Pekerjaan Ibu', 'required');
         //set
-        $this->form_validation->set_rules('pendidikan_ayah', 'Pekerjaan Ayah', 'required');
+        //$this->form_validation->set_rules('pendidikan_ayah', 'Pekerjaan Ayah', 'required');
         //set
-        $this->form_validation->set_rules('pendidikan_ibu', 'Pekerjaan Ibu', 'required');
+        //$this->form_validation->set_rules('pendidikan_ibu', 'Pekerjaan Ibu', 'required');
         //set
         $this->form_validation->set_rules('jln_dsn', 'Alamat Jalan', 'required');
         //set
@@ -140,13 +142,13 @@ class Daftar extends CI_Controller {
         //set
         $this->form_validation->set_rules('provinsi', 'Provinsi', 'required');
         //set
-        $this->form_validation->set_rules('penghasilan_ayah', 'Penghasilan Ayah', 'required');
+        //$this->form_validation->set_rules('penghasilan_ayah', 'Penghasilan Ayah', 'required');
         //set
-        $this->form_validation->set_rules('penghasilan_ibu', 'Penghasilan Ibu', 'required');
+        //$this->form_validation->set_rules('penghasilan_ibu', 'Penghasilan Ibu', 'required');
         //set
-        $this->form_validation->set_rules('keterangan_ayah', 'Keterangan Ayah', 'required');
+        //$this->form_validation->set_rules('keterangan_ayah', 'Keterangan Ayah', 'required');
         //set
-        $this->form_validation->set_rules('keterangan_ibu', 'Keterangan Ibu', 'required');
+        //$this->form_validation->set_rules('keterangan_ibu', 'Keterangan Ibu', 'required');
         //set
         $this->form_validation->set_rules('no_hp_ayah', 'Nomor HP Ayah', 'required');
         //set
@@ -290,6 +292,7 @@ class Daftar extends CI_Controller {
                     'daftar'     => TRUE,
                     'kelas_sd'   =>$this->users->kelas_sd(),
                     'kelas_smp'  =>$this->users->kelas_smp(),
+                    'data_asrama'   =>$this->users->asrama()
             );
 
             $this->load->view('home/part/header', $data);

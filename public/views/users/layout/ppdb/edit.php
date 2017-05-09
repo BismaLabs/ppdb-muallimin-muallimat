@@ -23,8 +23,8 @@
                          <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-list-ul"></i>  A. KETERANGAN CALON PESERTA DIDIK</h3>
                           </div>
-                                                      <input type="hidden" name="type" value="<?php echo $type ?>">
-                                                      <input type="hidden" name="kode_pendaftaran" value="<?php echo $edit_user['kode_pendaftaran']?>">
+                            <input type="hidden" name="type" value="<?php echo $type ?>">
+                            <input type="hidden" name="kode_pendaftaran" value="<?php echo $edit_user['kode_pendaftaran']?>">
                            <div class="card">
                               <div class="card-content">
                                     <div class="box-body">
@@ -134,7 +134,7 @@
                                      <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="tahun">Tahun <span class="required"
-                                                                       style="color: red">*</span></label>
+                                         style="color: red">*</span></label>
                                         <select class="form-control" name="tahun_lahir" id="tahun">
                                             <option value='1990'>1990</option>
                                         <option value='1991'>1991</option>
@@ -176,9 +176,8 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <input type="text"  class="form-control" id="anak_ke" placeholder="Jumlah"
-                                                   name="anak_ke" value="<?php echo  $edit_user['anak_ke'] ?>"
-                                                   style="border-radius: 0px" >
+                                            <input type="text"  class="form-control" id="anak_ke" placeholder="Jumlah" name="anak_ke" value="<?php echo  $edit_user['anak_ke'] ?>"
+                                            style="border-radius: 0px" >
                                             <?php echo form_error('anak_ke'); ?>
                                         </div>
                                     </div>
@@ -421,13 +420,23 @@
                                         </div>
 
                                         <div class="col-md-3">
-                                            <input type="text" class="form-control" name="pendidikan_ayah" value="<?php echo  $edit_user['pendidikan_ayah'] ?>"
-                                                   placeholder="Masukkan Pendidikan Ayah" style="border-radius: 0px" >
-                                            <?php echo form_error('pendidikan_ayah'); ?>
+                                        <option name="pendidikan_ayah">
+                                          <select>SD/MI</select>
+                                          <select>SLTP/MTS</select>
+                                          <select>SMU/SMA</select>
+                                          <select>SARJANA</select>
+                                          <select>PASCASARJANA</select>
+                                          <select><?php echo $edit_user['pendidikan_ayah'] ?></select>
+                                        </option>
                                             <br>
-                                            <input type="text" class="form-control" name="pendidikan_ibu" value="<?php echo  $edit_user['pendidikan_ibu'] ?>"
-                                                   placeholder="Masukkan Pendidikan Ibu" style="border-radius: 0px" >
-                                            <?php echo form_error('pendidikan_ibu'); ?>
+                                        <option name="pendidikan_ibu">
+                                            <select>SD/MI</select>
+                                            <select>SLTP/MTS</select>
+                                            <select>SMU/SMA</select>
+                                            <select>SARJANA</select>
+                                            <select>PASCASARJANA</select>
+                                            <select><?php echo $edit_user['pendidikan_ibu'] ?></select>
+                                        </option>
                                         </div>
                                     </div>
                                 </div>

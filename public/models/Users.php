@@ -24,13 +24,11 @@ class Users extends CI_Model
     {   
       $data = array('kode_pendaftaran' => $this->session->userdata('kode_pendaftaran'), 
           );
-        return $this->db->get_where('tbl_siswa',$data);
-        
+        return $this->db->get_where('tbl_siswa',$data);   
     }
 
     function edit_siswa()
     {
-
         $data = array('kode_pendaftaran' => $this->session->userdata('kode_pendaftaran'),
           );
         return $this->db->get_where('tbl_siswa',$data);
@@ -51,6 +49,12 @@ class Users extends CI_Model
     {
         $this->db->where('status','2');
         return $this->db->get('tbl_kelas');
+    }
+
+        //get asrama
+    function asrama()
+    {
+        return $this->db->get('tbl_asrama');
     }
 
     //fungsi check username

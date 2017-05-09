@@ -29,23 +29,14 @@
                                     <div id="form_sd" style="display: none">
                                         <select class="form-control" id="select_sd">
                                             <?php
-                                            foreach($kelas_sd->result_array() as $row)
-                                            {
-                                                if($row['id_kelas']== $id_kelas)
-                                                {
-                                                    ?>
-                                                    <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
-                                                    <?php
-                                                } else {
-                                                    ?>
-                                                    <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
-                                                    <?php
-                                                }
-                                            }
+                                            foreach($kelas_sd->result_array() as $sd)
+                                            { 
+                                             ?>
+                                                <option><?php echo $sd['nama_kelas'] ?></option>
+                                          <?php  }
                                             ?>
                                         </select>
                                     </div>
-                                    <?php echo form_error('pendaftaran_kelas'); ?>
                                 </div>
 
                                 <!-- Pilih Kelas smp -->
@@ -62,19 +53,11 @@
                                     <div id="form_smp" style="display: none">
                                         <select class="form-control" id="select_smp">
                                             <?php
-                                            foreach($kelas_smp->result_array() as $row)
-                                            {
-                                                if($row['nama_kelas']== $nama_kelas)
-                                                {
-                                                    ?>
-                                                    <option value="<?php echo $row['nama_kelas']; ?>" selected="selected"><?php echo $row['nama_kelas']; ?></option>
-                                                    <?php
-                                                } else {
-                                                    ?>
-                                                    <option value="<?php echo $row['nama_kelas']; ?>"><?php echo $row['nama_kelas']; ?></option>
-                                                    <?php
-                                                }
-                                            }
+                                            foreach($kelas_smp->result_array() as $smp)
+                                            { 
+                                             ?>
+                                                <option><?php echo $smp['nama_kelas'] ?></option>
+                                          <?php  }
                                             ?>
                                         </select>
                                     </div>
@@ -279,9 +262,15 @@
                         </div>
                         <div class="form-group">
                             <label>Asrama <i>(Bagi yang Tinggal Dipondok)</i></label>
-                            <input type="text" placeholder="Asrama" class="form-control" name="asrama"
-                                   value="<?php echo set_value('asrama') ?>"
-                                   style="border-radius: 0px">
+                            <select class="form-control" name="asrama" required>
+                            <?php
+                                foreach($data_asrama->result() as $asrama)
+                                { 
+                                 ?>
+                                    <option value="<?php echo $asrama->nama_asrama ?>"><?php echo $asrama->nama_asrama ?></option>
+                              <?php  }
+                                ?>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Nomor Kartu Keluarga <i>(KK) <span class="required"                                                                      style="color: red">*</span></i></label>
@@ -348,7 +337,6 @@
                                 <input type="text" placeholder="No UN" name="no_un"
                                        value="<?php echo set_value('no_un') ?>" class="form-control"
                                        style="border-radius: 0px">
-                                <?php echo form_error('no_un'); ?>
                             </div>
                         </div>
                     </div>
@@ -395,7 +383,7 @@
                             <label> Nama Lengkap <span class="required" style="color: red">*</span></label>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>a. Ayah <i>(Sesuai Dengan Ijazah SIswa) </i></label>
+                                    <label>a. Ayah <i>(Sesuai Dengan Ijazah Siswa) </i></label>
                                     <br/>
                                     <label style="padding-top:30px">b. Ibu </label>
                                 </div>
@@ -445,21 +433,26 @@
                                 <div class="col-md-3">
                                     <input type="text" class="form-control" name="pekerjaan_ayah" value="<?php echo set_value('pekerjaan_ayah') ?>"
                                            placeholder="Masukkan Pekerjaan Ayah" style="border-radius: 0px">
-                                    <?php echo form_error('pekerjaan_ayah'); ?>
                                     <br>
                                     <input type="text" class="form-control" name="pekerjaan_ibu" value="<?php echo set_value('pekerjaan_ibu') ?>"
                                            placeholder="Masukkan Pekerjaan Ibu" style="border-radius: 0px">
-                                    <?php echo form_error('pekerjaan_ibu'); ?>
                                 </div>
-
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control" name="pendidikan_ayah" value="<?php echo set_value('pendidikan_ayah') ?>"
-                                           placeholder="Masukkan Pendidikan Ayah" style="border-radius: 0px">
-                                    <?php echo form_error('pendidikan_ayah'); ?>
+                                    <select class="form-control" name="pendidikan_ayah">
+                                        <option value="SD/MI">SD/MI</option>
+                                        <option value="SLTP/MTs" >SLTP/MTs</option>
+                                        <option value="SMU/SMA" > SMU/SMA</option>
+                                        <option value="SARJANA" > SARJANA</option>
+                                        <option value="PASCASARJANA" > PASCASARJANA</option>
+                                    </select>
                                     <br>
-                                    <input type="text" class="form-control" name="pendidikan_ibu" value="<?php echo set_value('pendidikan_ibu') ?>"
-                                           placeholder="Masukkan Pendidikan Ibu" style="border-radius: 0px">
-                                    <?php echo form_error('pendidikan_ibu'); ?>
+                                     <select class="form-control" name="pendidikan_ibu">
+                                        <option value="SD/MI">SD/MI</option>
+                                        <option value="SLTP/MTs" >SLTP/MTs</option>
+                                        <option value="SMU/SMA" > SMU/SMA</option>
+                                        <option value="SARJANA" > SARJANA</option>
+                                        <option value="PASCASARJANA" > PASCASARJANA</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
