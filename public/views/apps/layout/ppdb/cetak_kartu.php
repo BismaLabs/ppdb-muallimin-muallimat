@@ -74,20 +74,18 @@
     Tgl. Tes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 4-5 Juli 2017
     <br>
     <br>
-    <br>
     Jombang, 2 Juli 2017
     <br>
     Panitia
     <br>
+
+   <br>
+        <img src="<?php echo base_url() ?>resources/images/gus-rifan.png"
+             style="width:80px;padding-left: 60px">
+        <br>
+     H. Moch. Abdulloh Rif'an, Lc.
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    AHSANUN NAIM, S.Pd.I
-    <br>
-    <br>
-    <br>
+
     </td>
     <td style="width:40%;table-layout: fixed;text-align:center; border: 1px solid black;
     box-sizing: border-box;">

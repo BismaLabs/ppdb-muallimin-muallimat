@@ -708,9 +708,18 @@
 <table style="width: 100%;font-size: 85%">
     <tr>
         <td>
+            <img src="<?php echo base_url() ?>resources/images/yai-nashir.png"
+                 style="width:80px;padding-left: 20px">
+            <br>
+            <br>
             (H. Abdul Nashir Fattah)
         </td>
-        <td style="padding-left: 26%;padding-right: 10%">
+        <td style="padding-left: 45%;padding-right: 8%">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             (..................................................)
         </td>
     </tr>
