@@ -205,7 +205,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="anak_ke"> Anak Ke <span class="required" style="color: red">*</span></label>
+                            <label for="anak_ke"> Anak Ke</label>
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
@@ -232,7 +232,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="saudara_kandung"> Jumlah Saudara Kandung <span class="required"                                                                                       style="color: red">*</span></label>
+                            <label for="saudara_kandung"> Jumlah Saudara Kandung </label>
                             <input type="text" class="form-control" id="saudara_kandung" name="jumlah_saudara_kandung"
                                    value="<?php echo set_value('jumlah_saudara_kandung') ?>"
                                    placeholder="Saudara Kandung" style="border-radius: 0px">
@@ -242,7 +242,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Jumlah Adik <span class="required"                                                                 style="color: red">*</span></label>
+                                        <label>Jumlah Adik </label>
                                         <input type="text" name="jumlah_adik"
                                                value="<?php echo set_value('jumlah_adik') ?>" placeholder="Jumlah"
                                                class="form-control"
@@ -251,7 +251,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label>Jumlah Kakak <span class="required" style="color: red">*</span></label>
+                                    <label>Jumlah Kakak </label>
                                     <input type="text" name="jumlah_kakak"
                                            value="<?php echo set_value('jumlah_kakak') ?>" placeholder="Jumlah"
                                            class="form-control"
@@ -333,7 +333,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Nomor Peserta Ujian Nasional <span class="required"                                                                          style="color: red">*</span></label>
+                                <label>Nomor Peserta Ujian Nasional </label>
                                 <input type="text" placeholder="No UN" name="no_un"
                                        value="<?php echo set_value('no_un') ?>" class="form-control"
                                        style="border-radius: 0px">
@@ -422,7 +422,7 @@
                                 <ins>Pekerjaan</ins>
                                 &
                                 <ins>Pendidikan</ins>
-                                <span class="required" style="color: red">*</span>
+                                
                             </label>
                             <div class="row">
                                 <div class="col-md-6">
