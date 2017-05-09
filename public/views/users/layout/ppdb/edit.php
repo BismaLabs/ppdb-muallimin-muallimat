@@ -1,4 +1,3 @@
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -228,9 +227,16 @@
                                     </div>
                                     <div class="form-group">
                                 <label>Asrama <i>(Bagi yang Tinggal Dipondok)</i></label>
-                                <input type="text" placeholder="Asrama" class="form-control" name="asrama"
-                                       value="<?php echo  $edit_user['asrama'] ?>"
-                                       style="border-radius: 0px" >
+                                  <select class="form-control" name="asrama" required>
+                                <?php
+                                foreach($data_asrama->result() as $asrama)
+                                { 
+                                 ?>
+                                    <option value="<?php echo $asrama->nama_asrama ?>"><?php echo $asrama->nama_asrama ?></option>
+                              <?php  }
+                                ?>
+                                <option value="Lainnya">Lainnya..</option>
+                            </select>
                                     </div>
                                     <div class="form-group">
                                 <label>Nomor Kartu Keluarga <i>(KK) <span class="required"                                                                      style="color: red">*</span></i></label>
@@ -418,25 +424,24 @@
                                                    placeholder="Masukkan Pekerjaan Ibu" style="border-radius: 0px" >
                                             <?php echo form_error('pekerjaan_ibu'); ?>
                                         </div>
-
-                                        <div class="col-md-3">
-                                        <option name="pendidikan_ayah">
-                                          <select>SD/MI</select>
-                                          <select>SLTP/MTS</select>
-                                          <select>SMU/SMA</select>
-                                          <select>SARJANA</select>
-                                          <select>PASCASARJANA</select>
-                                          <select><?php echo $edit_user['pendidikan_ayah'] ?></select>
-                                        </option>
-                                            <br>
-                                        <option name="pendidikan_ibu">
-                                            <select>SD/MI</select>
-                                            <select>SLTP/MTS</select>
-                                            <select>SMU/SMA</select>
-                                            <select>SARJANA</select>
-                                            <select>PASCASARJANA</select>
-                                            <select><?php echo $edit_user['pendidikan_ibu'] ?></select>
-                                        </option>
+                                    <div class="col-md-3">
+                                      <select class="form-control" name="pendidikan_ayah">
+                                      <option><?php echo $edit_user['pendidikan_ayah']; ?></option>
+                                        <option value="SD/MI">SD/MI</option>
+                                        <option value="SLTP/MTs" >SLTP/MTs</option>
+                                        <option value="SMU/SMA" > SMU/SMA</option>
+                                        <option value="SARJANA" > SARJANA</option>
+                                        <option value="PASCASARJANA" > PASCASARJANA</option>
+                                    </select>
+                                    <br>
+                                     <select class="form-control" name="pendidikan_ibu">
+                                      <option><?php echo $edit_user['pendidikan_ibu']; ?></option>
+                                        <option value="SD/MI">SD/MI</option>
+                                        <option value="SLTP/MTs" >SLTP/MTs</option>
+                                        <option value="SMU/SMA" > SMU/SMA</option>
+                                        <option value="SARJANA" > SARJANA</option>
+                                        <option value="PASCASARJANA" > PASCASARJANA</option>
+                                    </select>
                                         </div>
                                     </div>
                                 </div>

@@ -26,7 +26,8 @@ class Ppdb extends CI_Controller
                 'ppdb' => True,
                 'siswa' => $this->users->edit_users(),
                 'kelas_sd' => $this->users->kelas_sd(),
-                'kelas_smp' => $this->users->kelas_smp()
+                'kelas_smp' => $this->users->kelas_smp(),
+                'data_asrama'   =>$this->users->asrama()
             );
 
             //load view with data
@@ -49,7 +50,8 @@ class Ppdb extends CI_Controller
                 'type' => 'edit data',
                 'edit_user' => $this->users->edit_siswa($id)->row_array(),
                 'kelas_sd' => $this->users->kelas_sd(),
-                'kelas_smp' => $this->users->kelas_smp()
+                'kelas_smp' => $this->users->kelas_smp(),
+                'data_asrama'   =>$this->users->asrama()
             );
             //load view with data
             $this->load->view('users/part/header', $data);
