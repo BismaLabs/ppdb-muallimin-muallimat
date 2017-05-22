@@ -110,8 +110,11 @@ class Ppdb extends CI_Controller
     public function confirm($id, $value)
     {
         if ($this->apps->apps_id()) {
+
             $kode_pendaftaran = $this->encryption->decode($id);
+
             $value = $this->encryption->decode($this->uri->segment(5));
+
             //where id
             $key['kode_pendaftaran'] = $kode_pendaftaran;
             //update
@@ -120,15 +123,68 @@ class Ppdb extends CI_Controller
             );
             //update query
             $this->db->update("tbl_siswa", $update, $key);
+
+            $query     = $this->db->query("SELECT kode_pendaftaran, no_test,pendaftaran_kelas FROM tbl_siswa WHERE kode_pendaftaran='$kode_pendaftaran'")->row();
+
+            print_r($query);
+
+            if($value == "0")
+            {
+
+                $kelas = '';
+                $key['kode_pendaftaran'] = $query->kode_pendaftaran;
+                //update
+                $update = array(
+                    'no_test' => $kelas
+                );
+                //update query
+                $this->db->update("tbl_siswa", $update, $key);
+
+            }else{
+
+                $kelas = $this->getnotes($query->pendaftaran_kelas);
+                $key['kode_pendaftaran'] = $query->kode_pendaftaran;
+                //update
+                $update = array(
+                    'no_test' => $kelas
+                );
+                //update query
+                $this->db->update("tbl_siswa", $update, $key);
+
+            }
             //deklarasi session flashdata
             $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible" style="font-family:Roboto">
 			                                                    <i class="fa fa-check"></i> Data Berhasil Diupdate.
 			                                                </div>');
             //redirect halaman
             redirect('apps/ppdb?source=confirm&utf8=✓');
+
+
         } else {
             show_404();
             return FALSE;
+        }
+    }
+
+
+    public function getnotes($kelas='') {
+        if (empty(trim($kelas))) {
+            return '';
+            exit();
+        }
+        $ketemu=false;
+        $urut=1;
+        while ($ketemu==false) {
+            $no_test = $kelas.'-'.sprintf("%03d", $urut);
+            $sql="SELECT no_test FROM tbl_siswa where no_test='$no_test'";
+            $jml  = $this->db->query($sql)->num_rows();
+            if ($jml==0) { //Jika nomor tes belum dipakai
+                $ketemu=true;
+                return $no_test;
+            }
+            else { //Jika nomor tes sudah dipakai
+                $urut++;
+            }
         }
     }
 

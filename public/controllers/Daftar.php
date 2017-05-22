@@ -170,7 +170,7 @@ class Daftar extends CI_Controller {
         {
 
             //get kode test peserta
-            $generate_no_test = $this->getnotes($this->input->post("pendaftaran_kelas"));
+            //$generate_no_test = $this->getnotes($this->input->post("pendaftaran_kelas"));
 
             //get random kode pendaftaran
             $this->load->helper('string');
@@ -180,7 +180,7 @@ class Daftar extends CI_Controller {
 
                 'kode_pendaftaran'          => $random,
                 'asal_sekolah'              => $this->input->post("asal_sekolah"),
-                'no_test'                   => $generate_no_test,
+                //'no_test'                   => $generate_no_test,
                 'pendaftaran_kelas'         => $this->input->post("pendaftaran_kelas"),
                 'nama_lengkap'              => $this->input->post("nama"),
                 'jenis_kelamin'             => $this->input->post("jenis_kelamin"),
